@@ -1,0 +1,24 @@
+/* Transition for project list items */
+.projects-list li {
+  transition: transform 0.1s;
+}
+
+/* Hover transform for project items */
+.projects-list li:hover {
+  transform: translateX(10px);
+}
+
+/* Opacity transition for project items */
+.projects-list .projects-item {
+  transition: opacity 0.1s ease;
+}
+
+/* Reduce opacity for all items on list hover */
+.projects-list:hover .projects-item {
+  opacity: 0.5;
+}
+
+/* Restore full opacity for hovered item */
+.projects-list .projects-item:hover {
+  opacity: 1 !important;
+}

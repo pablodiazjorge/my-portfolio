@@ -1,0 +1,30 @@
+<!-- Sidebar navigation with responsive display -->
+<nav
+  class="sidebar-nav hidden lg:[display:contents]"
+  aria-label="In-page jump links"
+>
+  <!-- Navigation list with Tailwind styling -->
+  <ul class="mt-16 pl-0 ml-0 w-max list-none">
+    <!-- Dynamically render navigation items -->
+    <li *ngFor="let item of navItems">
+      <!-- Navigation link with active state and click handler -->
+      <a
+        class="nav-link py-3 flex items-center cursor-pointer no-underline"
+        href="{{ item.href }}"
+        [class.active]="item.href === activeHref"
+        (click)="onClick(item, $event)"
+      >
+        <!-- Indicator line with transition effects -->
+        <span
+          class="nav-indicator w-8 h-[1px] bg-slate-600 mr-4 transition-all duration-150"
+        ></span>
+        <!-- Link text with Tailwind typography -->
+        <span
+          class="nav-text text-xs leading-4 font-bold uppercase tracking-widest text-slate-500 transition-colors duration-150"
+        >
+          {{ item.label | translate }}
+        </span>
+      </a>
+    </li>
+  </ul>
+</nav>

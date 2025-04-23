@@ -1,0 +1,175 @@
+{
+    "HOME_HEADER_NAME": "Pablo Díaz-Jorge",
+    "HOME_JOB_TITLE": "Full Stack Engineer",
+    "HOME_DESCRIPTION": "Full Stack Developer with a dynamic and adaptable approach, experienced in Angular and Web Components, and possessing a continuous improvement-oriented mindset.",
+    "HOME_FOOTER_TEXT": "Built with <a href=\"https://angular.io/\" class=\"text-teal-300\">Angular</a> and <a href=\"https://tailwindcss.com/\" class=\"text-teal-300\">Tailwind</a>",
+
+    "SIDEBAR_ABOUT": "About",
+    "SIDEBAR_EXPERIENCE": "Experience",
+    "SIDEBAR_PROJECTS": "Projects",
+
+    "EXPERIENCE_TITLE": "Job Experience",
+    "EXPERIENCE_LIST": [
+    {
+        "EXPERIENCE_PERIOD": "May 2022 — July 2022",
+        "EXPERIENCE_TITLE": "Full Stack Engineer",
+        "EXPERIENCE_TYPECONTRACT": "Practice contract — Full time",
+        "EXPERIENCE_COMPANY": "NTT DATA Europe & Latam",
+        "EXPERIENCE_COMPANYLINK": "https://es.nttdata.com/",
+        "EXPERIENCE_DESCRIPTION": "Full Stack Developer for the Industrial sector NTT DATA Valencia. My main role was developing features for an internal employee management project. Creating endpoints in the backend and developing or modifying components in the frontend, such as a calendar component with an overview and details of an employee's national and personal vacations fetching data from the cloud database.",
+        "EXPERIENCE_TECNOLOGIES": [
+            "Angular",
+            "JavaScript",
+            "TypeScript",
+            "HTML & SCSS",
+            "CSS",
+            "Webpack",
+            "Bootstrap",
+            "Java",
+            "Spring Boot"
+        ],
+        "EXPERIENCE_OTHERS": [
+            "Scrum",
+            "UI/UX"
+        ]
+        },
+        {
+        "EXPERIENCE_PERIOD": "March 2018 — June 2018",
+        "EXPERIENCE_TITLE": "Data Analist",
+        "EXPERIENCE_TYPECONTRACT": "Practice contract — Full time",
+        "EXPERIENCE_COMPANY": "Sothis",
+        "EXPERIENCE_COMPANYLINK": "https://www.sothis.tech/",
+        "EXPERIENCE_DESCRIPTION": "Análisis y diseño de base de datos para el plan retributivo de la UNE de Consultoría y Sistemas de la Información (CSI) y la UNE de Automatización y Control (AC).",
+        "EXPERIENCE_TECNOLOGIES": [
+            "MySQL",
+            "Microsoft Access",
+            "Power BI"
+        ],
+        "EXPERIENCE_OTHERS": [
+            "draw.io",
+            "Office 365",
+            "Jira"
+        ]
+        }
+    ],
+
+    "PROJECTS_TITLE": "Projects",
+    "PROJECTS_LIST": [
+        
+      {
+        "PROJECTS_TITLE": "Palaze",
+        "PROJECTS_DESCRIPTION": "Native web component library developed using Stencil.js, designed to facilitate the creation of modern web applications with support for customization and adaptability. It includes a variety of components such as buttons, headers, footers, and more, all built following current web standards.",
+        "PROJECTS_IMAGE": "/assets/images/palace-project.svg",
+        "PROJECTS_LINK": "https://palaze-pablodiazjorge.netlify.app/",
+        "PROJECTS_TECNOLOGIES": [
+          "Stencil.js",
+          "Web Components",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "TypeScript",
+          "MarkDown",
+          "Figma"
+        ]
+      },
+      {
+        "PROJECTS_TITLE": "Palaze",
+        "PROJECTS_DESCRIPTION": "Native web component library developed using Stencil.js, designed to facilitate the creation of modern web applications with support for customization and adaptability. It includes a variety of components such as buttons, headers, footers, and more, all built following current web standards.",
+        "PROJECTS_IMAGE": "/assets/images/palace-project.svg",
+        "PROJECTS_LINK": "https://palaze-pablodiazjorge.netlify.app/",
+        "PROJECTS_TECNOLOGIES": [
+          "Stencil.js",
+          "Web Components",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "TypeScript",
+          "MarkDown",
+          "Figma"
+        ]
+      },
+      {
+        "PROJECTS_TITLE": "Palaze",
+        "PROJECTS_DESCRIPTION": "Native web component library developed using Stencil.js, designed to facilitate the creation of modern web applications with support for customization and adaptability. It includes a variety of components such as buttons, headers, footers, and more, all built following current web standards.",
+        "PROJECTS_IMAGE": "/assets/images/palace-project.svg",
+        "PROJECTS_LINK": "https://palaze-pablodiazjorge.netlify.app/",
+        "PROJECTS_TECNOLOGIES": [
+          "Stencil.js",
+          "Web Components",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "TypeScript",
+          "MarkDown",
+          "Figma"
+        ]
+      },
+      {
+        "PROJECTS_TITLE": "Palaze",
+        "PROJECTS_DESCRIPTION": "Native web component library developed using Stencil.js, designed to facilitate the creation of modern web applications with support for customization and adaptability. It includes a variety of components such as buttons, headers, footers, and more, all built following current web standards.",
+        "PROJECTS_IMAGE": "/assets/images/palace-project.svg",
+        "PROJECTS_LINK": "https://palaze-pablodiazjorge.netlify.app/",
+        "PROJECTS_TECNOLOGIES": [
+          "Stencil.js",
+          "Web Components",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "TypeScript",
+          "MarkDown",
+          "Figma"
+        ]
+      },
+      {
+        "PROJECTS_TITLE": "Palaze",
+        "PROJECTS_DESCRIPTION": "Native web component library developed using Stencil.js, designed to facilitate the creation of modern web applications with support for customization and adaptability. It includes a variety of components such as buttons, headers, footers, and more, all built following current web standards.",
+        "PROJECTS_IMAGE": "/assets/images/palace-project.svg",
+        "PROJECTS_LINK": "https://palaze-pablodiazjorge.netlify.app/",
+        "PROJECTS_TECNOLOGIES": [
+          "Stencil.js",
+          "Web Components",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "TypeScript",
+          "MarkDown",
+          "Figma"
+        ]
+      },
+      {
+        "PROJECTS_TITLE": "Palaze",
+        "PROJECTS_DESCRIPTION": "Native web component library developed using Stencil.js, designed to facilitate the creation of modern web applications with support for customization and adaptability. It includes a variety of components such as buttons, headers, footers, and more, all built following current web standards.",
+        "PROJECTS_IMAGE": "/assets/images/palace-project.svg",
+        "PROJECTS_LINK": "https://palaze-pablodiazjorge.netlify.app/",
+        "PROJECTS_TECNOLOGIES": [
+          "Stencil.js",
+          "Web Components",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "TypeScript",
+          "MarkDown",
+          "Figma"
+        ]
+      },
+      {
+        "PROJECTS_TITLE": "Palaze",
+        "PROJECTS_DESCRIPTION": "Native web component library developed using Stencil.js, designed to facilitate the creation of modern web applications with support for customization and adaptability. It includes a variety of components such as buttons, headers, footers, and more, all built following current web standards.",
+        "PROJECTS_IMAGE": "/assets/images/palace-project.svg",
+        "PROJECTS_LINK": "https://palaze-pablodiazjorge.netlify.app/",
+        "PROJECTS_TECNOLOGIES": [
+          "Stencil.js",
+          "Web Components",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "TypeScript",
+          "MarkDown",
+          "Figma"
+        ]
+      }
+    ],
+
+    "ABOUT_TITLE": "About",
+    "ABOUT_CONTENT": "<p>Dynamic and adaptable Full Stack Developer, Pablo Díaz-Jorge García brings a strong foundation in modern web technologies, particularly Angular and Web Components. His academic background in Computer Engineering from the Polytechnic University of Valencia, complemented by a Higher Technical Degree in Multiplatform Application Development, has equipped him with a comprehensive understanding of the software development lifecycle. Pablo possesses a proactive mindset, consistently seeking opportunities for continuous improvement and embracing new challenges within the ever-evolving tech landscape.\n    </p>\n\n    <p>\n      His professional experience includes a Frontend Developer role at\n      <a\n        href=\"https://es.nttdata.com/\"\n        target=\"_blank\"\n        class=\"font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300\"\n      >\n        NTT DATA Europe & LATAM\n      </a>\n      , where he focused on Angular development within the industrial sector. Prior to this, he contributed to database analysis and design at\n      <a\n        href=\"https://www.sothis.com/\"\n        target=\"_blank\"\n        class=\"font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300\"\n      >\n        Sothis\n      </a>\n      . This practical experience, combined with his passion for clean and efficient code, drives his commitment to delivering high-quality solutions. Pablo's final degree project,\n      <a\n        href=\"https://github.com/pablodiazjorge/palaze\"\n        target=\"_blank\"\n        class=\"font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300\"\n      >\n        Palaze\n      </a>\n      , a collection of native Web Components, showcases his initiative and deep interest in cutting-edge frontend technologies.\n    </p>\n\n    <p>\n      Beyond his technical skills in languages such as JavaScript, TypeScript, HTML5, CSS, Java, and Objective-C, Pablo is a collaborative team player with a strong sense of responsibility and dedication. He is fluent in Spanish, Valencian, and English, facilitating effective communication in diverse environments. With a proven ability to adapt, learn quickly, and a genuine motivation for his field, Pablo is a valuable asset eager to contribute to innovative projects.</p>"
+}

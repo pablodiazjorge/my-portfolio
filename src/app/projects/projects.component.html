@@ -1,0 +1,83 @@
+<!-- Projects section with responsive margins -->
+<section
+  id="project"
+  class="mb-8 scroll-mt-16 md:mb-12 lg:mb-18 lg:scroll-mt-24 py-2"
+>
+  <!-- Sticky header with responsive visibility -->
+  <div
+    class="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:relative lg:top-auto lg:w-full"
+  >
+    <h2 class="text-sm font-bold uppercase tracking-widest text-slate-200">
+      {{ "PROJECTS_TITLE" | translate }}
+    </h2>
+  </div>
+  <!-- Projects list with vertical spacing -->
+  <div class="space-y-12 projects-list">
+    <!-- Project item with hover effects -->
+    <div
+      *ngFor="let project of projects"
+      class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50 projects-item"
+    >
+      <!-- Hover background overlay -->
+      <div
+        class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"
+      ></div>
+      <!-- Project period and image -->
+      <header
+        class="z-10 mb-2 mt-1 text-xs font-semibold tracking-wide text-slate-500 sm:col-span-2"
+      >
+        <!-- Project image -->
+        <div class="sm:order-1 sm:col-span-2 sm:translate-y-1">
+          <img
+            [src]="project.PROJECTS_IMAGE"
+            alt="{{ project.PROJECTS_TITLE| translate }}"
+            class="aspect-video object-cover rounded border-2 border-slate-200/10 transition hover:border-slate-200/30 group-hover:border-slate-200/30 lg:group-hover/list:border-slate-200/30"
+            loading="lazy"
+          />
+        </div>
+      </header>
+
+      <!-- Project details -->
+      <div class="z-10 sm:col-span-6">
+        <!-- Project title and link -->
+        <h3 class="font-medium leading-snug text-slate-200">
+          <a
+            target="_blank"
+            [href]="project.PROJECTS_LINK"
+            class="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link"
+          >
+            <!-- Hover hit area -->
+            <span
+              class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"
+            ></span>
+            {{ project.PROJECTS_TITLE | translate }}
+            <!-- Link arrow icon -->
+            <svg
+              class="ml-1 inline-block h-4 w-4 shrink-0 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 text-slate-300"
+              fill="currentColor"
+            >
+              <path
+                d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+              />
+            </svg>
+          </a>
+        </h3>
+
+        <!-- Project description -->
+        <p class="mt-2 text-sm leading-normal">{{ project.PROJECTS_DESCRIPTION | translate }}</p>
+
+        <!-- Project technologies -->
+        <ul class="mt-2 flex flex-wrap">
+          <!-- Technology tag -->
+          <li *ngFor="let tech of project.PROJECTS_TECNOLOGIES" class="mr-1.5 mt-2">
+            <div
+              class="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300"
+            >
+              {{ tech }}
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

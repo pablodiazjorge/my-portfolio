@@ -1,0 +1,10 @@
+export interface Experience {
+  EXPERIENCE_PERIOD: string;
+  EXPERIENCE_TITLE: string;
+  EXPERIENCE_TYPECONTRACT: string;
+  EXPERIENCE_COMPANY: string;
+  EXPERIENCE_COMPANYLINK: string;
+  EXPERIENCE_DESCRIPTION: string;
+  EXPERIENCE_TECNOLOGIES: string[];
+  EXPERIENCE_OTHERS: string[];
+}

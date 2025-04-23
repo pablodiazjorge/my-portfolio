@@ -1,0 +1,35 @@
+<!-- Social media links list -->
+<ul class="social-list mt-8 mb-8 flex list-none p-0" aria-label="Social media">
+  <!-- Social link items -->
+  <li
+    *ngFor="let link of socialLinks"
+    class="social-item mr-5 shrink-0 text-xs leading-4"
+  >
+    <!-- Social media link with hover and focus effects -->
+    <a
+      class="social-link block text-slate-400 transition-colors duration-200 hover:text-slate-200 focus-visible:text-slate-200"
+      [href]="link.url"
+      target="_blank"
+      rel="noreferrer noopener"
+      [attr.aria-label]="link.name + ' (opens in a new tab)'"
+      [title]="link.title"
+    >
+      <!-- Screen-reader-only link name -->
+      <span class="sr-only">{{ link.name }}</span>
+      <!-- Social media icon -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        [attr.viewBox]="link.viewBox"
+        [attr.fill]="link.fill || 'currentColor'"
+        [attr.stroke]="link.stroke || 'none'"
+        [attr.stroke-width]="link.strokeWidth || '0'"
+        [attr.stroke-linecap]="link.strokeLinecap || 'butt'"
+        [attr.stroke-linejoin]="link.strokeLinejoin || 'miter'"
+        class="social-icon h-6 w-6"
+        aria-hidden="true"
+      >
+        <path [attr.d]="link.iconPath"></path>
+      </svg>
+    </a>
+  </li>
+</ul>

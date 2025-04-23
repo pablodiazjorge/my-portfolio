@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+:root {
+  @layer base {
+    font-family: Inter, sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1;
+  }
+}
+
+body {
+  @apply bg-slate-900 text-slate-400 leading-relaxed text-slate-400;
+}
+
+body::selection {
+  @apply bg-teal-300 text-teal-900;
+}
+
+nav {
+  @apply fixed top-0 left-0 w-64 bg-slate-900 h-screen overflow-y-auto;
+}

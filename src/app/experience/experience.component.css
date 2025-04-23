@@ -1,0 +1,24 @@
+/* Transition for experience list items */
+.experience-list li {
+  transition: transform 0.1s;
+}
+
+/* Hover transform for experience items */
+.experience-list li:hover {
+  transform: translateX(10px);
+}
+
+/* Opacity transition for experience items */
+.experience-list .experience-item {
+  transition: opacity 0.1s ease;
+}
+
+/* Reduce opacity for all items on list hover */
+.experience-list:hover .experience-item {
+  opacity: 0.5;
+}
+
+/* Restore full opacity for hovered item */
+.experience-list .experience-item:hover {
+  opacity: 1 !important;
+}
