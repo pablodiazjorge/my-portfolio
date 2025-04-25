@@ -3,6 +3,23 @@
 @custom-variant light (&:where([data-theme=light], [data-theme=light] *));
 
 :root {
-    font-family: Inter, sans-serif;
-    font-feature-settings: 'liga' 1, 'calt' 1;
+  font-family: Inter, sans-serif;
+  font-feature-settings: "liga" 1, "calt" 1;
+}
+
+@theme {
+  /* Backgrounds */
+  --color-d-background-primary:    oklch(20.8% 0.042 265.755);          /* was bg-slate-900 */  
+  --color-d-background-card-hover: oklch(27.9% 0.041 260.031 / 0.5);   /* was bg-slate-800/50 */  
+
+  /* Text colors */
+  --color-d-text-default:          oklch(70.4% 0.04 256.788);           /* was text-slate-400 */  
+  --color-d-text-heading:          oklch(92.9% 0.013 255.508);          /* was text-slate-200 */  
+  --color-d-text-secondary:        oklch(55.4% 0.046 257.417);          /* was text-slate-500 */  
+  --color-d-text-hover-accent:     oklch(85.5% 0.138 181.071);          /* was text-teal-300 */  
+
+  /* Badge styles */
+  --color-d-badge-tech-background: oklch(77.7% 0.152 181.912 / 0.1);   /* was bg-teal-400/10 */  
+  --color-d-badge-tech-text:       oklch(85.5% 0.138 181.071);          /* was text-teal-300 */  
+  --color-d-badge-other-text:      oklch(89.7% 0.196 126.665);          /* was text-lime-300 */
 }
