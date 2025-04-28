@@ -9,18 +9,58 @@
     <li *ngFor="let item of navItems">
       <!-- Navigation link with active state and click handler -->
       <a
-        class="nav-link py-3 flex items-center cursor-pointer no-underline"
+        class="group nav-link py-3 flex items-center cursor-pointer no-underline"
         href="{{ item.href }}"
         [class.active]="item.href === activeHref"
         (click)="onClick(item, $event)"
       >
-        <!-- Indicator line with transition effects -->
+        <!-- Indicador -->
         <span
-          class="nav-indicator w-8 h-[1px] dark:bg-slate-600 mr-4 transition-all duration-150"
+          class="
+            nav-indicator
+            w-8 h-[1px] mr-4
+            transition-all duration-150
+            dark:bg-d-text-secondary
+            light:bg-l-text-secondary
+
+            /* HOVER */
+            group-hover:w-16
+            light:group-hover:bg-l-text-heading
+            dark:group-hover:bg-d-text-heading
+
+            /* FOCUS-VISIBLE */
+            group-focus-visible:w-16
+            light:group-focus-visible:bg-l-text-heading
+            dark:group-focus-visible:bg-d-text-heading
+
+            /* ACTIVE (cuando .active en el <a>) */
+            group-[&.active]:w-16
+            light:group-[&.active]:bg-l-text-heading
+            dark:group-[&.active]:bg-d-text-heading
+          "
         ></span>
-        <!-- Link text with Tailwind typography -->
+
+        <!-- Texto -->
         <span
-          class="nav-text text-xs leading-4 font-bold uppercase tracking-widest dark:text-d-text-secondary transition-colors duration-150"
+          class="
+            nav-text
+            text-xs leading-4 font-bold uppercase tracking-widest
+            transition-colors duration-150
+            dark:text-d-text-secondary
+            light:text-l-text-secondary
+
+            /* HOVER */
+            light:group-hover:text-l-text-heading
+            dark:group-hover:text-d-text-heading
+
+            /* FOCUS-VISIBLE */
+            light:group-focus-visible:text-l-text-secondary
+            dark:group-focus-visible:text-d-text-secondary
+
+            /* ACTIVE */
+            group-[&.active]:text-slate-200    light:group-[&.active]:text-l-text-heading
+            dark:group-[&.active]:text-d-text-heading
+          "
         >
           {{ item.label | translate }}
         </span>

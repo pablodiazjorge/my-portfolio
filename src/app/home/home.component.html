@@ -6,7 +6,7 @@
 >
   <!-- Overlay circular gradient -->
   <div
-    class="pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute home-gradient"
+    class="pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute" [ngClass]="isDarkTheme ? 'home-gradient' : ''"
   ></div>
 
 <!-- Main container with responsive padding -->
@@ -20,12 +20,12 @@
     <!-- Language Switch Button -->
     <button
       (click)="switchLanguage()"
-      class="dark:text-d-text-heading dark:hover:text-d-badge-other-text h-8 flex items-center justify-center cursor-pointer"
+      class="dark:text-d-text-heading dark:hover:text-d-badge-other-text light:text-l-text-heading light:hover:text-l-badge-other-text h-8 flex items-center justify-center cursor-pointer"
       [attr.aria-label]="
         'Switch to ' + (currentLang === 'en' ? 'Spanish' : 'English')
       "
     >
-      {{ currentLang === "en" ? "ES" : "EN" }}
+      {{ currentLang === "en" ? "EN" : "ES" }}
     </button>
     <!-- Theme Toggle Button -->
     <button
@@ -50,7 +50,7 @@
         <g>
           <path
             d="M256,144c-61.75,0-112,50.25-112,112s50.25,112,112,112s112-50.25,112-112S317.75,144,256,144z M256,336 c-44.188,0-80-35.812-80-80c0-44.188,35.812-80,80-80c44.188,0,80,35.812,80,80C336,300.188,300.188,336,256,336z M256,112 c8.833,0,16-7.167,16-16V64c0-8.833-7.167-16-16-16s-16,7.167-16,16v32C240,104.833,247.167,112,256,112z M256,400 c-8.833,0-16,7.167-16,16v32c0,8.833,7.167,16,16,16s16-7.167,16-16v-32C272,407.167,264.833,400,256,400z M380.438,154.167 l22.625-22.625c6.25-6.25,6.25-16.375,0-22.625s-16.375-6.25-22.625,0l-22.625,22.625c-6.25,6.25-6.25,16.375,0,22.625 S374.188,160.417,380.438,154.167z M131.562,357.834l-22.625,22.625c-6.25,6.249-6.25,16.374,0,22.624s16.375,6.25,22.625,0 l22.625-22.624c6.25-6.271,6.25-16.376,0-22.625C147.938,351.583,137.812,351.562,131.562,357.834z M112,256 c0-8.833-7.167-16-16-16H64c-8.833,0-16,7.167-16,16s7.167,16,16,16h32C104.833,272,112,264.833,112,256z M448,240h-32 c-8.833,0-16,7.167-16,16s7.167,16,16,16h32c8.833,0,16-7.167,16-16S456.833,240,448,240z M131.541,154.167 c6.251,6.25,16.376,6.25,22.625,0c6.251-6.25,6.251-16.375,0-22.625l-22.625-22.625c-6.25-6.25-16.374-6.25-22.625,0 c-6.25,6.25-6.25,16.375,0,22.625L131.541,154.167z M380.459,357.812c-6.271-6.25-16.376-6.25-22.625,0 c-6.251,6.25-6.271,16.375,0,22.625l22.625,22.625c6.249,6.25,16.374,6.25,22.624,0s6.25-16.375,0-22.625L380.459,357.812z"
-            fill="#FFF9B0"
+            fill="d-background-primary"
           />
         </g>
       </svg>
@@ -86,7 +86,7 @@
       <div>
         <!-- Profile name -->
         <h1
-          class="text-4xl font-bold tracking-tight dark:text-d-text-heading sm:text-5xl"
+          class="text-4xl font-bold tracking-tight dark:text-d-text-heading light:text-l-text-heading sm:text-5xl"
         >
           {{
             "HOME_HEADER_NAME" | translate
@@ -94,7 +94,7 @@
         </h1>
         <!-- Job title -->
         <h2
-          class="mt-3 text-lg font-medium tracking-tight dark:text-d-text-heading sm:text-xl"
+          class="mt-3 text-lg font-medium tracking-tight dark:text-d-text-heading light:text-l-text-heading sm:text-xl"
         >
           {{ "HOME_JOB_TITLE" | translate }}
         </h2>
@@ -138,7 +138,7 @@
       </section>
       <!-- Footer -->
       <footer
-        class="max-w-md pb-16 text-sm dark:text-d-text-secondary sm:pb-0"
+        class="max-w-md pb-16 text-sm dark:text-d-text-secondary light:text-l-text-secondary sm:pb-0"
         [innerHTML]="'HOME_FOOTER_TEXT' | translate | safeHtml"
       ></footer>
     </main>

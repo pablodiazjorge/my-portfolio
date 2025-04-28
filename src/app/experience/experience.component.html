@@ -7,7 +7,7 @@
   <div
     class="sticky top-0 z-20 -mx-6 mb-4 w-screen px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:relative lg:top-auto lg:w-full"
   >
-    <h2 class="text-sm font-bold uppercase tracking-widest text-slate-200">
+    <h2 class="text-sm font-bold uppercase tracking-widest dark:text-d-text-heading light:text-l-text-heading">
       {{ "EXPERIENCE_TITLE" | translate }}
     </h2>
   </div>
@@ -20,11 +20,11 @@
     >
       <!-- Hover background overlay -->
       <div
-        class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block dark:lg:group-hover:bg-d-background-card-hover lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"
+        class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md light:border light:border-solid light:border-neutral-200 light:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.02)] light:drop-shadow transition motion-reduce:transition-none lg:-inset-x-6 lg:block dark:lg:group-hover:bg-d-background-card-hover light:lg:group-hover:bg-l-background-card-hover lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"
       ></div>
       <!-- Job period and contract type -->
       <header
-        class="z-10 mb-2 mt-1 text-xs font-semibold tracking-wide dark:text-d-text-secondary sm:col-span-2"
+        class="z-10 mb-2 mt-1 text-xs font-semibold tracking-wide dark:text-d-text-secondary light:text-l-text-secondary sm:col-span-2"
       >
         <!-- Job period -->
         <p class="uppercase">
@@ -39,11 +39,11 @@
       <!-- Job details -->
       <div class="z-10 sm:col-span-6">
         <!-- Job title and company -->
-        <h3 class="font-medium leading-snug dark:text-d-text-heading">
+        <h3 class="font-medium leading-snug dark:text-d-text-heading light:text-l-text-heading">
           <a
             target="_blank"
             [href]="job.EXPERIENCE_COMPANYLINK | translate"
-            class="inline-flex items-baseline font-medium leading-tight text-d-text-heading dark:hover:text-d-text-hover-accent dark:focus-visible:text-teal-d-text-hover-accent group/link"
+            class="inline-flex items-baseline font-medium leading-tight dark:text-d-text-heading dark:hover:text-d-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:text-l-text-heading light:hover:text-l-text-hover-accent light:focus-visible:text-l-text-hover-accent group/link"
           >
             <!-- Hover hit area -->
             <span
@@ -55,7 +55,7 @@
             >
             <!-- Link arrow icon -->
             <svg
-              class="ml-1 inline-block h-4 w-4 shrink-0 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 dark:text-d-text-hover-accent"
+              class="ml-1 inline-block h-4 w-4 shrink-0 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 dark:text-d-text-hover-accent light:text-l-text-hover-accent"
               fill="currentColor"
             >
               <path
@@ -78,7 +78,7 @@
             class="mr-1.5 mt-2"
           >
             <div
-              class="flex items-center rounded-full dark:bg-d-badge-tech-background px-3 py-1 text-xs font-medium leading-5 dark:text-d-text-hover-accent"
+              class="flex items-center rounded-full dark:bg-d-badge-tech-background light:bg-l-badge-tech-background px-3 py-1 text-xs font-medium leading-5 dark:text-d-text-hover-accent light:text-l-badge-text light:border light:border-solid light:border-l-badge-tech-border"
             >
               {{ tech }}
             </div>
@@ -89,7 +89,7 @@
           <!-- Skill tag -->
           <li *ngFor="let other of job.EXPERIENCE_OTHERS" class="mr-1.5 mt-2">
             <div
-              class="flex items-center rounded-full dark:bg-d-badge-tech-background px-3 py-1 text-xs font-medium leading-5 dark:text-d-badge-other-text"
+              class="flex items-center rounded-full dark:bg-d-badge-tech-background light:bg-l-badge-tech-background px-3 py-1 text-xs font-medium leading-5 dark:text-d-badge-other-text light:text-l-badge-other-text light:border light:border-solid light:border-l-badge-tech-border"
             >
               {{ other }}
             </div>
