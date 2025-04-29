@@ -7,7 +7,6 @@ import {
   OnDestroy,
   ElementRef,
   ViewChild,
-
 } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { ExperienceComponent } from '../experience/experience.component';
@@ -37,7 +36,8 @@ import { Subject, fromEvent, takeUntil, debounceTime } from 'rxjs';
 })
 export class HomeComponent implements OnInit, OnDestroy {
   /** Reference to the home container element for DOM manipulation */
-  @ViewChild('homeContainer', { static: true }) container!: ElementRef<HTMLElement>;
+  @ViewChild('homeContainer', { static: true })
+  container!: ElementRef<HTMLElement>;
 
   /** Currently active section URL fragment */
   activeHref = '#about';
@@ -72,10 +72,14 @@ export class HomeComponent implements OnInit, OnDestroy {
 
     // Initialize theme from localStorage
     if (isPlatformBrowser(this.platformId)) {
-      this.isDarkTheme = localStorage.getItem('theme') === 'dark';
-      if (this.isDarkTheme) {
-        document.documentElement.classList.add('dark');
-      }
+      this.isDarkTheme =
+        localStorage.getItem('theme') === 'light' ? false : true; // default to dark if not explicitly 'light'
+
+      document.documentElement.setAttribute(
+        'data-theme',
+        this.isDarkTheme ? 'dark' : 'light'
+      );
+      localStorage.setItem('theme', this.isDarkTheme ? 'dark' : 'light');
     }
   }
 
@@ -119,9 +123,16 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   /** Toggles between light and dark theme */
   toggleTheme() {
+    // flip our boolean…
     this.isDarkTheme = !this.isDarkTheme;
+
     if (isPlatformBrowser(this.platformId)) {
-      document.documentElement.classList.toggle('dark', this.isDarkTheme);
+      // …and then write the matching data-theme attribute
+      document.documentElement.setAttribute(
+        'data-theme',
+        this.isDarkTheme ? 'dark' : 'light'
+      );
+      // persist the choice
       localStorage.setItem('theme', this.isDarkTheme ? 'dark' : 'light');
     }
   }

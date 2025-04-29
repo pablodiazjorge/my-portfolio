@@ -2,7 +2,7 @@
     "HOME_HEADER_NAME": "Pablo Díaz-Jorge",
     "HOME_JOB_TITLE": "Full Stack Engineer",
     "HOME_DESCRIPTION": "Full Stack Developer with a dynamic and adaptable approach, experienced in Angular and Web Components, and possessing a continuous improvement-oriented mindset.",
-    "HOME_FOOTER_TEXT": "Built with <a href=\"https://angular.io/\" class=\"text-teal-300\">Angular</a> and <a href=\"https://tailwindcss.com/\" class=\"text-teal-300\">Tailwind</a>",
+    "HOME_FOOTER_TEXT": "Built with <a href=\"https://angular.io/\" class=\"dark:text-d-text-default light:text-l-text-default\">Angular</a> and <a href=\"https://tailwindcss.com/\" class=\"dark:text-d-text-default light:text-l-text-default\">Tailwind CSS.</a>",
 
     "SIDEBAR_ABOUT": "About",
     "SIDEBAR_EXPERIENCE": "Experience",
@@ -11,65 +11,62 @@
     "EXPERIENCE_TITLE": "Job Experience",
     "EXPERIENCE_LIST": [
     {
-        "EXPERIENCE_PERIOD": "May 2022 — July 2022",
-        "EXPERIENCE_TITLE": "Full Stack Engineer",
-        "EXPERIENCE_TYPECONTRACT": "Practice contract — Full time",
-        "EXPERIENCE_COMPANY": "NTT DATA Europe & Latam",
-        "EXPERIENCE_COMPANYLINK": "https://es.nttdata.com/",
-        "EXPERIENCE_DESCRIPTION": "Full Stack Developer for the Industrial sector NTT DATA Valencia. My main role was developing features for an internal employee management project. Creating endpoints in the backend and developing or modifying components in the frontend, such as a calendar component with an overview and details of an employee's national and personal vacations fetching data from the cloud database.",
-        "EXPERIENCE_TECNOLOGIES": [
-            "Angular",
-            "JavaScript",
-            "TypeScript",
-            "HTML & SCSS",
-            "CSS",
-            "Webpack",
-            "Bootstrap",
-            "Java",
-            "Spring Boot"
-        ],
-        "EXPERIENCE_OTHERS": [
-            "Scrum",
-            "UI/UX"
-        ]
-        },
-        {
-        "EXPERIENCE_PERIOD": "March 2018 — June 2018",
-        "EXPERIENCE_TITLE": "Data Analist",
-        "EXPERIENCE_TYPECONTRACT": "Practice contract — Full time",
-        "EXPERIENCE_COMPANY": "Sothis",
-        "EXPERIENCE_COMPANYLINK": "https://www.sothis.tech/",
-        "EXPERIENCE_DESCRIPTION": "Análisis y diseño de base de datos para el plan retributivo de la UNE de Consultoría y Sistemas de la Información (CSI) y la UNE de Automatización y Control (AC).",
-        "EXPERIENCE_TECNOLOGIES": [
-            "MySQL",
-            "Microsoft Access",
-            "Power BI"
-        ],
-        "EXPERIENCE_OTHERS": [
-            "draw.io",
-            "Office 365",
-            "Jira"
-        ]
-        }
+      "EXPERIENCE_PERIOD": "May 2022 — July 2022",
+      "EXPERIENCE_TITLE": "Full Stack Engineer",
+      "EXPERIENCE_TYPECONTRACT": "Practice contract — Full time",
+      "EXPERIENCE_COMPANY": "NTT DATA Europe & Latam",
+      "EXPERIENCE_COMPANYLINK": "https://es.nttdata.com/",
+      "EXPERIENCE_DESCRIPTION": "As a Full Stack Developer at NTT DATA Valencia, I delivered end-to-end functionality for an internal employee management system. I configured REST services on the backend and built an interactive frontend calendar that offers both an overall view and a detailed breakdown of vacation days, all powered by cloud-hosted data.",
+      "EXPERIENCE_TECNOLOGIES": [
+          "Angular",
+          "JavaScript",
+          "TypeScript",
+          "HTML & SCSS",
+          "CSS",
+          "Webpack",
+          "Bootstrap",
+          "Java",
+          "Spring Boot"
+      ],
+      "EXPERIENCE_OTHERS": [
+          "Scrum",
+          "UI/UX"
+      ]
+      },
+      {
+      "EXPERIENCE_PERIOD": "March 2018 — June 2018",
+      "EXPERIENCE_TITLE": "Data Analist",
+      "EXPERIENCE_TYPECONTRACT": "Practice contract — Full time",
+      "EXPERIENCE_COMPANY": "Sothis",
+      "EXPERIENCE_COMPANYLINK": "https://www.sothis.tech/",
+      "EXPERIENCE_DESCRIPTION": "Análisis y diseño de base de datos para el plan retributivo de la UNE de Consultoría y Sistemas de la Información (CSI) y la UNE de Automatización y Control (AC).",
+      "EXPERIENCE_TECNOLOGIES": [
+          "MySQL",
+          "Microsoft Access",
+          "Power BI"
+      ],
+      "EXPERIENCE_OTHERS": [
+          "draw.io",
+          "Office 365",
+          "Jira"
+      ]
+      }
     ],
 
     "PROJECTS_TITLE": "Projects",
     "PROJECTS_LIST": [
-        
       {
-        "PROJECTS_TITLE": "Palaze",
-        "PROJECTS_DESCRIPTION": "Native web component library developed using Stencil.js, designed to facilitate the creation of modern web applications with support for customization and adaptability. It includes a variety of components such as buttons, headers, footers, and more, all built following current web standards.",
-        "PROJECTS_IMAGE": "/assets/images/palace-project.svg",
-        "PROJECTS_LINK": "https://palaze-pablodiazjorge.netlify.app/",
+        "PROJECTS_TITLE": "My Portfolio",
+        "PROJECTS_DESCRIPTION": "Personal portfolio built with Angular 19.1.7 and Tailwind CSS 4.1, featuring SSR, i18n (ES/EN), automatic dark mode, and lazy-loading for a fast, accessible experience.",
+        "PROJECTS_IMAGE": "/assets/images/my-portfolio-project.png",
+        "PROJECTS_LINK": "https://github.com/pablodiazjorge/my-portfolio",
         "PROJECTS_TECNOLOGIES": [
-          "Stencil.js",
-          "Web Components",
-          "HTML",
-          "CSS",
-          "JavaScript",
-          "TypeScript",
-          "MarkDown",
-          "Figma"
+          "Angular 19.1.7",
+          "Angular Universal (SSR)",
+          "Tailwind CSS 4.1",
+          "ngx-translate",
+          "Express.js",
+          "PostCSS"
         ]
       },
       {
@@ -89,87 +86,68 @@
         ]
       },
       {
-        "PROJECTS_TITLE": "Palaze",
-        "PROJECTS_DESCRIPTION": "Native web component library developed using Stencil.js, designed to facilitate the creation of modern web applications with support for customization and adaptability. It includes a variety of components such as buttons, headers, footers, and more, all built following current web standards.",
-        "PROJECTS_IMAGE": "/assets/images/palace-project.svg",
-        "PROJECTS_LINK": "https://palaze-pablodiazjorge.netlify.app/",
+        "PROJECTS_TITLE": "Book Management App (Advanced)",
+        "PROJECTS_DESCRIPTION": "Advanced book management application using Angular 19.1.7 on the frontend and Spring Boot + PostgreSQL on the backend. Includes dynamic search and filtering, pagination, confirmation dialogs, UX/UI enhancements over the simple version, and comprehensive unit tests.",
+        "PROJECTS_IMAGE": "/assets/images/book-management-advanced.png",
+        "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-frontend/tree/advanced",
         "PROJECTS_TECNOLOGIES": [
-          "Stencil.js",
-          "Web Components",
-          "HTML",
-          "CSS",
-          "JavaScript",
+          "Angular",
+          "PrimeNG",
+          "PrimeFlex",
+          "Reactive Forms",
+          "HttpClient",
+          "ngx-pagination",
           "TypeScript",
-          "MarkDown",
-          "Figma"
+          "HTML",
+          "SCSS"
         ]
       },
       {
-        "PROJECTS_TITLE": "Palaze",
-        "PROJECTS_DESCRIPTION": "Native web component library developed using Stencil.js, designed to facilitate the creation of modern web applications with support for customization and adaptability. It includes a variety of components such as buttons, headers, footers, and more, all built following current web standards.",
-        "PROJECTS_IMAGE": "/assets/images/palace-project.svg",
-        "PROJECTS_LINK": "https://palaze-pablodiazjorge.netlify.app/",
+        "PROJECTS_TITLE": "Book Management API (Advanced)",
+        "PROJECTS_DESCRIPTION": "Advanced version of the book management API using Spring Boot and PostgreSQL. Incorporates image uploads to Cloudinary, global error handling, configurable logging, pagination, and comprehensive unit tests.",
+        "PROJECTS_IMAGE": "/assets/images/book-management-advanced.png",
+        "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-backend/tree/advanced",
         "PROJECTS_TECNOLOGIES": [
-          "Stencil.js",
-          "Web Components",
-          "HTML",
-          "CSS",
-          "JavaScript",
-          "TypeScript",
-          "MarkDown",
-          "Figma"
+          "Spring Boot",
+          "Spring Data JPA",
+          "Hibernate",
+          "PostgreSQL",
+          "Cloudinary API",
+          "JUnit",
+          "Maven"
         ]
       },
       {
-        "PROJECTS_TITLE": "Palaze",
-        "PROJECTS_DESCRIPTION": "Native web component library developed using Stencil.js, designed to facilitate the creation of modern web applications with support for customization and adaptability. It includes a variety of components such as buttons, headers, footers, and more, all built following current web standards.",
-        "PROJECTS_IMAGE": "/assets/images/palace-project.svg",
-        "PROJECTS_LINK": "https://palaze-pablodiazjorge.netlify.app/",
+        "PROJECTS_TITLE": "Book Management App (Simple)",
+        "PROJECTS_DESCRIPTION": "Book management application using Angular 19.1.7 on the frontend and Spring Boot + PostgreSQL on the backend. Provides full Create, Read, Update, Delete functionality with reactive forms, global notifications, and responsive design.",
+        "PROJECTS_IMAGE": "/assets/images/book-management-simple.png",
+        "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-frontend/tree/simple",
         "PROJECTS_TECNOLOGIES": [
-          "Stencil.js",
-          "Web Components",
-          "HTML",
-          "CSS",
-          "JavaScript",
+          "Angular",
+          "PrimeNG",
+          "PrimeFlex",
+          "Reactive Forms",
+          "HttpClient",
           "TypeScript",
-          "MarkDown",
-          "Figma"
+          "HTML",
+          "SCSS"
         ]
       },
       {
-        "PROJECTS_TITLE": "Palaze",
-        "PROJECTS_DESCRIPTION": "Native web component library developed using Stencil.js, designed to facilitate the creation of modern web applications with support for customization and adaptability. It includes a variety of components such as buttons, headers, footers, and more, all built following current web standards.",
-        "PROJECTS_IMAGE": "/assets/images/palace-project.svg",
-        "PROJECTS_LINK": "https://palaze-pablodiazjorge.netlify.app/",
+        "PROJECTS_TITLE": "Book Management API (Simple)",
+        "PROJECTS_DESCRIPTION": "REST API for book management using Spring Boot and PostgreSQL. Follows a classic controllers-services-repositories architecture, offers CRUD endpoints, and includes CORS support for the Angular frontend.",
+        "PROJECTS_IMAGE": "/assets/images/book-management-simple.png",
+        "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-backend/tree/simple",
         "PROJECTS_TECNOLOGIES": [
-          "Stencil.js",
-          "Web Components",
-          "HTML",
-          "CSS",
-          "JavaScript",
-          "TypeScript",
-          "MarkDown",
-          "Figma"
+          "Spring Boot",
+          "Spring Data JPA",
+          "Hibernate",
+          "PostgreSQL",
+          "Maven"
         ]
-      },
-      {
-        "PROJECTS_TITLE": "Palaze",
-        "PROJECTS_DESCRIPTION": "Native web component library developed using Stencil.js, designed to facilitate the creation of modern web applications with support for customization and adaptability. It includes a variety of components such as buttons, headers, footers, and more, all built following current web standards.",
-        "PROJECTS_IMAGE": "/assets/images/palace-project.svg",
-        "PROJECTS_LINK": "https://palaze-pablodiazjorge.netlify.app/",
-        "PROJECTS_TECNOLOGIES": [
-          "Stencil.js",
-          "Web Components",
-          "HTML",
-          "CSS",
-          "JavaScript",
-          "TypeScript",
-          "MarkDown",
-          "Figma"
-        ]
-      }
+      }      
     ],
 
     "ABOUT_TITLE": "About",
-    "ABOUT_CONTENT": "<p>Dynamic and adaptable Full Stack Developer, Pablo Díaz-Jorge García brings a strong foundation in modern web technologies, particularly Angular and Web Components. His academic background in Computer Engineering from the Polytechnic University of Valencia, complemented by a Higher Technical Degree in Multiplatform Application Development, has equipped him with a comprehensive understanding of the software development lifecycle. Pablo possesses a proactive mindset, consistently seeking opportunities for continuous improvement and embracing new challenges within the ever-evolving tech landscape.\n    </p>\n\n    <p>\n      His professional experience includes a Frontend Developer role at\n      <a\n        href=\"https://es.nttdata.com/\"\n        target=\"_blank\"\n        class=\"font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300\"\n      >\n        NTT DATA Europe & LATAM\n      </a>\n      , where he focused on Angular development within the industrial sector. Prior to this, he contributed to database analysis and design at\n      <a\n        href=\"https://www.sothis.com/\"\n        target=\"_blank\"\n        class=\"font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300\"\n      >\n        Sothis\n      </a>\n      . This practical experience, combined with his passion for clean and efficient code, drives his commitment to delivering high-quality solutions. Pablo's final degree project,\n      <a\n        href=\"https://github.com/pablodiazjorge/palaze\"\n        target=\"_blank\"\n        class=\"font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300\"\n      >\n        Palaze\n      </a>\n      , a collection of native Web Components, showcases his initiative and deep interest in cutting-edge frontend technologies.\n    </p>\n\n    <p>\n      Beyond his technical skills in languages such as JavaScript, TypeScript, HTML5, CSS, Java, and Objective-C, Pablo is a collaborative team player with a strong sense of responsibility and dedication. He is fluent in Spanish, Valencian, and English, facilitating effective communication in diverse environments. With a proven ability to adapt, learn quickly, and a genuine motivation for his field, Pablo is a valuable asset eager to contribute to innovative projects.</p>"
+    "ABOUT_CONTENT": "<p>What began as a simple experiment in high school has become my vocation. Today, my focus is on creating clean, scalable interfaces, combining thoughtful design with best practices. I’m Full Stack, but I have a soft spot for the frontend, and I enjoy building applications that address real needs while being both attractive and fluid.</p><p>Currently, I’m ready to embark on a new project where I can apply my skills and continue learning as I develop.<br>My last role was as a Full Stack Developer on a full-time internship contract at <a href=\"https://es.nttdata.com/\" target=\"_blank\" class=\"font-medium dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\">NTTData</a>, where for five months I worked on designing and implementing an employee management platform using Angular within a Scrum team. There, I developed both themable interfaces with Bootstrap and external component libraries, as well as custom Angular components tailored to complex business workflows. I also implemented HTTP services for CRUD operations, ensuring smooth communication between the frontend and the backend API.</p><p>For my final degree project, I designed and published a library of native Web Components with Stencil called <a href=\"https://github.com/pablodiazjorge/palaze/\" target=\"_blank\" class=\"font-medium dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\">Palaze</a>, accompanied by a live documentation site to facilitate its adoption and integration.</p><p>Each week, I dedicate time to personal projects, either expanding existing applications or coming up with new ones for my portfolio. One of the highlights is an advanced <a href=\"https://github.com/pablodiazjorge/crud-basic-backend/tree/advanced/\" target=\"_blank\" class=\"font-medium dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\">Book Management API</a> (Spring Boot + PostgreSQL) featuring image uploads to Cloudinary, global error handling, configurable logging, pagination, and a comprehensive suite of unit tests. It consists of four projects—two for the backend and two for the frontend—one simple implementation and one advanced.</p><p>In my free time, I usually do sports—you might find me pushing myself at the gym, hiking in the mountains, reading novels, or sitting in a bar with friends.</p>"
 }
