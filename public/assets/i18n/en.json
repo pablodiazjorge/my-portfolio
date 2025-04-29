@@ -89,7 +89,7 @@
         "PROJECTS_TITLE": "Book Management App (Advanced)",
         "PROJECTS_DESCRIPTION": "Advanced book management application using Angular 19.1.7 on the frontend and Spring Boot + PostgreSQL on the backend. Includes dynamic search and filtering, pagination, confirmation dialogs, UX/UI enhancements over the simple version, and comprehensive unit tests.",
         "PROJECTS_IMAGE": "/assets/images/book-management-advanced.png",
-        "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-advanced-frontend",
+        "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-frontend/tree/advanced",
         "PROJECTS_TECNOLOGIES": [
           "Angular",
           "PrimeNG",
@@ -106,7 +106,7 @@
         "PROJECTS_TITLE": "Book Management API (Advanced)",
         "PROJECTS_DESCRIPTION": "Advanced version of the book management API using Spring Boot and PostgreSQL. Incorporates image uploads to Cloudinary, global error handling, configurable logging, pagination, and comprehensive unit tests.",
         "PROJECTS_IMAGE": "/assets/images/book-management-advanced.png",
-        "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-basic-backend/tree/advanced",
+        "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-backend/tree/advanced",
         "PROJECTS_TECNOLOGIES": [
           "Spring Boot",
           "Spring Data JPA",
@@ -121,7 +121,7 @@
         "PROJECTS_TITLE": "Book Management App (Simple)",
         "PROJECTS_DESCRIPTION": "Book management application using Angular 19.1.7 on the frontend and Spring Boot + PostgreSQL on the backend. Provides full Create, Read, Update, Delete functionality with reactive forms, global notifications, and responsive design.",
         "PROJECTS_IMAGE": "/assets/images/book-management-simple.png",
-        "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-basic-frontend",
+        "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-frontend/tree/simple",
         "PROJECTS_TECNOLOGIES": [
           "Angular",
           "PrimeNG",
@@ -137,7 +137,7 @@
         "PROJECTS_TITLE": "Book Management API (Simple)",
         "PROJECTS_DESCRIPTION": "REST API for book management using Spring Boot and PostgreSQL. Follows a classic controllers-services-repositories architecture, offers CRUD endpoints, and includes CORS support for the Angular frontend.",
         "PROJECTS_IMAGE": "/assets/images/book-management-simple.png",
-        "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-basic-backend/tree/simple",
+        "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-backend/tree/simple",
         "PROJECTS_TECNOLOGIES": [
           "Spring Boot",
           "Spring Data JPA",

@@ -89,7 +89,7 @@
       "PROJECTS_TITLE": "Aplicación CRUD de Libros (versión avanzada)",
       "PROJECTS_DESCRIPTION": "Aplicación avanzada de gestión de libros con Angular 19.1.7 en el frontend y Spring Boot + PostgreSQL en el backend. Incluye búsqueda y filtrado dinámico, paginación, diálogos de confirmación y mejoras de UX/UI sobre la versión simple. También incluye pruebas unitarias completas",
       "PROJECTS_IMAGE": "/assets/images/book-management-advanced.png",
-      "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-advanced-frontend",
+      "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-frontend/tree/advanced",
       "PROJECTS_TECNOLOGIES": [
         "Angular",
         "PrimeNG",
@@ -106,7 +106,7 @@
       "PROJECTS_TITLE": "API de Gestión de Libros (versión avanzada)",
       "PROJECTS_DESCRIPTION": "Versión avanzada de la API de gestión de libros con Spring Boot y PostgreSQL. Incorpora subida de imágenes a Cloudinary, manejo global de errores, registro configurable, paginación y pruebas unitarias completas.",
       "PROJECTS_IMAGE": "/assets/images/book-management-advanced.png",
-      "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-basic-backend/tree/advanced",
+      "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-backend/tree/advanced",
       "PROJECTS_TECNOLOGIES": [
         "Spring Boot",
         "Spring Data JPA",
@@ -121,7 +121,7 @@
       "PROJECTS_TITLE": "Aplicación CRUD de Libros (versión simple)",
       "PROJECTS_DESCRIPTION": "Aplicación de gestión de libros con Angular 19.1.7 en el frontend y Spring Boot + PostgreSQL en el backend. Ofrece funcionalidad completa de Crear, Leer, Actualizar y Eliminar, con formularios reactivos, notificaciones globales y diseño responsivo.",
       "PROJECTS_IMAGE": "/assets/images/book-management-simple.png",
-      "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-basic-frontend",
+      "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-frontend/tree/simple",
       "PROJECTS_TECNOLOGIES": [
         "Angular",
         "PrimeNG",
@@ -137,7 +137,7 @@
       "PROJECTS_TITLE": "API de Gestión de Libros (versión simple)",
       "PROJECTS_DESCRIPTION": "API REST para gestión de libros con Spring Boot y PostgreSQL. Sigue una arquitectura clásica de controladores, servicios y repositorios, ofrece endpoints CRUD y soporte CORS para el frontend de Angular.",
       "PROJECTS_IMAGE": "/assets/images/book-management-simple.png",
-      "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-basic-backend/tree/simple",
+      "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-backend/tree/simple",
       "PROJECTS_TECNOLOGIES": [
         "Spring Boot",
         "Spring Data JPA",
