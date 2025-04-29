@@ -14,9 +14,10 @@ import { AboutComponent } from '../about/about.component';
 import { SidebarComponent } from '../sidebar/sidebar.component';
 import { socialComponent } from '../social/social.component';
 import { ProjectsComponent } from '../projects/projects.component';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { LangChangeEvent, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { SafeHtmlPipe } from '../pipes/safe-html.pipe';
 import { Subject, fromEvent, takeUntil, debounceTime } from 'rxjs';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -56,6 +57,9 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   constructor(
     private translate: TranslateService,
+    //Seo description
+    private meta: Meta,
+    private titleService: Title,
     @Inject(PLATFORM_ID) private platformId: Object
   ) {
     // Initialize language from localStorage or browser settings
@@ -87,6 +91,13 @@ export class HomeComponent implements OnInit, OnDestroy {
    * Lifecycle hook called after data-bound properties are initialized.
    */
   ngOnInit(): void {
+    //Updates meta desc everytime the language changes
+    this.updateMetaDescription();
+    this.translate.onLangChange
+      .pipe(takeUntil(this.destroy$))
+      .subscribe((event: LangChangeEvent) => {
+        this.updateMetaDescription();
+      });
     // Check if the code is running in the browser
     if (isPlatformBrowser(this.platformId)) {
       // Create an observable from the window scroll event
@@ -110,6 +121,14 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.destroy$.next();
     // Complete the subject, unsubscribing all its subscribers
     this.destroy$.complete();
+  }
+
+  private updateMetaDescription() {
+    const desc = this.translate.instant('HOME_META_DESCRIPTION');
+    this.meta.updateTag({ name: 'description', content: desc });
+    // Opcional, si quieres título dinámico:
+    const title = this.translate.instant('HOME_HEADER_NAME');
+    this.titleService.setTitle(title);
   }
 
   /** Switches between English and Spanish languages */
