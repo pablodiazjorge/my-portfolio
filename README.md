@@ -2,6 +2,8 @@
 
 **Personal portfolio** built with Angular 19.1.7 and Tailwind CSS 4.1, designed to showcase my projects and skills in a fast, accessible, and multilingual interface.
 
+---
+
 ## 🚀 Features
 
 - **Server-Side Rendering** using Angular Universal for improved SEO and performance  
@@ -11,6 +13,8 @@
 - **Express.js** for SSR server in production  
 - **PostCSS configuration** for Tailwind CSS integration
 
+---
+
 ## 📦 Tech Stack
 
 - Angular 19.1.7  
@@ -18,9 +22,13 @@
 - Tailwind CSS 4.1.4  
 - @ngx-translate/core + http-loader  
 - Express.js  
-- PostCSS  
+- PostCSS
+
+---
 
 ## 📁 Project Structure
+
+```
 my-portfolio/
 ├── public/
 │   ├── assets/              # Images, SVGs, static content
@@ -31,3 +39,4 @@ my-portfolio/
 ├── angular.json             # Angular build and serve config
 ├── package.json             # Scripts and dependencies
 └── .postcssrc.json          # Tailwind plugin configuration
+```
