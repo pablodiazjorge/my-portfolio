@@ -41,3 +41,11 @@
     transparent 80%
   );
 }
+
+/* Transitions link CV */
+.group:hover .cv-link-arrow {
+  opacity: 0.5;
+}
+.group .cv-link-arrow:hover {
+  opacity: 1 !important;
+}

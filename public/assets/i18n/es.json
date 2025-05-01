@@ -1,9 +1,10 @@
 {
-  "HOME_META_DESCRIPTION" : "Portafolio de Pablo Díaz-Jorge, Ingeniero Full Stack experto en Angular y Web Components, con SSR, i18n, modo oscuro y diseño responsivo.",
+  "HOME_META_DESCRIPTION" : "Portafolio de Pablo Díaz-Jorge, Ingeniero Full Stack, Frontend, Backend, Angular y Web Components, con SSR, i18n, Java y Spring Boot, diseño responsivo.",
   "HOME_HEADER_NAME": "Pablo Díaz-Jorge",
   "HOME_JOB_TITLE": "Ingeniero Full Stack",
   "HOME_DESCRIPTION": "Desarrollador Full Stack con un enfoque dinámico y adaptable, experiencia en Angular y Web Components, y una mentalidad orientada a la mejora continua.",
-  "HOME_FOOTER_TEXT": "Construido con <a href=\"https://angular.io/\" class=\"dark:text-d-text-default light:text-l-text-default\">Angular</a> y <a href=\"https://tailwindcss.com/\" class=\"dark:text-d-text-default light:text-l-text-default\">Tailwind CSS.</a>",
+  "HOME_FOOTER_TEXT": "Construido con <a href=\"https://angular.io/\" class=\"dark:text-d-text-default light:text-l-text-default light:font-semibold\">Angular</a> y <a href=\"https://tailwindcss.com/\" class=\"dark:text-d-text-default light:text-l-text-default light:font-semibold\">Tailwind CSS.</a>",
+  "HOME_CV": "Currículum vitae",
 
   "SIDEBAR_ABOUT": "Acerca de",
   "SIDEBAR_EXPERIENCE": "Experiencia",
@@ -12,7 +13,7 @@
   "EXPERIENCE_TITLE": "Experiencia Laboral",
   "EXPERIENCE_LIST": [
     {
-      "EXPERIENCE_PERIOD": "May 2022 — July 2022",
+      "EXPERIENCE_PERIOD": "May 2022 — Julio 2022",
       "EXPERIENCE_TITLE": "Ingeniero Full Stack",
       "EXPERIENCE_TYPECONTRACT": "Contrato de prácticas — Jornada completa",
       "EXPERIENCE_COMPANY": "NTT DATA Europe & Latam",
@@ -35,7 +36,7 @@
       ]
     },
     {
-      "EXPERIENCE_PERIOD": "March 2018 — June 2018",
+      "EXPERIENCE_PERIOD": "Marzo 2018 — Junio 2018",
       "EXPERIENCE_TITLE": "Analista de Datos",
       "EXPERIENCE_TYPECONTRACT": "Contrato de prácticas — Jornada completa",
       "EXPERIENCE_COMPANY": "Sothis",
@@ -74,7 +75,7 @@
       "PROJECTS_TITLE": "Palaze",
       "PROJECTS_DESCRIPTION": "Biblioteca de componentes web nativos desarrollada utilizando Stencil.js, diseñada para facilitar la creación de aplicaciones web modernas con soporte para personalización y adaptabilidad. Incluye una variedad de componentes como botones, headers, footers, y más, todos construidos siguiendo estándares web actuales.",
       "PROJECTS_IMAGE": "/assets/images/palace-project.svg",
-      "PROJECTS_LINK": "https://palaze-pablodiazjorge.netlify.app/",
+      "PROJECTS_LINK": "https://github.com/pablodiazjorge/palaze",
       "PROJECTS_TECNOLOGIES": [
         "Stencil.js",
         "Web Components",
@@ -87,8 +88,8 @@
       ]
     },
     {
-      "PROJECTS_TITLE": "Aplicación CRUD de Libros (versión avanzada)",
-      "PROJECTS_DESCRIPTION": "Aplicación avanzada de gestión de libros con Angular 19.1.7 en el frontend y Spring Boot + PostgreSQL en el backend. Incluye búsqueda y filtrado dinámico, paginación, diálogos de confirmación y mejoras de UX/UI sobre la versión simple. También incluye pruebas unitarias completas",
+      "PROJECTS_TITLE": "Aplicación de Gestión de Libros (avanzada)",
+      "PROJECTS_DESCRIPTION": "Aplicación avanzada de gestión de libros con Angular 19.1.7 en el frontend y Spring Boot + PostgreSQL en el backend. Incluye búsqueda y filtrado dinámico, paginación, diálogos de confirmación y mejoras de UX/UI sobre la versión simple. También incluye pruebas unitarias completas.",
       "PROJECTS_IMAGE": "/assets/images/book-management-advanced.png",
       "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-frontend/tree/advanced",
       "PROJECTS_TECNOLOGIES": [
@@ -104,7 +105,7 @@
       ]
     },
     {
-      "PROJECTS_TITLE": "API de Gestión de Libros (versión avanzada)",
+      "PROJECTS_TITLE": "API de Gestión de Libros (avanzada)",
       "PROJECTS_DESCRIPTION": "Versión avanzada de la API de gestión de libros con Spring Boot y PostgreSQL. Incorpora subida de imágenes a Cloudinary, manejo global de errores, registro configurable, paginación y pruebas unitarias completas.",
       "PROJECTS_IMAGE": "/assets/images/book-management-advanced.png",
       "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-backend/tree/advanced",
@@ -119,7 +120,7 @@
       ]
     },
     {
-      "PROJECTS_TITLE": "Aplicación CRUD de Libros (versión simple)",
+      "PROJECTS_TITLE": "Aplicación de Gestión de Libros (simple)",
       "PROJECTS_DESCRIPTION": "Aplicación de gestión de libros con Angular 19.1.7 en el frontend y Spring Boot + PostgreSQL en el backend. Ofrece funcionalidad completa de Crear, Leer, Actualizar y Eliminar, con formularios reactivos, notificaciones globales y diseño responsivo.",
       "PROJECTS_IMAGE": "/assets/images/book-management-simple.png",
       "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-frontend/tree/simple",
@@ -135,7 +136,7 @@
       ]
     },
     {
-      "PROJECTS_TITLE": "API de Gestión de Libros (versión simple)",
+      "PROJECTS_TITLE": "API de Gestión de Libros (simple)",
       "PROJECTS_DESCRIPTION": "API REST para gestión de libros con Spring Boot y PostgreSQL. Sigue una arquitectura clásica de controladores, servicios y repositorios, ofrece endpoints CRUD y soporte CORS para el frontend de Angular.",
       "PROJECTS_IMAGE": "/assets/images/book-management-simple.png",
       "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-backend/tree/simple",
@@ -150,5 +151,5 @@
   ],
 
   "ABOUT_TITLE": "Acerca De",
-  "ABOUT_CONTENT": "<p>Lo que empezó en el instituto como un simple experimento se ha convertido en mi vocación. Hoy me centro en crear interfaces limpias y escalables, combinando un diseño cuidado con buenas prácticas. Soy Full Stack, pero tengo debilidad por el frontend. Disfruto creando aplicaciones que respondan a necesidades reales siendo tanto atractivas como fluidas.</p><p>Actualmente, estoy listo para embarcarme en un nuevo proyecto donde pueda aplicar mis conocimientos y seguir aprendiendo mientras desarrollo.<br>Mi último trabajo fue desarrollador Full Stack con contrato de prácticas a jornada completa en <a href=\"https://es.nttdata.com/\" target=\"_blank\" class=\"font-medium dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\">NTTData</a>, donde durante cinco meses he trabajado en el diseño e implementación de una plataforma de gestión de empleados usando Angular dentro de un equipo con metodología Scrum. Allí he desarrollado tanto interfaces tematizables con Bootstrap y bibliotecas de componentes externos, como componentes personalizados en Angular adaptados a flujos de trabajo empresariales complejos. A su vez, implementé servicios HTTP para operaciones CRUD, garantizando una comunicación fluida entre el frontend y la API de backend.</p><p>Para mi proyecto de fin de grado, diseñé y publiqué una librería de Web Components nativos con Stencil a la que llamé <a href=\"https://github.com/pablodiazjorge/palaze/\" target=\"_blank\" class=\"font-medium dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\">Palaze</a>, acompañada de un sitio de documentación en vivo que facilita su adopción e integración.</p><p>Todas las semanas, dedico tiempo a proyectos personales, ya sea ampliando aplicaciones existentes o ideando nuevas para mi portfolio. Uno de los más destacados es una API avanzada de <a href=\"https://github.com/pablodiazjorge/crud-basic-backend/tree/advanced/\" target=\"_blank\" class=\"font-medium dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\">Gestión de libros</a> (Spring Boot + PostgreSQL) con subida de imágenes a Cloudinary, manejo global de errores, registro configurable, paginación y un completo conjunto de pruebas unitarias. Se compone de cuatro proyectos, dos para backend y dos para frontend, siendo uno la implementación simple y otro la avanzada.</p><p>En mi tiempo libre suelo hacer deporte, puede que me veas sufrir en el gimnasio, por la montaña haciendo senderismo, leyendo novelas o sentado en un bar con amigos.</p>"
+  "ABOUT_CONTENT": "<p>Lo que empezó en el instituto como un simple experimento se ha convertido en mi vocación. Hoy me centro en crear interfaces limpias y escalables, combinando un diseño cuidado con buenas prácticas. Soy Full Stack, pero tengo debilidad por el frontend. Disfruto creando aplicaciones que respondan a necesidades reales siendo tanto atractivas como fluidas.</p><p>Actualmente, estoy listo para embarcarme en un nuevo proyecto donde pueda aplicar mis conocimientos y seguir aprendiendo mientras desarrollo.<br>Mi último trabajo fue desarrollador Full Stack con contrato de prácticas a jornada completa en <a href=\"https://es.nttdata.com/\" target=\"_blank\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\">NTTData</a>, donde durante cinco meses he trabajado en el diseño e implementación de una plataforma de gestión de empleados usando Angular dentro de un equipo con metodología Scrum. Allí he desarrollado tanto interfaces tematizables con Bootstrap y bibliotecas de componentes externos, como componentes personalizados en Angular adaptados a flujos de trabajo empresariales complejos. A su vez, implementé servicios HTTP para operaciones CRUD, garantizando una comunicación fluida entre el frontend y la API de backend.</p><p>Para mi proyecto de fin de grado, diseñé y publiqué una librería de Web Components nativos con Stencil a la que llamé <a href=\"https://github.com/pablodiazjorge/palaze/\" target=\"_blank\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\">Palaze</a>, acompañada de un sitio de documentación en vivo que facilita su adopción e integración.</p><p>Todas las semanas, dedico tiempo a proyectos personales, ya sea ampliando aplicaciones existentes o ideando nuevas para mi portfolio. Uno de los más destacados es una API avanzada de <a href=\"https://github.com/pablodiazjorge/crud-basic-backend/tree/advanced/\" target=\"_blank\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\">Gestión de libros</a> (Spring Boot + PostgreSQL) con subida de imágenes a Cloudinary, manejo global de errores, registro configurable, paginación y un completo conjunto de pruebas unitarias. Se compone de cuatro proyectos, dos para backend y dos para frontend, siendo uno la implementación simple y otro la avanzada.</p><p>En mi tiempo libre suelo hacer deporte, puede que me veas sufrir en el gimnasio, por la montaña haciendo senderismo, leyendo novelas o sentado en un bar con amigos.</p>"
 }
