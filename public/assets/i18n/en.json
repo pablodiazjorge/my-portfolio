@@ -60,7 +60,7 @@
       {
         "PROJECTS_TITLE": "My Portfolio",
         "PROJECTS_DESCRIPTION": "Personal portfolio built with Angular 19.1.7 and Tailwind CSS 4.1, featuring SSR, i18n (ES/EN), automatic dark mode, and lazy-loading for a fast, accessible experience.",
-        "PROJECTS_IMAGE": "/assets/images/my-portfolio-project.png",
+        "PROJECTS_IMAGE": "/assets/images/my-portfolio-project.svg",
         "PROJECTS_LINK": "https://github.com/pablodiazjorge/my-portfolio",
         "PROJECTS_TECNOLOGIES": [
           "Angular 19.1.7",
