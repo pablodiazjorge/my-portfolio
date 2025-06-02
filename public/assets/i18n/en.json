@@ -75,7 +75,7 @@
         "PROJECTS_TITLE": "Palaze",
         "PROJECTS_DESCRIPTION": "Native web component library developed using Stencil.js, designed to facilitate the creation of modern web applications with support for customization and adaptability. It includes a variety of components such as buttons, headers, footers, and more, all built following current web standards.",
         "PROJECTS_IMAGE": "/assets/images/palace-project.svg",
-        "PROJECTS_LINK": "https://github.com/pablodiazjorge/palaze",
+        "PROJECTS_LINK": "https://palaze-pablodiazjorge.netlify.app/",
         "PROJECTS_TECNOLOGIES": [
           "Stencil.js",
           "Web Components",
