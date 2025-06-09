@@ -62,6 +62,8 @@
         "PROJECTS_DESCRIPTION": "Personal portfolio built with Angular 19.1.7 and Tailwind CSS 4.1, featuring SSR, i18n (ES/EN), automatic dark mode, and lazy-loading for a fast, accessible experience.",
         "PROJECTS_IMAGE": "/assets/images/my-portfolio-project.svg",
         "PROJECTS_LINK": "https://github.com/pablodiazjorge/my-portfolio",
+        "PROJECTS_DEMO": "https://my-portfolio-pablodiazjorges-projects.vercel.app/",
+        "PROJECTS_DEMO_ACTIVE": "true",
         "PROJECTS_TECNOLOGIES": [
           "Angular 19.1.7",
           "Angular Universal (SSR)",
@@ -76,6 +78,8 @@
         "PROJECTS_DESCRIPTION": "Native web component library developed using Stencil.js, designed to facilitate the creation of modern web applications with support for customization and adaptability. It includes a variety of components such as buttons, headers, footers, and more, all built following current web standards.",
         "PROJECTS_IMAGE": "/assets/images/palace-project.svg",
         "PROJECTS_LINK": "https://palaze-pablodiazjorge.netlify.app/",
+        "PROJECTS_DEMO": "https://palaze-pablodiazjorge.netlify.app/",
+        "PROJECTS_DEMO_ACTIVE": "true",
         "PROJECTS_TECNOLOGIES": [
           "Stencil.js",
           "Web Components",
@@ -91,7 +95,9 @@
         "PROJECTS_TITLE": "Book Management App (Advanced)",
         "PROJECTS_DESCRIPTION": "Advanced book management application using Angular 19.1.7 on the frontend and Spring Boot + PostgreSQL on the backend. Includes dynamic search and filtering, pagination, confirmation dialogs, UX/UI enhancements over the simple version, and comprehensive unit tests.",
         "PROJECTS_IMAGE": "/assets/images/book-management-advanced.png",
-        "PROJECTS_LINK": "https://book-management-fz1axpy34-pablodiazjorges-projects.vercel.app/",
+        "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-frontend/tree/advanced",
+        "PROJECTS_DEMO": "https://book-management-fz1axpy34-pablodiazjorges-projects.vercel.app/",
+        "PROJECTS_DEMO_ACTIVE": "true",
         "PROJECTS_TECNOLOGIES": [
           "Angular",
           "PrimeNG",
@@ -109,6 +115,8 @@
         "PROJECTS_DESCRIPTION": "Advanced version of the book management API using Spring Boot and PostgreSQL. Incorporates image uploads to Cloudinary, global error handling, configurable logging, pagination, and comprehensive unit tests.",
         "PROJECTS_IMAGE": "/assets/images/book-management-advanced.png",
         "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-backend/tree/advanced",
+        "PROJECTS_DEMO": "https://book-management-fz1axpy34-pablodiazjorges-projects.vercel.app/",
+        "PROJECTS_DEMO_ACTIVE": "true",
         "PROJECTS_TECNOLOGIES": [
           "Spring Boot",
           "Spring Data JPA",
@@ -123,7 +131,9 @@
         "PROJECTS_TITLE": "Book Management App (Simple)",
         "PROJECTS_DESCRIPTION": "Book management application using Angular 19.1.7 on the frontend and Spring Boot + PostgreSQL on the backend. Provides full Create, Read, Update, Delete functionality with reactive forms, global notifications, and responsive design.",
         "PROJECTS_IMAGE": "/assets/images/book-management-simple.png",
-        "PROJECTS_LINK": "https://book-management-fz1axpy34-pablodiazjorges-projects.vercel.app/",
+        "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-frontend/tree/simple",
+        "PROJECTS_DEMO": "https://book-management-fz1axpy34-pablodiazjorges-projects.vercel.app/",
+        "PROJECTS_DEMO_ACTIVE": "",
         "PROJECTS_TECNOLOGIES": [
           "Angular",
           "PrimeNG",
@@ -140,6 +150,8 @@
         "PROJECTS_DESCRIPTION": "REST API for book management using Spring Boot and PostgreSQL. Follows a classic controllers-services-repositories architecture, offers CRUD endpoints, and includes CORS support for the Angular frontend.",
         "PROJECTS_IMAGE": "/assets/images/book-management-simple.png",
         "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-backend/tree/simple",
+        "PROJECTS_DEMO": "https://book-management-fz1axpy34-pablodiazjorges-projects.vercel.app/",
+        "PROJECTS_DEMO_ACTIVE": "",
         "PROJECTS_TECNOLOGIES": [
           "Spring Boot",
           "Spring Data JPA",
