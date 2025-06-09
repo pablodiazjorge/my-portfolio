@@ -22,3 +22,14 @@
 .projects-list .projects-item:hover {
   opacity: 1 !important;
 }
+
+.proj-butt {
+  border-radius: 10px;
+  transition: border-color 0.2s ease-in-out;
+  border: 1px solid transparent;
+}
+
+.proj-butt:hover {
+  border-color: var(--color-d-text-hover-accent);
+  color: var(--color-d-text-hover-accent);
+}
