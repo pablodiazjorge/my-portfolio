@@ -91,7 +91,7 @@
         "PROJECTS_TITLE": "Book Management App (Advanced)",
         "PROJECTS_DESCRIPTION": "Advanced book management application using Angular 19.1.7 on the frontend and Spring Boot + PostgreSQL on the backend. Includes dynamic search and filtering, pagination, confirmation dialogs, UX/UI enhancements over the simple version, and comprehensive unit tests.",
         "PROJECTS_IMAGE": "/assets/images/book-management-advanced.png",
-        "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-frontend/tree/advanced",
+        "PROJECTS_LINK": "https://book-management-fz1axpy34-pablodiazjorges-projects.vercel.app/",
         "PROJECTS_TECNOLOGIES": [
           "Angular",
           "PrimeNG",
@@ -123,7 +123,7 @@
         "PROJECTS_TITLE": "Book Management App (Simple)",
         "PROJECTS_DESCRIPTION": "Book management application using Angular 19.1.7 on the frontend and Spring Boot + PostgreSQL on the backend. Provides full Create, Read, Update, Delete functionality with reactive forms, global notifications, and responsive design.",
         "PROJECTS_IMAGE": "/assets/images/book-management-simple.png",
-        "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-frontend/tree/simple",
+        "PROJECTS_LINK": "https://book-management-fz1axpy34-pablodiazjorges-projects.vercel.app/",
         "PROJECTS_TECNOLOGIES": [
           "Angular",
           "PrimeNG",
