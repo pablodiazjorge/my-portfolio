@@ -132,7 +132,7 @@
         "PROJECTS_DESCRIPTION": "Book management application using Angular 19.1.7 on the frontend and Spring Boot + PostgreSQL on the backend. Provides full Create, Read, Update, Delete functionality with reactive forms, global notifications, and responsive design.",
         "PROJECTS_IMAGE": "/assets/images/book-management-simple.png",
         "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-frontend/tree/simple",
-        "PROJECTS_DEMO": "https://book-management-fz1axpy34-pablodiazjorges-projects.vercel.app/",
+        "PROJECTS_DEMO": "",
         "PROJECTS_DEMO_ACTIVE": "",
         "PROJECTS_TECNOLOGIES": [
           "Angular",
@@ -150,7 +150,7 @@
         "PROJECTS_DESCRIPTION": "REST API for book management using Spring Boot and PostgreSQL. Follows a classic controllers-services-repositories architecture, offers CRUD endpoints, and includes CORS support for the Angular frontend.",
         "PROJECTS_IMAGE": "/assets/images/book-management-simple.png",
         "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-backend/tree/simple",
-        "PROJECTS_DEMO": "https://book-management-fz1axpy34-pablodiazjorges-projects.vercel.app/",
+        "PROJECTS_DEMO": "",
         "PROJECTS_DEMO_ACTIVE": "",
         "PROJECTS_TECNOLOGIES": [
           "Spring Boot",

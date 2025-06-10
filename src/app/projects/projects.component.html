@@ -93,7 +93,7 @@
         >
           <a
             target="_blank"
-            [href]="project.PROJECTS_DEMO"
+            [href]="project.PROJECTS_DEMO_ACTIVE === 'true' ? project.PROJECTS_DEMO : project.PROJECTS_LINK"
             class="inline-flex items-baseline font-medium leading-tight dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-badge-tech-text dark:focus-visible:text-d-badge-tech-text light:hover:text-l-badge-tech-text light:focus-visible:text-l-badge-tech-text group/link pointer-events-auto"
           >
             <!-- Hover hit area -->
