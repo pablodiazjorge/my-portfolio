@@ -46,3 +46,23 @@
   --color-l-badge-text:               oklch(39.1% 0.09 240.876);
   --color-l-badge-other-text:         oklch(37.8% 0.077 168.94);
 }
+
+@media (min-width: 1024px) and (max-width: 1127px) {
+  .live-demo {
+    position: relative;
+    font-size: 0;
+    color: transparent;
+    pointer-events: none;
+  }
+
+  .live-demo::before {
+    content: "Demo";
+    font-size: 14px;
+    color: var(--color-l-text-heading);
+    white-space: nowrap;
+  }
+
+  [data-theme="dark"] .live-demo::before {
+    color: var(--color-d-text-heading);
+  }
+}
