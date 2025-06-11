@@ -13,6 +13,25 @@
   "EXPERIENCE_TITLE": "Experiencia Laboral",
   "EXPERIENCE_LIST": [
     {
+      "EXPERIENCE_PERIOD": "2024 — Actualidad",
+      "EXPERIENCE_TITLE": "Ingeniero Full Stack",
+      "EXPERIENCE_TYPECONTRACT": "Autoaprendizaje continuo y proyectos personales",
+      "EXPERIENCE_COMPANY": "Proyectos Personales",
+      "EXPERIENCE_COMPANYLINK": "",
+      "EXPERIENCE_DESCRIPTION": "Durante este periodo he mantenido una rutina constante de formación y desarrollo independiente. Me he centrado en profundizar en tecnologías como Angular, Spring Boot y PostgreSQL, entre otras, a través de proyectos prácticos con despliegue real, documentación detallada y pruebas automatizadas. Además, he perfeccionado mis habilidades en control de versiones, rendimiento web y buenas prácticas de arquitectura modular. Todos los proyectos están disponibles en mi portfolio y en GitHub.",
+      "EXPERIENCE_TECNOLOGIES": [
+        "Angular",
+        "Spring Boot",
+        "PostgreSQL",
+        "Otras..."
+      ],
+      "EXPERIENCE_OTHERS": [
+        "Scrum",
+        "UI/UX",
+        "Otras..."
+      ]
+    },
+    {
       "EXPERIENCE_PERIOD": "May 2022 — Julio 2022",
       "EXPERIENCE_TITLE": "Ingeniero Full Stack",
       "EXPERIENCE_TYPECONTRACT": "Contrato de prácticas — Jornada completa",

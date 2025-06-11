@@ -13,6 +13,25 @@
     "EXPERIENCE_TITLE": "Job Experience",
     "EXPERIENCE_LIST": [
     {
+      "EXPERIENCE_PERIOD": "2024 — Present",
+      "EXPERIENCE_TITLE": "Full Stack Engineer",
+      "EXPERIENCE_TYPECONTRACT": "Continuous self-learning and personal projects",
+      "EXPERIENCE_COMPANY": "Personal Projects",
+      "EXPERIENCE_COMPANYLINK": "",
+      "EXPERIENCE_DESCRIPTION": "During this period, I have maintained a consistent routine of selfdirected learning and independent development. I have focused on deepening my knowledge of technologies such as Angular, Spring Boot, and PostgreSQL, among others, through hands-on projects with real deployments, detailed documentation, and automated testing. Additionally, I have enhanced my skills in version control, web performance, and best practices for modular architecture. All projects are available in my portfolio and on GitHub.",
+      "EXPERIENCE_TECNOLOGIES": [
+        "Angular",
+        "Spring Boot",
+        "PostgreSQL",
+        "Others..."
+      ],
+      "EXPERIENCE_OTHERS": [
+        "Scrum",
+        "UI/UX",
+        "Others..."
+      ]
+    },
+    {
       "EXPERIENCE_PERIOD": "May 2022 — July 2022",
       "EXPERIENCE_TITLE": "Full Stack Engineer",
       "EXPERIENCE_TYPECONTRACT": "Practice contract — Full time",
