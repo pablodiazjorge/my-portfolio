@@ -2,7 +2,7 @@
   "HOME_META_DESCRIPTION" : "Portafolio de Pablo Díaz-Jorge, Ingeniero Full Stack, Frontend, Backend, Angular y Web Components, con SSR, i18n, Java y Spring Boot, diseño responsivo.",
   "HOME_HEADER_NAME": "Pablo Díaz-Jorge",
   "HOME_JOB_TITLE": "Ingeniero Full Stack",
-  "HOME_DESCRIPTION": "Desarrollador Full Stack con un enfoque dinámico y adaptable, experiencia en Angular y Web Components, y una mentalidad orientada a la mejora continua.",
+  "HOME_DESCRIPTION": "Desarrollador Full Stack con un enfoque dinámico y adaptable, experiencia en Angular, Spring Boot y Web Components, y una mentalidad orientada a la mejora continua.",
   "HOME_FOOTER_TEXT": "Construido con <a href=\"https://angular.io/\" class=\"dark:text-d-text-default light:text-l-text-default light:font-semibold\">Angular</a> y <a href=\"https://tailwindcss.com/\" class=\"dark:text-d-text-default light:text-l-text-default light:font-semibold\">Tailwind CSS.</a>",
   "HOME_CV": "Currículum vitae",
 
