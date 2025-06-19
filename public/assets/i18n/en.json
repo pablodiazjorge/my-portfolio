@@ -77,6 +77,34 @@
     "PROJECTS_TITLE": "Projects",
     "PROJECTS_LIST": [
       {
+        "PROJECTS_TITLE": "Full Deploy Demo - Book Management (Simple)",
+        "PROJECTS_DESCRIPTION": "This project contains the online-deployable version of the Book Management Application based on the `simple-book-management` branch, it adds environment variable support and Docker configuration for secure deployment to Render (API), Vercel(APP) and Neon(PostgreSQL). <br> ⚠️<span class=\"font-semibold\">Note:</span> Hosted on free-tier plans, the backend may hibernate after inactivity. The first request can take a few minutes to respond while the server starts. Please wait or refresh the page if data doesn't load initially.",
+        "PROJECTS_IMAGE": "/assets/images/book-management-simple.png",
+        "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-backend/tree/docker-simple-demo",
+        "PROJECTS_DEMO": "https://crud-frontend-pablodiazjorges-projects.vercel.app/",
+        "PROJECTS_DEMO_ACTIVE": "true",
+        "PROJECTS_TECNOLOGIES": [
+          "Docker",
+          "Dotenv",
+          "Vercel",
+          "Render",
+          "Neon",
+          "Angular",
+          "PrimeNG",
+          "PrimeFlex",
+          "Reactive Forms",
+          "HttpClient",
+          "TypeScript",
+          "HTML",
+          "SCSS",
+          "Spring Boot",
+          "Spring Data JPA",
+          "Hibernate",
+          "PostgreSQL",
+          "Maven"
+        ]
+      },
+      {
         "PROJECTS_TITLE": "My Portfolio",
         "PROJECTS_DESCRIPTION": "Personal portfolio built with Angular 19.1.7 and Tailwind CSS 4.1, featuring SSR, i18n (ES/EN), automatic dark mode, and lazy-loading for a fast, accessible experience.",
         "PROJECTS_IMAGE": "/assets/images/my-portfolio-project.svg",

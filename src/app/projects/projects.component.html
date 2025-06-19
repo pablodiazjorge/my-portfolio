@@ -114,8 +114,8 @@
         </h3>
 
         <!-- Project description -->
-        <p class="mt-2 text-sm leading-normal text-justify">
-          {{ project.PROJECTS_DESCRIPTION | translate }}
+        <p class="mt-2 text-sm leading-normal text-justify" [innerHTML]="project.PROJECTS_DESCRIPTION | translate">
+          
         </p>
 
         <!-- Project technologies -->
