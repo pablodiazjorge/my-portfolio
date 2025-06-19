@@ -76,9 +76,40 @@
 
   "PROJECTS_TITLE": "Proyectos",
   "PROJECTS_LIST": [
-  {
-      "PROJECTS_TITLE": "Despliegue Completo Demo - Gestión de Libros (Simple)",
-      "PROJECTS_DESCRIPTION": "Este proyecto contiene la versión live demo de la Aplicación de Gestión de Libros basada en la rama 'simple-book-management', añade soporte para variables de entorno y configuración Docker para un despliegue seguro en Render (API), Vercel (APP) y Neon (PostgreSQL). <br> ⚠️<span class=\"font-semibold\">Nota:</span> Al estar el hosting en planes gratuitos, el backend puede entrar en hibernación tras un periodo de inactividad. La primera solicitud puede tardar unos minutos en responder mientras el servidor se inicia. Por favor, espere o actualice la página si los datos no cargan inicialmente.",
+    {
+      "PROJECTS_TITLE": "Despliegue Completo Demo - Gestión de Libros (avanzada)",
+      "PROJECTS_DESCRIPTION": "Este proyecto contiene la versión live demo de la Aplicación de Gestión de Libros basada en la rama 'avanzada', añade soporte para variables de entorno y configuración Docker para un despliegue seguro en Render (API), Vercel (APP) y Neon (PostgreSQL). <br> ⚠️<span class=\"font-semibold\">Nota:</span> Al estar el hosting en planes gratuitos, el backend puede entrar en hibernación tras un periodo de inactividad. La primera solicitud puede tardar unos minutos en responder mientras el servidor se inicia. Por favor, espere o actualice la página si los datos no cargan inicialmente.",
+      "PROJECTS_IMAGE": "/assets/images/book-management-advanced.png",
+      "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-backend/tree/docker-advanced-demo",
+      "PROJECTS_DEMO": "https://book-management-advanced-pablodiazjorges-projects.vercel.app/",
+      "PROJECTS_DEMO_ACTIVE": "true",
+      "PROJECTS_TECNOLOGIES": [
+        "Docker",
+        "Dotenv",
+        "Vercel",
+        "Render",
+        "Neon",
+        "Spring Boot",
+        "Spring Data JPA",
+        "Hibernate",
+        "PostgreSQL",
+        "Cloudinary API",
+        "JUnit",
+        "Maven",
+        "Angular",
+        "PrimeNG",
+        "PrimeFlex",
+        "Reactive Forms",
+        "HttpClient",
+        "ngx-pagination",
+        "TypeScript",
+        "HTML",
+        "SCSS"
+      ]
+    },
+    {
+      "PROJECTS_TITLE": "Despliegue Completo Demo - Gestión de Libros (simple)",
+      "PROJECTS_DESCRIPTION": "Este proyecto contiene la versión live demo de la Aplicación de Gestión de Libros basada en la rama 'simple', añade soporte para variables de entorno y configuración Docker para un despliegue seguro en Render (API), Vercel (APP) y Neon (PostgreSQL). <br> ⚠️<span class=\"font-semibold\">Nota:</span> Al estar el hosting en planes gratuitos, el backend puede entrar en hibernación tras un periodo de inactividad. La primera solicitud puede tardar unos minutos en responder mientras el servidor se inicia. Por favor, espere o actualice la página si los datos no cargan inicialmente.",
       "PROJECTS_IMAGE": "/assets/images/book-management-simple.png",
       "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-backend/tree/docker-simple-demo",
       "PROJECTS_DEMO": "https://crud-frontend-pablodiazjorges-projects.vercel.app/",
