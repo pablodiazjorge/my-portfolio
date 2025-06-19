@@ -77,7 +77,7 @@
   "PROJECTS_TITLE": "Proyectos",
   "PROJECTS_LIST": [
   {
-      "PROJECTS_TITLE": "Desplegue Completo Demo - Gestión de Libros (Simple)",
+      "PROJECTS_TITLE": "Despliegue Completo Demo - Gestión de Libros (Simple)",
       "PROJECTS_DESCRIPTION": "Este proyecto contiene la versión live demo de la Aplicación de Gestión de Libros basada en la rama 'simple-book-management', añade soporte para variables de entorno y configuración Docker para un despliegue seguro en Render (API), Vercel (APP) y Neon (PostgreSQL). <br> ⚠️<span class=\"font-semibold\">Nota:</span> Al estar el hosting en planes gratuitos, el backend puede entrar en hibernación tras un periodo de inactividad. La primera solicitud puede tardar unos minutos en responder mientras el servidor se inicia. Por favor, espere o actualice la página si los datos no cargan inicialmente.",
       "PROJECTS_IMAGE": "/assets/images/book-management-simple.png",
       "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-backend/tree/docker-simple-demo",
@@ -143,8 +143,8 @@
       "PROJECTS_DESCRIPTION": "Aplicación avanzada de gestión de libros con Angular 19.1.7 en el frontend y Spring Boot + PostgreSQL en el backend. Incluye búsqueda y filtrado dinámico, paginación, diálogos de confirmación y mejoras de UX/UI sobre la versión simple. También incluye pruebas unitarias completas.",
       "PROJECTS_IMAGE": "/assets/images/book-management-advanced.png",
       "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-frontend/tree/advanced",
-      "PROJECTS_DEMO": "https://book-management-pablodiazjorges-projects.vercel.app/",
-      "PROJECTS_DEMO_ACTIVE": "true",
+      "PROJECTS_DEMO": "",
+      "PROJECTS_DEMO_ACTIVE": "",
       "PROJECTS_TECNOLOGIES": [
         "Angular",
         "PrimeNG",
@@ -162,8 +162,8 @@
       "PROJECTS_DESCRIPTION": "Versión avanzada de la API de gestión de libros con Spring Boot y PostgreSQL. Incorpora subida de imágenes a Cloudinary, manejo global de errores, registro configurable, paginación y pruebas unitarias completas.",
       "PROJECTS_IMAGE": "/assets/images/book-management-advanced.png",
       "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-backend/tree/advanced",
-      "PROJECTS_DEMO": "https://book-management-pablodiazjorges-projects.vercel.app/",
-      "PROJECTS_DEMO_ACTIVE": "true",
+      "PROJECTS_DEMO": "",
+      "PROJECTS_DEMO_ACTIVE": "",
       "PROJECTS_TECNOLOGIES": [
         "Spring Boot",
         "Spring Data JPA",

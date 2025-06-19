@@ -143,8 +143,8 @@
         "PROJECTS_DESCRIPTION": "Advanced book management application using Angular 19.1.7 on the frontend and Spring Boot + PostgreSQL on the backend. Includes dynamic search and filtering, pagination, confirmation dialogs, UX/UI enhancements over the simple version, and comprehensive unit tests.",
         "PROJECTS_IMAGE": "/assets/images/book-management-advanced.png",
         "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-frontend/tree/advanced",
-        "PROJECTS_DEMO": "https://book-management-pablodiazjorges-projects.vercel.app/",
-        "PROJECTS_DEMO_ACTIVE": "true",
+        "PROJECTS_DEMO": "",
+        "PROJECTS_DEMO_ACTIVE": "",
         "PROJECTS_TECNOLOGIES": [
           "Angular",
           "PrimeNG",
@@ -162,8 +162,8 @@
         "PROJECTS_DESCRIPTION": "Advanced version of the book management API using Spring Boot and PostgreSQL. Incorporates image uploads to Cloudinary, global error handling, configurable logging, pagination, and comprehensive unit tests.",
         "PROJECTS_IMAGE": "/assets/images/book-management-advanced.png",
         "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-backend/tree/advanced",
-        "PROJECTS_DEMO": "https://book-management-pablodiazjorges-projects.vercel.app/",
-        "PROJECTS_DEMO_ACTIVE": "true",
+        "PROJECTS_DEMO": "",
+        "PROJECTS_DEMO_ACTIVE": "",
         "PROJECTS_TECNOLOGIES": [
           "Spring Boot",
           "Spring Data JPA",
