@@ -13,12 +13,14 @@
   transition: opacity 0.1s ease;
 }
 
-/* Reduce opacity for all items on list hover */
-.experience-list:hover .experience-item {
-  opacity: 0.5;
-}
+@media (min-width: 639px) {
+  /* Reduce opacity for all items on list hover */
+  .experience-list:hover .experience-item {
+    opacity: 0.5;
+  }
 
-/* Restore full opacity for hovered item */
-.experience-list .experience-item:hover {
-  opacity: 1 !important;
+  /* Restore full opacity for hovered item */
+  .experience-list .experience-item:hover {
+    opacity: 1 !important;
+  }
 }
