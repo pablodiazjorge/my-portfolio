@@ -13,16 +13,6 @@
   transition: opacity 0.1s ease;
 }
 
-/* Reduce opacity for all items on list hover */
-.projects-list:hover .projects-item {
-  opacity: 0.5;
-}
-
-/* Restore full opacity for hovered item */
-.projects-list .projects-item:hover {
-  opacity: 1 !important;
-}
-
 .proj-butt {
   border-radius: 10px;
   transition: border-color 0.2s ease-in-out;
@@ -32,4 +22,26 @@
 .proj-butt:hover {
   border-color: var(--color-d-text-hover-accent);
   color: var(--color-d-text-hover-accent);
+}
+
+@media (min-width: 639px) {
+  /* Reduce opacity for all items on list hover */
+  .projects-list:hover .projects-item {
+    opacity: 0.5;
+  }
+
+  /* Restore full opacity for hovered item */
+  .projects-list .projects-item:hover {
+    opacity: 1 !important;
+  }
+}
+
+@media (min-width: 285px) and (max-width: 639px) {
+  .proj-butt-wrapper {
+    flex-direction: row;
+  }
+
+  .butt-end {
+    justify-content: end;
+  }
 }
