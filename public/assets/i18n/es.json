@@ -13,6 +13,32 @@
   "EXPERIENCE_TITLE": "Experiencia Laboral",
   "EXPERIENCE_LIST": [
     {
+      "EXPERIENCE_PERIOD": "Sept 2025 — Actualidad",
+      "EXPERIENCE_TITLE": "Frontend Engineer",
+      "EXPERIENCE_TYPECONTRACT": "Contrato indefinido — Jornada Completa",
+      "EXPERIENCE_COMPANY": "Infoport",
+      "EXPERIENCE_COMPANYLINK": "https://www.infoport.es/",
+      "EXPERIENCE_DESCRIPTION": "Desarrollo de aplicaciones web con Angular y tecnologías asociadas (TypeScript, HTML5, SCSS).",
+      "EXPERIENCE_TECNOLOGIES": [
+          "Angular",
+          "JavaScript",
+          "TypeScript",
+          "HTML & SCSS",
+          "CSS",
+          "Webpack",
+          "Bootstrap",
+          "Web accessibility",
+          "Web Components",
+          "RxJS",
+          "Git"
+      ],
+      "EXPERIENCE_OTHERS": [
+          "Scrum",
+          "Jira",
+          "UI/UX"
+      ]
+    },
+    {
       "EXPERIENCE_PERIOD": "2024 — Actualidad",
       "EXPERIENCE_TITLE": "Ingeniero Full Stack",
       "EXPERIENCE_TYPECONTRACT": "Autoaprendizaje continuo y proyectos personales",
