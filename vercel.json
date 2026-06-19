@@ -12,6 +12,16 @@
       "source": "/palaze/:path*",
       "destination": "https://palaze.pablodiazjorge.com/:path*",
       "permanent": true
+    },
+    {
+      "source": "/attention-matrix-explorer/:path*",
+      "destination": "https://attention-matrix-explorer.pablodiazjorge.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/token-cost-analyzer/:path*",
+      "destination": "https://token-cost-analyzer.pablodiazjorge.com/:path*",
+      "permanent": true
     }
   ],
 
