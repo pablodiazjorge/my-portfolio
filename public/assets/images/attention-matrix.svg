@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" fill="none">
+  <rect width="400" height="250" rx="12" fill="#0f172a"/>
+  <!-- Heatmap grid -->
+  <rect x="80" y="30" width="240" height="190" rx="4" fill="#1e293b"/>
+  <!-- Row labels -->
+  <text x="65" y="60" text-anchor="end" fill="#94a3b8" font-family="monospace" font-size="9">Q</text>
+  <text x="65" y="110" text-anchor="end" fill="#94a3b8" font-family="monospace" font-size="9">K</text>
+  <text x="65" y="160" text-anchor="end" fill="#94a3b8" font-family="monospace" font-size="9">V</text>
+  <!-- Heatmap cells row Q -->
+  <rect x="95" y="45" width="22" height="22" rx="2" fill="#440154"/>
+  <rect x="122" y="45" width="22" height="22" rx="2" fill="#3b528b"/>
+  <rect x="149" y="45" width="22" height="22" rx="2" fill="#21918c"/>
+  <rect x="176" y="45" width="22" height="22" rx="2" fill="#5ec962"/>
+  <rect x="203" y="45" width="22" height="22" rx="2" fill="#fde725"/>
+  <rect x="230" y="45" width="22" height="22" rx="2" fill="#440154"/>
+  <rect x="257" y="45" width="22" height="22" rx="2" fill="#3b528b"/>
+  <rect x="284" y="45" width="22" height="22" rx="2" fill="#21918c"/>
+  <!-- Heatmap cells row K -->
+  <rect x="95" y="95" width="22" height="22" rx="2" fill="#fde725"/>
+  <rect x="122" y="95" width="22" height="22" rx="2" fill="#21918c"/>
+  <rect x="149" y="95" width="22" height="22" rx="2" fill="#440154"/>
+  <rect x="176" y="95" width="22" height="22" rx="2" fill="#3b528b"/>
+  <rect x="203" y="95" width="22" height="22" rx="2" fill="#5ec962"/>
+  <rect x="230" y="95" width="22" height="22" rx="2" fill="#fde725"/>
+  <rect x="257" y="95" width="22" height="22" rx="2" fill="#21918c"/>
+  <rect x="284" y="95" width="22" height="22" rx="2" fill="#440154"/>
+  <!-- Heatmap cells row V -->
+  <rect x="95" y="145" width="22" height="22" rx="2" fill="#21918c"/>
+  <rect x="122" y="145" width="22" height="22" rx="2" fill="#5ec962"/>
+  <rect x="149" y="145" width="22" height="22" rx="2" fill="#fde725"/>
+  <rect x="176" y="145" width="22" height="22" rx="2" fill="#440154"/>
+  <rect x="203" y="145" width="22" height="22" rx="2" fill="#3b528b"/>
+  <rect x="230" y="145" width="22" height="22" rx="2" fill="#21918c"/>
+  <rect x="257" y="145" width="22" height="22" rx="2" fill="#5ec962"/>
+  <rect x="284" y="145" width="22" height="22" rx="2" fill="#fde725"/>
+  <!-- Color scale -->
+  <rect x="95" y="230" width="16" height="8" rx="1" fill="#440154"/>
+  <rect x="111" y="230" width="16" height="8" rx="1" fill="#3b528b"/>
+  <rect x="127" y="230" width="16" height="8" rx="1" fill="#21918c"/>
+  <rect x="143" y="230" width="16" height="8" rx="1" fill="#5ec962"/>
+  <rect x="159" y="230" width="16" height="8" rx="1" fill="#fde725"/>
+  <text x="90" y="225" fill="#64748b" font-family="monospace" font-size="7">0.0</text>
+  <text x="170" y="225" fill="#64748b" font-family="monospace" font-size="7">1.0</text>
+  <!-- D3 label -->
+  <text x="200" y="15" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="12">D3.js Heatmap</text>
+</svg>

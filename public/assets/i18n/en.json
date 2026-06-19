@@ -1,273 +1,210 @@
 {
-    "HOME_META_DESCRIPTION" : "Personal portfolio of Pablo Díaz-Jorge, Front End Engineer, Frontend, Backend, Angular & Web Components, Java & Spring Boot, featuring SSR, i18n, responsive design.",
+    "HOME_META_DESCRIPTION": "Portfolio of Pablo Díaz-Jorge — Frontend Engineer specialized in Frontend Systems Architecture & AI Engineering. Angular, TypeScript, WebAssembly, SSE, D3.js & PostgreSQL + pgvector.",
     "HOME_HEADER_NAME": "Pablo Díaz-Jorge",
-    "HOME_JOB_TITLE": "Frontend Engineer",
-    "HOME_DESCRIPTION": "Frontend Developer with a dynamic and adaptable approach, experienced in Angular, Web Components and Spring Boot, and possessing a continuous improvement-oriented mindset.",
+    "HOME_JOB_TITLE": "Frontend Engineer<br>Frontend Architecture · AI Engineering",
+    "HOME_DESCRIPTION": "I design and build scalable frontend systems at the intersection of software architecture and artificial intelligence engineering.",
     "HOME_FOOTER_TEXT": "Built with <a href=\"https://angular.io/\" class=\"light:font-semibold dark:text-d-text-default light:text-l-text-default\">Angular</a> and <a href=\"https://tailwindcss.com/\" class=\"light:font-semibold dark:text-d-text-default light:text-l-text-default\">Tailwind CSS.</a>",
     "HOME_CV": "Curriculum vitae",
-
     "SIDEBAR_ABOUT": "About",
     "SIDEBAR_EXPERIENCE": "Experience",
     "SIDEBAR_PROJECTS": "Projects",
-
-    "EXPERIENCE_TITLE": "Job Experience",
+    "EXPERIENCE_TITLE": "Professional Experience",
     "EXPERIENCE_LIST": [
-    {
-      "EXPERIENCE_PERIOD": "Sept 2025 — Present",
-      "EXPERIENCE_TITLE": "Frontend Engineer",
-      "EXPERIENCE_TYPECONTRACT": "Indefinite contract — Full time",
-      "EXPERIENCE_COMPANY": "Infoport",
-      "EXPERIENCE_COMPANYLINK": "https://www.infoport.es/",
-      "EXPERIENCE_DESCRIPTION": "I contribute to the development of digital solutions that optimize port community operations, building accessible, scalable, and user-centered interfaces using Angular, TypeScript, and complementary technologies such as SCSS, RxJS, and custom component libraries. I am part of an agile team, working closely with analysts and backend developers to deliver high-quality products that bring real value to the sector.",
-      "EXPERIENCE_TECNOLOGIES": [
-          "Angular",
-          "JavaScript",
-          "TypeScript",
-          "HTML & SCSS",
-          "CSS",
-          "Webpack",
-          "Bootstrap",
-          "Web accessibility",
-          "Web Components",
-          "RxJS",
-          "Git"
-      ],
-      "EXPERIENCE_OTHERS": [
-          "Scrum",
-          "Jira",
-          "UI/UX"
-      ]
-    },
-    {
-      "EXPERIENCE_PERIOD": "2024 — Present",
-      "EXPERIENCE_TITLE": "Full Stack Engineer",
-      "EXPERIENCE_TYPECONTRACT": "Continuous self-learning and personal projects",
-      "EXPERIENCE_COMPANY": "Personal Projects",
-      "EXPERIENCE_COMPANYLINK": "",
-      "EXPERIENCE_DESCRIPTION": "During this period, I have maintained a consistent routine of selfdirected learning and independent development. I have focused on deepening my knowledge of technologies such as Angular, Spring Boot, and PostgreSQL, among others, through hands-on projects with real deployments, detailed documentation, and automated testing. Additionally, I have enhanced my skills in version control, web performance, and best practices for modular architecture. All projects are available in my portfolio and on GitHub.",
-      "EXPERIENCE_TECNOLOGIES": [
-        "Angular",
-        "Spring Boot",
-        "PostgreSQL",
-        "Docker",
-        "Others..."
-      ],
-      "EXPERIENCE_OTHERS": [
-        "Scrum",
-        "UI/UX",
-        "Others..."
-      ]
-
-    },
-    {
-      "EXPERIENCE_PERIOD": "May 2022 — July 2022",
-      "EXPERIENCE_TITLE": "Full Stack Engineer",
-      "EXPERIENCE_TYPECONTRACT": "Practice contract — Full time",
-      "EXPERIENCE_COMPANY": "NTT DATA Europe & Latam",
-      "EXPERIENCE_COMPANYLINK": "https://es.nttdata.com/",
-      "EXPERIENCE_DESCRIPTION": "As a Full Stack Developer at NTT DATA Valencia, I delivered end-to-end functionality for an internal employee management system. I configured REST services on the backend and built an interactive frontend calendar that offers both an overall view and a detailed breakdown of vacation days, all powered by cloud-hosted data.",
-      "EXPERIENCE_TECNOLOGIES": [
-          "Angular",
-          "JavaScript",
-          "TypeScript",
-          "HTML & SCSS",
-          "CSS",
-          "Webpack",
-          "Bootstrap",
-          "Java",
-          "Spring Boot"
-      ],
-      "EXPERIENCE_OTHERS": [
-          "Scrum",
-          "UI/UX"
-      ]
-      },
-      {
-      "EXPERIENCE_PERIOD": "March 2018 — June 2018",
-      "EXPERIENCE_TITLE": "Data Analist",
-      "EXPERIENCE_TYPECONTRACT": "Practice contract — Full time",
-      "EXPERIENCE_COMPANY": "Sothis",
-      "EXPERIENCE_COMPANYLINK": "https://www.sothis.tech/",
-      "EXPERIENCE_DESCRIPTION": "Database analysis and design for the compensation plan of the UNE (Business Unit) of Consulting and Information Systems (CSI) and the UNE of Automation and Control (AC).",
-      "EXPERIENCE_TECNOLOGIES": [
-          "MySQL",
-          "Microsoft Access",
-          "Power BI"
-      ],
-      "EXPERIENCE_OTHERS": [
-          "draw.io",
-          "Office 365",
-          "Jira"
-      ]
-      }
+        {
+            "EXPERIENCE_PERIOD": "Sept 2025 — Present",
+            "EXPERIENCE_TITLE": "Frontend Engineer",
+            "EXPERIENCE_TYPECONTRACT": "Indefinite contract \u0014 Full time",
+            "EXPERIENCE_COMPANY": "Infoport",
+            "EXPERIENCE_COMPANYLINK": "https://www.infoport.es/",
+            "EXPERIENCE_DESCRIPTION": "I contribute to the development of digital solutions that optimize port logistics operations, building accessible, scalable, and user-centered interfaces with Angular and TypeScript, supported by technologies such as SCSS, RxJS, and custom component libraries. I integrate AI-assisted development tools into the workflow to accelerate development, refactoring, and code review tasks, maintaining high quality standards. I work in an agile environment, collaborating closely with analysts and backend developers to deliver robust, high-value solutions for the sector.",
+            "EXPERIENCE_TECNOLOGIES": [
+                "Angular",
+                "TypeScript",
+                "RxJS",
+                "Signals",
+                "Web Components",
+                "Web accessibility",
+                "AI-Assisted Development",
+                "Git"
+            ],
+            "EXPERIENCE_OTHERS": [
+                "Scrum",
+                "Jira"
+            ]
+        },
+        {
+            "EXPERIENCE_PERIOD": "Jul 2023 — Sept 2025",
+            "EXPERIENCE_TITLE": "Independent Software Engineer — AI & Frontend R&D",
+            "EXPERIENCE_TYPECONTRACT": "Applied research and independent development",
+            "EXPERIENCE_COMPANY": "Open Source Projects",
+            "EXPERIENCE_COMPANYLINK": "https://github.com/pablodiazjorge",
+            "EXPERIENCE_DESCRIPTION": "Applied research and independent development period focused on the convergence between frontend systems architecture and artificial intelligence engineering. I designed and prototyped four open-source solutions: Attention Matrix Explorer (2023) — interactive visualization of transformer attention matrices with D3.js and Web Workers; Semantic Search Engine (2024) — corporate semantic search engine with PostgreSQL + pgvector and HNSW indexing; Cognitive Agent Orchestrator (2024-2025) — cognitive agent orchestrator with ReAct pattern and real-time streaming via SSE; Token Cost Analyzer (2025) — LLM prompt cost and tokenization analyzer with tiktoken WebAssembly. Stack: Angular (16 → 19), TypeScript, RxJS, Signals, D3.js, Spring Boot, PostgreSQL, pgvector, Node.js, Express, Web Workers, WebAssembly, SSE, Docker, Ollama.",
+            "EXPERIENCE_TECNOLOGIES": [
+                "Angular (16 → 19)",
+                "TypeScript",
+                "RxJS & Signals",
+                "D3.js",
+                "Spring Boot",
+                "PostgreSQL + pgvector",
+                "Node.js & Express",
+                "Web Workers & WASM",
+                "Server-Sent Events",
+                "Docker",
+                "Ollama & Qwen"
+            ],
+            "EXPERIENCE_OTHERS": [
+                "Open Source",
+                "R&D",
+                "Technical Documentation"
+            ]
+        },
+        {
+            "EXPERIENCE_PERIOD": "Mar 2022 — Jul 2022",
+            "EXPERIENCE_TITLE": "Full Stack Developer",
+            "EXPERIENCE_TYPECONTRACT": "Internship \u0014 Full time",
+            "EXPERIENCE_COMPANY": "NTT DATA Europe & Latam",
+            "EXPERIENCE_COMPANYLINK": "https://es.nttdata.com/",
+            "EXPERIENCE_DESCRIPTION": "As a Full Stack Developer at NTT DATA Valencia, I contributed to the end-to-end development of a corporate personnel management solution. I took part in implementing REST services on the backend and developed an interactive frontend module focused on dynamic visualization of structured data, ensuring code maintainability under the team's quality standards.",
+            "EXPERIENCE_TECNOLOGIES": [
+                "Angular",
+                "TypeScript",
+                "Java",
+                "Spring Boot"
+            ],
+            "EXPERIENCE_OTHERS": [
+                "Scrum"
+            ]
+        },
+        {
+            "EXPERIENCE_PERIOD": "Mar 2018 — Jun 2018",
+            "EXPERIENCE_TITLE": "Data Analyst",
+            "EXPERIENCE_TYPECONTRACT": "Internship \u0014 Full time",
+            "EXPERIENCE_COMPANY": "Sothis",
+            "EXPERIENCE_COMPANYLINK": "https://www.sothis.tech/",
+            "EXPERIENCE_DESCRIPTION": "Database analysis and design for the compensation plan of the UNE of Consulting and Information Systems (CSI) and the UNE of Automation and Control (AC).",
+            "EXPERIENCE_TECNOLOGIES": [
+                "MySQL",
+                "Microsoft Access",
+                "Power BI"
+            ],
+            "EXPERIENCE_OTHERS": [
+                "draw.io",
+                "Office 365"
+            ]
+        }
     ],
-
     "PROJECTS_TITLE": "Projects",
     "PROJECTS_LIST": [
-      {
-        "PROJECTS_TITLE": "Full Deploy Demo - Book Management (Advanced)",
-        "PROJECTS_DESCRIPTION": "This project contains the online-deployable version of the Book Management Application based on the `advanced` branch, it adds environment variable support and Docker configuration for secure deployment to Render (API), Vercel(APP) and Neon(PostgreSQL). <br> ⚠️<span class=\"font-semibold\">Note:</span> Hosted on free-tier plans, the backend may hibernate after inactivity. The first request can take a few minutes to respond while the server starts. Please wait or refresh the page if data doesn't load initially.",
-        "PROJECTS_IMAGE": "/assets/images/book-management-advanced.png",
-        "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-backend/tree/docker-advanced-demo",
-        "PROJECTS_DEMO": "https://book-management-advanced-pablodiazjorges-projects.vercel.app/",
-        "PROJECTS_DEMO_ACTIVE": "true",
-        "PROJECTS_TECNOLOGIES": [
-          "Docker",
-          "Dotenv",
-          "Vercel",
-          "Render",
-          "Neon",
-          "Spring Boot",
-          "Spring Data JPA",
-          "Hibernate",
-          "PostgreSQL",
-          "Cloudinary API",
-          "JUnit",
-          "Maven",
-          "Angular",
-          "PrimeNG",
-          "PrimeFlex",
-          "Reactive Forms",
-          "HttpClient",
-          "ngx-pagination",
-          "TypeScript",
-          "HTML",
-          "SCSS"
-        ]
-      },
-      {
-        "PROJECTS_TITLE": "Full Deploy Demo - Book Management (Simple)",
-        "PROJECTS_DESCRIPTION": "This project contains the online-deployable version of the Book Management Application based on the `simple` branch, it adds environment variable support and Docker configuration for secure deployment to Render (API), Vercel(APP) and Neon(PostgreSQL). <br> ⚠️<span class=\"font-semibold\">Note:</span> Hosted on free-tier plans, the backend may hibernate after inactivity. The first request can take a few minutes to respond while the server starts. Please wait or refresh the page if data doesn't load initially.",
-        "PROJECTS_IMAGE": "/assets/images/book-management-simple.png",
-        "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-backend/tree/docker-simple-demo",
-        "PROJECTS_DEMO": "https://crud-frontend-pablodiazjorges-projects.vercel.app/",
-        "PROJECTS_DEMO_ACTIVE": "true",
-        "PROJECTS_TECNOLOGIES": [
-          "Docker",
-          "Dotenv",
-          "Vercel",
-          "Render",
-          "Neon",
-          "Angular",
-          "PrimeNG",
-          "PrimeFlex",
-          "Reactive Forms",
-          "HttpClient",
-          "TypeScript",
-          "HTML",
-          "SCSS",
-          "Spring Boot",
-          "Spring Data JPA",
-          "Hibernate",
-          "PostgreSQL",
-          "Maven"
-        ]
-      },
-      {
-        "PROJECTS_TITLE": "My Portfolio",
-        "PROJECTS_DESCRIPTION": "Personal portfolio built with Angular 19.1.7 and Tailwind CSS 4.1, featuring SSR, i18n (ES/EN), automatic dark mode, and lazy-loading for a fast, accessible experience.",
-        "PROJECTS_IMAGE": "/assets/images/my-portfolio-project.svg",
-        "PROJECTS_LINK": "https://github.com/pablodiazjorge/my-portfolio",
-        "PROJECTS_DEMO": "https://my-portfolio-pablodiazjorges-projects.vercel.app/",
-        "PROJECTS_DEMO_ACTIVE": "true",
-        "PROJECTS_TECNOLOGIES": [
-          "Angular 19.1.7",
-          "Angular Universal (SSR)",
-          "Tailwind CSS 4.1",
-          "ngx-translate",
-          "Express.js",
-          "PostCSS"
-        ]
-      },
-      {
-        "PROJECTS_TITLE": "Palaze",
-        "PROJECTS_DESCRIPTION": "Native web component library developed using Stencil.js, designed to facilitate the creation of modern web applications with support for customization and adaptability. It includes a variety of components such as buttons, headers, footers, and more, all built following current web standards.",
-        "PROJECTS_IMAGE": "/assets/images/palace-project.svg",
-        "PROJECTS_LINK": "https://github.com/pablodiazjorge/palaze",
-        "PROJECTS_DEMO": "https://palaze-pablodiazjorge.netlify.app/",
-        "PROJECTS_DEMO_ACTIVE": "true",
-        "PROJECTS_TECNOLOGIES": [
-          "Stencil.js",
-          "Web Components",
-          "HTML",
-          "CSS",
-          "JavaScript",
-          "TypeScript",
-          "MarkDown",
-          "Figma"
-        ]
-      },
-      {
-        "PROJECTS_TITLE": "Book Management App (Advanced)",
-        "PROJECTS_DESCRIPTION": "Advanced book management application using Angular 19.1.7 on the frontend and Spring Boot + PostgreSQL on the backend. Includes dynamic search and filtering, pagination, confirmation dialogs, UX/UI enhancements over the simple version, and comprehensive unit tests.",
-        "PROJECTS_IMAGE": "/assets/images/book-management-advanced.png",
-        "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-frontend/tree/advanced",
-        "PROJECTS_DEMO": "",
-        "PROJECTS_DEMO_ACTIVE": "",
-        "PROJECTS_TECNOLOGIES": [
-          "Angular",
-          "PrimeNG",
-          "PrimeFlex",
-          "Reactive Forms",
-          "HttpClient",
-          "ngx-pagination",
-          "TypeScript",
-          "HTML",
-          "SCSS"
-        ]
-      },
-      {
-        "PROJECTS_TITLE": "Book Management API (Advanced)",
-        "PROJECTS_DESCRIPTION": "Advanced version of the book management API using Spring Boot and PostgreSQL. Incorporates image uploads to Cloudinary, global error handling, configurable logging, pagination, and comprehensive unit tests.",
-        "PROJECTS_IMAGE": "/assets/images/book-management-advanced.png",
-        "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-backend/tree/advanced",
-        "PROJECTS_DEMO": "",
-        "PROJECTS_DEMO_ACTIVE": "",
-        "PROJECTS_TECNOLOGIES": [
-          "Spring Boot",
-          "Spring Data JPA",
-          "Hibernate",
-          "PostgreSQL",
-          "Cloudinary API",
-          "JUnit",
-          "Maven"
-        ]
-      },
-      {
-        "PROJECTS_TITLE": "Book Management App (Simple)",
-        "PROJECTS_DESCRIPTION": "Book management application using Angular 19.1.7 on the frontend and Spring Boot + PostgreSQL on the backend. Provides full Create, Read, Update, Delete functionality with reactive forms, global notifications, and responsive design.",
-        "PROJECTS_IMAGE": "/assets/images/book-management-simple.png",
-        "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-frontend/tree/simple",
-        "PROJECTS_DEMO": "",
-        "PROJECTS_DEMO_ACTIVE": "",
-        "PROJECTS_TECNOLOGIES": [
-          "Angular",
-          "PrimeNG",
-          "PrimeFlex",
-          "Reactive Forms",
-          "HttpClient",
-          "TypeScript",
-          "HTML",
-          "SCSS"
-        ]
-      },
-      {
-        "PROJECTS_TITLE": "Book Management API (Simple)",
-        "PROJECTS_DESCRIPTION": "REST API for book management using Spring Boot and PostgreSQL. Follows a classic controllers-services-repositories architecture, offers CRUD endpoints, and includes CORS support for the Angular frontend.",
-        "PROJECTS_IMAGE": "/assets/images/book-management-simple.png",
-        "PROJECTS_LINK": "https://github.com/pablodiazjorge/crud-backend/tree/simple",
-        "PROJECTS_DEMO": "",
-        "PROJECTS_DEMO_ACTIVE": "",
-        "PROJECTS_TECNOLOGIES": [
-          "Spring Boot",
-          "Spring Data JPA",
-          "Hibernate",
-          "PostgreSQL",
-          "Maven"
-        ]
-      }      
+        {
+            "PROJECTS_TITLE": "TestMaker",
+            "PROJECTS_DESCRIPTION": "Secure exam platform with multi-user access and encrypted question banks (AES-256-CBC). Built with Angular 21 (Signals) and a Vercel serverless API. Features authentication, topic-based session configuration, advanced keyboard shortcuts, professional PDF export of results, ES/EN internationalization, and 18 Vitest unit tests. Built with AI assistance to solve a real need: studying with questions protected against unauthorized sharing.",
+            "PROJECTS_IMAGE": "/assets/images/test-maker.svg",
+            "PROJECTS_LINK": "https://github.com/pablodiazjorge/test-maker",
+            "PROJECTS_DEMO": "https://test-maker.pablodiazjorge.com/",
+            "PROJECTS_DEMO_ACTIVE": "true",
+            "PROJECTS_TECNOLOGIES": [
+                "Angular 21 (Signals)",
+                "AES-256-CBC",
+                "Serverless API",
+                "PDF (jsPDF)",
+                "Vitest (18 tests)",
+                "i18n ES/EN"
+            ]
+        },
+        {
+            "PROJECTS_TITLE": "Token Cost Analyzer",
+            "PROJECTS_DESCRIPTION": "Client-side LLM prompt cost and tokenization analyzer. Runs tiktoken WebAssembly inside a Web Worker for non-blocking tokenization. Visualizes token distribution with D3.js bar charts and provides cost estimates for 10 LLM models. Built with Angular 19.1.8 (zoneless change detection), TypeScript 5.7.3, and D3.js 7.9.0. Published as open source in 2026, preserving the original 2025 tech stack.",
+            "PROJECTS_IMAGE": "/assets/images/token-cost-analyzer.svg",
+            "PROJECTS_LINK": "https://github.com/pablodiazjorge/token-cost-analyzer",
+            "PROJECTS_DEMO": "https://token-cost-analyzer.pablodiazjorge.com/",
+            "PROJECTS_DEMO_ACTIVE": "true",
+            "PROJECTS_TECNOLOGIES": [
+                "Angular 19 (Zoneless)",
+                "WebAssembly (tiktoken)",
+                "Web Workers",
+                "D3.js",
+                "TypeScript",
+                "RxJS & Signals"
+            ]
+        },
+        {
+            "PROJECTS_TITLE": "Cognitive Agent Orchestrator",
+            "PROJECTS_DESCRIPTION": "Cognitive agent orchestrator implementing the ReAct (Reasoning + Acting) pattern with real-time streaming via Server-Sent Events. Features a deterministic state machine that reasons, invokes tools (calculator, weather, search), observes results, and streams every thought to an Angular 18 zoneless frontend. Dual LLM provider support: simulated mode and Ollama + Qwen 2.5 Coder 7B. Backend: Node.js/Express with TypeScript 5.5.4. Published as open source in 2026, preserving the original 2024-2025 stack.",
+            "PROJECTS_IMAGE": "/assets/images/cognitive-agent.svg",
+            "PROJECTS_LINK": "https://github.com/pablodiazjorge/cognitive-agent-orchestrator",
+            "PROJECTS_DEMO": "",
+            "PROJECTS_DEMO_ACTIVE": "",
+            "PROJECTS_TECNOLOGIES": [
+                "Angular 18 (Zoneless)",
+                "Node.js & Express",
+                "Server-Sent Events",
+                "ReAct Pattern",
+                "Ollama & Qwen 2.5",
+                "Docker"
+            ]
+        },
+        {
+            "PROJECTS_TITLE": "Semantic Search Engine",
+            "PROJECTS_DESCRIPTION": "Fullstack semantic search engine with vector storage in PostgreSQL via the pgvector extension. Implements cosine similarity search with HNSW indexing over 384-dimensional embeddings. Backend built with Java 21 and Spring Boot 3.2.6; frontend with Angular 17.3.12 featuring deferred result loading via @defer. Infrastructure orchestrated with Docker Compose. Published as open source in 2026, preserving the original 2024 stack.",
+            "PROJECTS_IMAGE": "/assets/images/semantic-search.svg",
+            "PROJECTS_LINK": "https://github.com/pablodiazjorge/semantic-search-engine",
+            "PROJECTS_DEMO": "",
+            "PROJECTS_DEMO_ACTIVE": "",
+            "PROJECTS_TECNOLOGIES": [
+                "Java 21 & Spring Boot 3.2",
+                "PostgreSQL + pgvector",
+                "Angular 17 (@defer)",
+                "HNSW Indexing",
+                "Docker Compose"
+            ]
+        },
+        {
+            "PROJECTS_TITLE": "Attention Matrix Explorer",
+            "PROJECTS_DESCRIPTION": "Interactive visualization of transformer attention matrices (Query, Key, Value) inspired by the paper \"Attention Is All You Need\". Renders real-time heatmaps with D3.js (Viridis color scale, tooltips) and offloads matrix computations (softmax, transpose, multiplication) to a dedicated Web Worker. Built with Angular 16.2.12, Signals (Developer Preview), and D3.js 7.8.5. Published as open source in 2026, preserving the original 2023 stack.",
+            "PROJECTS_IMAGE": "/assets/images/attention-matrix.svg",
+            "PROJECTS_LINK": "https://github.com/pablodiazjorge/attention-matrix-explorer",
+            "PROJECTS_DEMO": "https://attention-matrix-explorer.pablodiazjorge.com/",
+            "PROJECTS_DEMO_ACTIVE": "true",
+            "PROJECTS_TECNOLOGIES": [
+                "Angular 16 (Signals Preview)",
+                "D3.js (Heatmaps)",
+                "Web Workers",
+                "Transformers (Q/K/V)",
+                "TypeScript"
+            ]
+        },
+        {
+            "PROJECTS_TITLE": "My Portfolio",
+            "PROJECTS_DESCRIPTION": "Personal portfolio built with Angular 19.1.7 and Tailwind CSS 4.1, featuring SSR, i18n (ES/EN), dark/light mode, and lazy-loading for a fast, accessible experience. Built with Angular Universal and Express.js for Server-Side Rendering in production.",
+            "PROJECTS_IMAGE": "/assets/images/my-portfolio-project.svg",
+            "PROJECTS_LINK": "https://github.com/pablodiazjorge/my-portfolio",
+            "PROJECTS_DEMO": "https://www.pablodiazjorge.com/",
+            "PROJECTS_DEMO_ACTIVE": "true",
+            "PROJECTS_TECNOLOGIES": [
+                "Angular 19.1.7",
+                "Angular Universal (SSR)",
+                "Tailwind CSS 4.1",
+                "ngx-translate",
+                "Express.js",
+                "PostCSS"
+            ]
+        },
+        {
+            "PROJECTS_TITLE": "Palaze",
+            "PROJECTS_DESCRIPTION": "Native web component library built with Stencil.js. Lightweight, easy-to-implement components with fast loading. Installable via npm or CDN. Includes dedicated documentation. Created as a final degree project to dive deep into web development.",
+            "PROJECTS_IMAGE": "/assets/images/palace-project.svg",
+            "PROJECTS_LINK": "https://github.com/pablodiazjorge/palaze",
+            "PROJECTS_DEMO": "https://palaze-pablodiazjorge.netlify.app/",
+            "PROJECTS_DEMO_ACTIVE": "true",
+            "PROJECTS_TECNOLOGIES": [
+                "Stencil.js",
+                "Web Components",
+                "TypeScript",
+                "HTML & CSS",
+                "Figma"
+            ]
+        }
     ],
-
     "ABOUT_TITLE": "About",
-    "ABOUT_CONTENT": "<p>What started back in high school as a simple experiment has grown into my true vocation. Today, I focus on building clean and scalable interfaces, combining thoughtful design with best practices. While I have worked in Full Stack environments, my real expertise and passion lie in frontend development, where I enjoy turning ideas into fluid, attractive, and user-oriented web applications.</p><p>I am currently working as a <strong>Frontend Developer at <a href=\"https://www.infoportvalencia.com/\" target=\"_blank\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\">Infoport Valencia</a></strong>, contributing to the development of web applications for the port community with a strong focus on <strong>Angular</strong>. My role involves designing and building robust, scalable interfaces, implementing reusable components, and ensuring an optimal user experience in a highly specialized business environment. I work within an agile team applying Scrum methodologies, collaborating closely with analysts, designers, and backend developers to deliver high-quality solutions that directly impact the sector’s operations.</p><p>Before joining Infoport, I was part of <a href=\"https://es.nttdata.com/\" target=\"_blank\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\">NTTData</a> as a Full Stack Developer intern, where I worked on the design and implementation of an employee management platform using Angular. There, I developed both themeable interfaces with Bootstrap and external component libraries, as well as custom Angular components tailored to complex business workflows. I also implemented HTTP services for CRUD operations, ensuring smooth communication between frontend and backend.</p><p>Among my personal projects, one of the highlights is <a href=\"https://github.com/pablodiazjorge/palaze/\" target=\"_blank\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\">Palaze</a>, a Web Components library built with Stencil and published as my final degree project, accompanied by a live documentation site to facilitate its adoption and integration. I also dedicate time to expanding my portfolio with projects such as an advanced <a href=\"https://github.com/pablodiazjorge/crud-basic-backend/tree/advanced/\" target=\"_blank\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\">Book Management</a> API (Spring Boot + PostgreSQL), deployed to the cloud and featuring a complete suite of unit tests.</p><p>Outside of coding, you’ll often find me working out at the gym, hiking in the mountains, reading novels, or enjoying good company at a bar with friends.</p>"
+    "ABOUT_CONTENT": "<p>What started back in high school as a simple experiment has grown into my true vocation. Today, I focus on designing and building scalable frontend systems at the intersection of software architecture and artificial intelligence engineering, combining thoughtful design with sound engineering practices.</p><p>I am currently working as a <strong>Frontend Engineer at <a href=\"https://www.infoportvalencia.com/\" target=\"_blank\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\">Infoport Valencia</a></strong>, where I contribute to the development of digital solutions that optimize port logistics operations. My role involves designing accessible, scalable, and user-centered interfaces with <strong>Angular and TypeScript</strong>, supported by technologies such as SCSS, RxJS, and custom component libraries. I also integrate AI-assisted development tools into the workflow to accelerate development, refactoring, and code review tasks while maintaining high quality standards.</p><p>Between 2023 and 2025, prior to joining Infoport, I dedicated a period to <strong>applied research and independent development</strong> focused on the convergence between frontend architecture and AI engineering. During this phase I designed and prototyped four open-source solutions: <a href=\"https://attention-matrix-explorer.pablodiazjorge.com/\" target=\"_blank\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\">Attention Matrix Explorer</a> — interactive visualization of transformer attention matrices with D3.js and Web Workers; <a href=\"https://github.com/pablodiazjorge/semantic-search-engine\" target=\"_blank\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\">Semantic Search Engine</a> — corporate semantic search engine with PostgreSQL + pgvector and HNSW indexing; <a href=\"https://github.com/pablodiazjorge/cognitive-agent-orchestrator\" target=\"_blank\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\">Cognitive Agent Orchestrator</a> — cognitive agent orchestrator with ReAct pattern and real-time SSE streaming; and <a href=\"https://token-cost-analyzer.pablodiazjorge.com/\" target=\"_blank\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\">Token Cost Analyzer</a> — 100% client-side LLM prompt cost and tokenization analyzer with WebAssembly.</p><p>Previously, I was part of <a href=\"https://es.nttdata.com/\" target=\"_blank\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\">NTTData</a> as a Full Stack Developer intern, where I worked on the design and implementation of an employee management platform with Angular and Java. I also interned as a data analyst at Sothis, where I contributed to database analysis and design for compensation plans.</p><p>Outside of coding, you will often find me working out at the gym, hiking in the mountains, reading novels, or enjoying good company at a bar with friends.</p>"
 }

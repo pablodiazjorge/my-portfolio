@@ -94,9 +94,8 @@
           <!-- Job title -->
           <h2
             class="mt-3 text-lg font-medium tracking-tight dark:text-d-text-heading light:text-l-text-heading sm:text-xl"
-          >
-            {{ "HOME_JOB_TITLE" | translate }}
-          </h2>
+            [innerHTML]="'HOME_JOB_TITLE' | translate | safeHtml"
+          ></h2>
           <!-- Profile description -->
           <p class="mt-4 sm:max-w-screen-xl md:max-w-xs ld:max-w-xs xd:max-w-xs  leading-normal text-justify">
             {{ "HOME_DESCRIPTION" | translate }}

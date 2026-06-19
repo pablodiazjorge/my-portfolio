@@ -37,6 +37,9 @@ yarn-error.log
 testem.log
 /typings
 
+# Project analysis (private)
+/docs/*.md
+
 # System files
 .DS_Store
 Thumbs.db
