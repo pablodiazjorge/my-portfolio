@@ -5,7 +5,7 @@
   "rewrites": [
     {
       "source": "/test-maker/:path*",
-      "destination": "https://test-maker.vercel.app/:path*"
+      "destination": "https://test-maker-five.vercel.app/:path*"
     },
     {
       "source": "/palaze/:path*",
