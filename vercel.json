@@ -1,0 +1,38 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "angular",
+
+  "rewrites": [
+    {
+      "source": "/test-maker/:path*",
+      "destination": "https://test-maker.vercel.app/:path*"
+    },
+    {
+      "source": "/palaze/:path*",
+      "destination": "https://palaze-pablodiazjorge.netlify.app/:path*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
+  ],
+
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ],
+
+  "functions": {
+    "api/**/*.ts": {
+      "memory": 512,
+      "maxDuration": 30
+    }
+  }
+}
