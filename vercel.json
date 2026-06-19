@@ -2,21 +2,6 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "angular",
 
-  "rewrites": [
-    {
-      "source": "/test-maker/:path*",
-      "destination": "https://test-maker-five.vercel.app/:path*"
-    },
-    {
-      "source": "/palaze/:path*",
-      "destination": "https://palaze-pablodiazjorge.netlify.app/:path*"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/"
-    }
-  ],
-
   "headers": [
     {
       "source": "/assets/(.*)",

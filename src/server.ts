@@ -1,5 +1,6 @@
 import { AngularNodeAppEngine, createNodeRequestHandler, isMainModule, writeResponseToNodeResponse } from '@angular/ssr/node';
 import express from 'express';
+import { createProxyMiddleware } from 'http-proxy-middleware';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -8,6 +9,24 @@ const browserDistFolder = resolve(serverDistFolder, '../browser');
 
 const app = express();
 const angularApp = new AngularNodeAppEngine();
+
+// Proxy /test-maker/* → test-maker-five.vercel.app
+app.use(
+  '/test-maker',
+  createProxyMiddleware({
+    target: 'https://test-maker-five.vercel.app',
+    changeOrigin: true,
+  })
+);
+
+// Proxy /palaze/* → palaze-pablodiazjorge.netlify.app
+app.use(
+  '/palaze',
+  createProxyMiddleware({
+    target: 'https://palaze-pablodiazjorge.netlify.app',
+    changeOrigin: true,
+  })
+);
 
 // Serve static files from /browser
 app.use(
