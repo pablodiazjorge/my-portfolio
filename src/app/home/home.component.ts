@@ -74,6 +74,11 @@ export class HomeComponent implements OnInit, OnDestroy {
         : 'en';
     this.translate.use(this.currentLang);
 
+    // Update <html lang> attribute for SEO/accessibility
+    if (isPlatformBrowser(this.platformId)) {
+      document.documentElement.lang = this.currentLang;
+    }
+
     // Initialize theme from localStorage
     if (isPlatformBrowser(this.platformId)) {
       this.isDarkTheme =
@@ -137,6 +142,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.translate.use(this.currentLang);
     if (isPlatformBrowser(this.platformId)) {
       localStorage.setItem('language', this.currentLang);
+      document.documentElement.lang = this.currentLang;
     }
   }
 
