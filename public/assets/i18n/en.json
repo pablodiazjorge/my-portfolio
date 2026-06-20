@@ -194,7 +194,7 @@
             "PROJECTS_DESCRIPTION": "Native web component library built with Stencil.js. Lightweight, easy-to-implement components with fast loading. Installable via npm or CDN. Includes dedicated documentation. Created as a final degree project to dive deep into web development.",
             "PROJECTS_IMAGE": "/assets/images/palace-project.svg",
             "PROJECTS_LINK": "https://github.com/pablodiazjorge/palaze",
-            "PROJECTS_DEMO": "https://palaze-pablodiazjorge.netlify.app/",
+            "PROJECTS_DEMO": "https://palaze.pablodiazjorge.com/",
             "PROJECTS_DEMO_ACTIVE": "true",
             "PROJECTS_TECNOLOGIES": [
                 "Stencil.js",

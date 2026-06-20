@@ -1,42 +1,26 @@
-# My Portfolio
+# my-portfolio
 
-**Personal portfolio** built with Angular 19.1.7 and Tailwind CSS 4.1, designed to showcase my projects and skills in a fast, accessible, and multilingual interface.
+Portfolio personal. Angular 19 standalone, Tailwind CSS 4, SSR con Angular Universal, i18n ES/EN con ngx-translate.
 
----
+## Stack
 
-## 🚀 Features
+Angular 19.1.7 · Angular Universal · Tailwind CSS 4.1 · ngx-translate 16 · Express.js · PostCSS
 
-- **Server-Side Rendering** using Angular Universal for improved SEO and performance  
-- **Responsive Design & Dark/Light Mode** powered by Tailwind CSS 4.1  
-- **Multilingual Support (ES/EN)** with ngx-translate  
-- **Lazy-loaded modules** to improve load time and optimize user experience  
-- **Express.js** for SSR server in production  
-- **PostCSS configuration** for Tailwind CSS integration
+## Estructura
 
----
-
-## 📦 Tech Stack
-
-- Angular 19.1.7  
-- Angular Universal (SSR)  
-- Tailwind CSS 4.1.4  
-- @ngx-translate/core + http-loader  
-- Express.js  
-- PostCSS
-
----
-
-## 📁 Project Structure
+Los datos de experiencia y proyectos se sirven desde los archivos de traducción
+(`public/assets/i18n/`), lo que permite cambiar contenido sin tocar componentes.
+Los componentes son standalone, con lazy loading gestionado por el router.
 
 ```
-my-portfolio/
-├── public/
-│   ├── assets/              # Images, SVGs, static content
-├── src/
-│   ├── app/                 # Angular components, modules, services
-│   ├── styles.css           # Tailwind directives (@tailwind base, components, utilities)
-│   └── main.server.ts       # SSR bootstrap entry
-├── angular.json             # Angular build and serve config
-├── package.json             # Scripts and dependencies
-└── .postcssrc.json          # Tailwind plugin configuration
+src/app/
+├── about/           # Sección "Acerca de" — HTML desde i18n con safeHtml
+├── experience/      # Lista de experiencia — datos desde EXPERIENCE_LIST en i18n
+├── projects/        # Proyectos — datos desde PROJECTS_LIST en i18n
+├── home/            # Layout principal, tema, idioma, SEO
+├── sidebar/         # Navegación lateral + indicador de sección activa
+├── social/          # Enlaces GitHub, LinkedIn
+├── models/          # Interfaces Experience y Project
+├── services/        # DataTranslationService — reactivo, cacheado con shareReplay
+└── pipes/           # SafeHtmlPipe para contenido HTML desde traducciones
 ```
