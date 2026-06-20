@@ -34,7 +34,6 @@ export class SidebarComponent {
    * @param event - The DOM click event
    */
   onClick(item: NavItem, event: Event) {
-    event.preventDefault();
     this.navigate.emit(item.href);
   }
 }
