@@ -20,16 +20,17 @@
             "EXPERIENCE_TECNOLOGIES": [
                 "Angular",
                 "TypeScript",
+                "SCSS",
                 "RxJS",
                 "Signals",
+                "Kendo UI",
                 "Web Components",
-                "Web accessibility",
-                "AI-Assisted Development",
-                "Git"
+                "AI-Assisted Development"
             ],
             "EXPERIENCE_OTHERS": [
                 "Scrum",
-                "Jira"
+                "Jira",
+                "Web accessibility"
             ]
         },
         {
@@ -84,13 +85,9 @@
             "EXPERIENCE_DESCRIPTION": "Database analysis and design for the compensation plan of the UNE of Consulting and Information Systems (CSI) and the UNE of Automation and Control (AC).",
             "EXPERIENCE_TECNOLOGIES": [
                 "MySQL",
-                "Microsoft Access",
                 "Power BI"
             ],
-            "EXPERIENCE_OTHERS": [
-                "draw.io",
-                "Office 365"
-            ]
+            "EXPERIENCE_OTHERS": []
         }
     ],
     "PROJECTS_TITLE": "Projects",
@@ -105,6 +102,7 @@
             "PROJECTS_TECNOLOGIES": [
                 "Angular 21 (Signals)",
                 "AES-256-CBC",
+                "Tailwind CSS",
                 "Serverless API",
                 "PDF (jsPDF)",
                 "Vitest (18 tests)",
@@ -136,6 +134,7 @@
             "PROJECTS_DEMO_ACTIVE": "",
             "PROJECTS_TECNOLOGIES": [
                 "Angular 18 (Zoneless)",
+                "TypeScript",
                 "Node.js & Express",
                 "Server-Sent Events",
                 "ReAct Pattern",
@@ -154,6 +153,7 @@
                 "Java 21 & Spring Boot 3.2",
                 "PostgreSQL + pgvector",
                 "Angular 17 (@defer)",
+                "TypeScript",
                 "HNSW Indexing",
                 "Docker Compose"
             ]
