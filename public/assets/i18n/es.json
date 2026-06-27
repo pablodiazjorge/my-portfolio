@@ -1,210 +1,246 @@
-{
-    "HOME_META_DESCRIPTION": "Portafolio de Pablo Díaz-Jorge — Ingeniero Frontend especializado en Arquitectura de Sistemas Frontend e Ingeniería de IA. Angular, TypeScript, WebAssembly, SSE, D3.js y PostgreSQL + pgvector.",
-    "HOME_HEADER_NAME": "Pablo Díaz-Jorge",
-    "HOME_JOB_TITLE": "Frontend Engineer<br>Frontend Architecture · AI Engineering",
-    "HOME_DESCRIPTION": "Diseño y construyo sistemas frontend escalables en la intersección entre la arquitectura de software y la ingeniería de inteligencia artificial.",
-    "HOME_FOOTER_TEXT": "Construido con <a href=\"https://angular.io/\" class=\"dark:text-d-text-default light:text-l-text-default light:font-semibold\">Angular</a> y <a href=\"https://tailwindcss.com/\" class=\"dark:text-d-text-default light:text-l-text-default light:font-semibold\">Tailwind CSS.</a>",
-    "HOME_CV": "Currículum vitae",
-    "SIDEBAR_ABOUT": "Acerca de",
-    "SIDEBAR_EXPERIENCE": "Experiencia",
-    "SIDEBAR_PROJECTS": "Proyectos",
-    "EXPERIENCE_TITLE": "Experiencia Profesional",
-    "EXPERIENCE_LIST": [
-        {
-            "EXPERIENCE_PERIOD": "Sept 2025 — Actualidad",
-            "EXPERIENCE_TITLE": "Frontend Engineer",
-            "EXPERIENCE_TYPECONTRACT": "Contrato indefinido — Jornada Completa",
-            "EXPERIENCE_COMPANY": "Infoport",
-            "EXPERIENCE_COMPANYLINK": "https://www.infoport.es/",
-            "EXPERIENCE_DESCRIPTION": "Contribuyo al desarrollo de soluciones digitales que optimizan la operativa del sector logístico portuario, creando interfaces accesibles, escalables y centradas en el usuario con Angular y TypeScript, apoyándome en tecnologías como SCSS, RxJS y librerías de componentes personalizadas. Integro herramientas de asistencia al desarrollo basadas en IA en el flujo de trabajo para acelerar tareas de desarrollo, refactorización y revisión de código, manteniendo altos estándares de calidad. Trabajo en un entorno ágil, colaborando estrechamente con analistas y desarrolladores backend para entregar soluciones robustas y de valor para el sector.",
-            "EXPERIENCE_TECNOLOGIES": [
-                "Angular",
-                "TypeScript",
-                "SCSS",
-                "RxJS",
-                "Signals",
-                "Kendo UI",
-                "Web Components",
-                "AI-Assisted Development"
-            ],
-            "EXPERIENCE_OTHERS": [
-                "Scrum",
-                "Jira",
-                "Web accessibility"
-            ]
-        },
-        {
-            "EXPERIENCE_PERIOD": "Jul 2023 — Sept 2025",
-            "EXPERIENCE_TITLE": "Ingeniero de Software Independiente — I+D en IA y Frontend",
-            "EXPERIENCE_TYPECONTRACT": "Investigación aplicada y desarrollo independiente",
-            "EXPERIENCE_COMPANY": "Proyectos de Código Abierto",
-            "EXPERIENCE_COMPANYLINK": "https://github.com/pablodiazjorge",
-            "EXPERIENCE_DESCRIPTION": "Período de investigación aplicada y desarrollo independiente centrado en la convergencia entre arquitectura de sistemas frontend e ingeniería de inteligencia artificial. Diseñé y prototipé cuatro soluciones de código abierto: Attention Matrix Explorer (2023) — visualización interactiva de matrices de atención de transformers con D3.js y Web Workers; Semantic Search Engine (2024) — motor de búsqueda semántica corporativa con PostgreSQL + pgvector e indexación HNSW; Cognitive Agent Orchestrator (2024-2025) — orquestador de agentes cognitivos con patrón ReAct y streaming en tiempo real vía SSE; Token Cost Analyzer (2025) — analizador de costes y tokenización de prompts LLM con tiktoken WebAssembly. Stack: Angular (16 → 19), TypeScript, RxJS, Signals, D3.js, Spring Boot, PostgreSQL, pgvector, Node.js, Express, Web Workers, WebAssembly, SSE, Docker, Ollama.",
-            "EXPERIENCE_TECNOLOGIES": [
-                "Angular (16 → 19)",
-                "TypeScript",
-                "RxJS & Signals",
-                "D3.js",
-                "Spring Boot",
-                "PostgreSQL + pgvector",
-                "Node.js & Express",
-                "Web Workers & WASM",
-                "Server-Sent Events",
-                "Docker",
-                "Ollama & Qwen"
-            ],
-            "EXPERIENCE_OTHERS": [
-                "Código Abierto",
-                "I+D",
-                "Documentación técnica"
-            ]
-        },
-        {
-            "EXPERIENCE_PERIOD": "Mar 2022 — Jul 2022",
-            "EXPERIENCE_TITLE": "Full Stack Developer",
-            "EXPERIENCE_TYPECONTRACT": "Contrato de prácticas — Jornada completa",
-            "EXPERIENCE_COMPANY": "NTT DATA Europe & Latam",
-            "EXPERIENCE_COMPANYLINK": "https://es.nttdata.com/",
-            "EXPERIENCE_DESCRIPTION": "Como Full Stack en NTT DATA Valencia, colaboré en el desarrollo end-to-end de una solución corporativa para la gestión de personal. Participé en la implementación de servicios REST en la capa backend y desarrollé un módulo interactivo en el frontend enfocado en la visualización dinámica de datos estructurados, asegurando la mantenibilidad del código bajo los estándares de calidad del equipo.",
-            "EXPERIENCE_TECNOLOGIES": [
-                "Angular",
-                "TypeScript",
-                "Java",
-                "Spring Boot"
-            ],
-            "EXPERIENCE_OTHERS": [
-                "Scrum"
-            ]
-        },
-        {
-            "EXPERIENCE_PERIOD": "Mar 2018 — Jun 2018",
-            "EXPERIENCE_TITLE": "Analista de Datos",
-            "EXPERIENCE_TYPECONTRACT": "Contrato de prácticas — Jornada completa",
-            "EXPERIENCE_COMPANY": "Sothis",
-            "EXPERIENCE_COMPANYLINK": "https://www.sothis.tech/",
-            "EXPERIENCE_DESCRIPTION": "Análisis y diseño de base de datos para el plan retributivo de la UNE de Consultoría y Sistemas de la Información (CSI) y la UNE de Automatización y Control (AC).",
-            "EXPERIENCE_TECNOLOGIES": [
-                "MySQL",
-                "Power BI"
-            ],
-            "EXPERIENCE_OTHERS": []
-        }
-    ],
-    "PROJECTS_TITLE": "Proyectos",
-    "PROJECTS_LIST": [
-        {
-            "PROJECTS_TITLE": "TestMaker",
-            "PROJECTS_DESCRIPTION": "Plataforma de exámenes segura con acceso multiusuario y bancos de preguntas cifrados (AES-256-CBC). Desarrollada con Angular 21 (Señales) y una API serverless en Vercel. Incluye autenticación, configuración de sesiones por temas, atajos de teclado avanzados, exportación de resultados a PDF profesional, internacionalización ES/EN, y 18 tests unitarios con Vitest. Construida con asistencia de IA para resolver una necesidad real de estudio con preguntas protegidas contra difusión.",
-            "PROJECTS_IMAGE": "/assets/images/test-maker.svg",
-            "PROJECTS_LINK": "https://github.com/pablodiazjorge/test-maker",
-            "PROJECTS_DEMO": "https://test-maker.pablodiazjorge.com/",
-            "PROJECTS_DEMO_ACTIVE": "true",
-            "PROJECTS_TECNOLOGIES": [
-                "Angular 21 (Signals)",
-                "AES-256-CBC",
-                "Tailwind CSS",
-                "Serverless API",
-                "PDF (jsPDF)",
-                "Vitest (18 tests)",
-                "i18n ES/EN"
-            ]
-        },
-        {
-            "PROJECTS_TITLE": "Token Cost Analyzer",
-            "PROJECTS_DESCRIPTION": "Analizador de costes y tokenización de prompts para LLMs, 100% en el lado del cliente. Ejecuta tiktoken WebAssembly dentro de un Web Worker para tokenizar sin bloquear la interfaz. Visualiza la distribución de tokens con gráficos D3.js y proporciona estimaciones de coste para 10 modelos de LLM. Construido con Angular 19.1.8 (detección de cambios zoneless), TypeScript 5.7.3 y D3.js 7.9.0. Publicado como código abierto en 2026, conservando el stack tecnológico original de 2025.",
-            "PROJECTS_IMAGE": "/assets/images/token-cost-analyzer.svg",
-            "PROJECTS_LINK": "https://github.com/pablodiazjorge/token-cost-analyzer",
-            "PROJECTS_DEMO": "https://token-cost-analyzer.pablodiazjorge.com/",
-            "PROJECTS_DEMO_ACTIVE": "true",
-            "PROJECTS_TECNOLOGIES": [
-                "Angular 19 (Zoneless)",
-                "WebAssembly (tiktoken)",
-                "Web Workers",
-                "D3.js",
-                "TypeScript",
-                "RxJS & Signals"
-            ]
-        },
-        {
-            "PROJECTS_TITLE": "Cognitive Agent Orchestrator",
-            "PROJECTS_DESCRIPTION": "Orquestador de agentes cognitivos con patrón ReAct (Reasoning + Acting) y streaming en tiempo real mediante Server-Sent Events. Implementa una máquina de estados determinista que razona, invoca herramientas (calculadora, clima, búsqueda), observa resultados y transmite cada pensamiento a un frontend Angular 18 zoneless. Soporte dual de proveedor LLM: modo simulado y Ollama + Qwen 2.5 Coder 7B. Backend Node.js/Express con TypeScript 5.5.4. Publicado como código abierto en 2026, conservando el stack original de 2024-2025.",
-            "PROJECTS_IMAGE": "/assets/images/cognitive-agent.svg",
-            "PROJECTS_LINK": "https://github.com/pablodiazjorge/cognitive-agent-orchestrator",
-            "PROJECTS_DEMO": "",
-            "PROJECTS_DEMO_ACTIVE": "",
-            "PROJECTS_TECNOLOGIES": [
-                "Angular 18 (Zoneless)",
-                "TypeScript",
-                "Node.js & Express",
-                "Server-Sent Events",
-                "ReAct Pattern",
-                "Ollama & Qwen 2.5",
-                "Docker"
-            ]
-        },
-        {
-            "PROJECTS_TITLE": "Semantic Search Engine",
-            "PROJECTS_DESCRIPTION": "Motor de búsqueda semántica corporativa con almacenamiento vectorial en PostgreSQL mediante la extensión pgvector. Implementa búsqueda por similitud coseno con indexación HNSW sobre embeddings de 384 dimensiones. Backend construido con Java 21 y Spring Boot 3.2.6; frontend con Angular 17.3.12 con carga diferida de resultados mediante @defer. Infraestructura orquestada con Docker Compose. Publicado como código abierto en 2026, conservando el stack original de 2024.",
-            "PROJECTS_IMAGE": "/assets/images/semantic-search.svg",
-            "PROJECTS_LINK": "https://github.com/pablodiazjorge/semantic-search-engine",
-            "PROJECTS_DEMO": "",
-            "PROJECTS_DEMO_ACTIVE": "",
-            "PROJECTS_TECNOLOGIES": [
-                "Java 21 & Spring Boot 3.2",
-                "PostgreSQL + pgvector",
-                "Angular 17 (@defer)",
-                "TypeScript",
-                "HNSW Indexing",
-                "Docker Compose"
-            ]
-        },
-        {
-            "PROJECTS_TITLE": "Attention Matrix Explorer",
-            "PROJECTS_DESCRIPTION": "Visualizador interactivo de matrices de atención de transformers (Query, Key, Value) inspirado en el paper \"Attention Is All You Need\". Renderiza heatmaps en tiempo real con D3.js (escala de color Viridis, tooltips) y descarga los cálculos matriciales (softmax, transpuesta, multiplicación) en un Web Worker dedicado. Construido con Angular 16.2.12, Signals (Developer Preview) y D3.js 7.8.5. Publicado como código abierto en 2026, conservando el stack original de 2023.",
-            "PROJECTS_IMAGE": "/assets/images/attention-matrix.svg",
-            "PROJECTS_LINK": "https://github.com/pablodiazjorge/attention-matrix-explorer",
-            "PROJECTS_DEMO": "https://attention-matrix-explorer.pablodiazjorge.com/",
-            "PROJECTS_DEMO_ACTIVE": "true",
-            "PROJECTS_TECNOLOGIES": [
-                "Angular 16 (Signals Preview)",
-                "D3.js (Heatmaps)",
-                "Web Workers",
-                "Transformers (Q/K/V)",
-                "TypeScript"
-            ]
-        },
-        {
-            "PROJECTS_TITLE": "Mi Portfolio",
-            "PROJECTS_DESCRIPTION": "Portfolio personal desarrollado con Angular 19.1.7 y Tailwind CSS 4.1, con SSR, i18n (ES/EN), dark/light mode y lazy-loading para una experiencia rápida y accesible. Construido con Angular Universal y Express.js para Server-Side Rendering en producción.",
-            "PROJECTS_IMAGE": "/assets/images/my-portfolio-project.svg",
-            "PROJECTS_LINK": "https://github.com/pablodiazjorge/my-portfolio",
-            "PROJECTS_DEMO": "https://www.pablodiazjorge.com/",
-            "PROJECTS_DEMO_ACTIVE": "true",
-            "PROJECTS_TECNOLOGIES": [
-                "Angular 19.1.7",
-                "Angular Universal (SSR)",
-                "Tailwind CSS 4.1",
-                "ngx-translate",
-                "Express.js",
-                "PostCSS"
-            ]
-        },
-        {
-            "PROJECTS_TITLE": "Palaze",
-            "PROJECTS_DESCRIPTION": "Biblioteca de componentes web nativos desarrollada con Stencil.js. Componentes ligeros, fáciles de implementar y con carga rápida. Instalable vía npm o CDN. Incluye documentación propia. Surgió como proyecto de final de grado para adentrarme en el desarrollo web.",
-            "PROJECTS_IMAGE": "/assets/images/palace-project.svg",
-            "PROJECTS_LINK": "https://github.com/pablodiazjorge/palaze",
-            "PROJECTS_DEMO": "https://palaze.pablodiazjorge.com/",
-            "PROJECTS_DEMO_ACTIVE": "true",
-            "PROJECTS_TECNOLOGIES": [
-                "Stencil.js",
-                "Web Components",
-                "TypeScript",
-                "HTML & CSS",
-                "Figma"
-            ]
-        }
-    ],
-    "ABOUT_TITLE": "Acerca De",
-    "ABOUT_CONTENT": "<p>Lo que empezó en el instituto como un simple experimento se ha convertido en mi vocación. Hoy me centro en diseñar y construir sistemas frontend escalables en la intersección entre la arquitectura de software y la ingeniería de inteligencia artificial, combinando un diseño cuidado con buenas prácticas de ingeniería.</p><p>Actualmente trabajo como <strong>Frontend Engineer en <a href=\"https://www.infoportvalencia.com/\" target=\"_blank\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\">Infoport Valencia</a></strong>, donde contribuyo al desarrollo de soluciones digitales que optimizan la operativa del sector logístico portuario. Mi rol implica diseñar interfaces accesibles, escalables y centradas en el usuario con <strong>Angular y TypeScript</strong>, apoyándome en tecnologías como SCSS, RxJS y librerías de componentes personalizadas. Además, integro herramientas de asistencia al desarrollo basadas en IA en el flujo de trabajo para acelerar tareas de desarrollo, refactorización y revisión de código, manteniendo altos estándares de calidad.</p><p>Entre 2023 y 2025, antes de mi incorporación a Infoport, dediqué un período de <strong>investigación aplicada y desarrollo independiente</strong> centrado en la convergencia entre arquitectura frontend e ingeniería de IA. Durante esta etapa diseñé y prototipé cuatro soluciones de código abierto: <a href=\"https://attention-matrix-explorer.pablodiazjorge.com/\" target=\"_blank\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\">Attention Matrix Explorer</a> — visualización interactiva de matrices de atención de transformers con D3.js y Web Workers; <a href=\"https://github.com/pablodiazjorge/semantic-search-engine\" target=\"_blank\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\">Semantic Search Engine</a> — motor de búsqueda semántica corporativa con PostgreSQL + pgvector e indexación HNSW; <a href=\"https://github.com/pablodiazjorge/cognitive-agent-orchestrator\" target=\"_blank\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\">Cognitive Agent Orchestrator</a> — orquestador de agentes cognitivos con patrón ReAct y streaming en tiempo real vía SSE; y <a href=\"https://token-cost-analyzer.pablodiazjorge.com/\" target=\"_blank\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\">Token Cost Analyzer</a> — analizador de costes y tokenización de prompts LLM 100% en cliente con WebAssembly.</p><p>Anteriormente, formé parte de <a href=\"https://es.nttdata.com/\" target=\"_blank\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\">NTTData</a> como desarrollador Full Stack en prácticas, donde trabajé en el diseño e implementación de una plataforma de gestión de empleados con Angular y Java. También realicé prácticas como analista de datos en Sothis, donde participé en el análisis y diseño de bases de datos para planes retributivos.</p><p>En mi tiempo libre suelo hacer deporte, puede que me veas sufrir en el gimnasio, por la montaña haciendo senderismo, leyendo novelas o sentado en un bar con amigos.</p>"
+﻿{
+    "HOME_META_DESCRIPTION":  "Portafolio de Pablo Díaz-Jorge — Ingeniero Frontend especializado en Arquitectura de Sistemas Frontend e Ingeniería de IA. Angular, TypeScript, WebAssembly, SSE, D3.js y PostgreSQL + pgvector.",
+    "HOME_HEADER_NAME":  "Pablo Díaz-Jorge",
+    "HOME_JOB_TITLE":  "Frontend Engineer\u003cbr\u003eFrontend Architecture · AI Engineering",
+    "HOME_DESCRIPTION":  "Diseño y construyo sistemas frontend escalables en la intersección entre la arquitectura de software y la ingeniería de inteligencia artificial.",
+    "HOME_FOOTER_TEXT":  "Construido con \u003ca href=\"https://angular.io/\" class=\"dark:text-d-text-default light:text-l-text-default light:font-semibold\"\u003eAngular\u003c/a\u003e y \u003ca href=\"https://tailwindcss.com/\" class=\"dark:text-d-text-default light:text-l-text-default light:font-semibold\"\u003eTailwind CSS.\u003c/a\u003e",
+    "HOME_CV":  "Currículum vitae",
+    "SIDEBAR_ABOUT":  "Acerca de",
+    "SIDEBAR_EXPERIENCE":  "Experiencia",
+    "SIDEBAR_PROJECTS":  "Proyectos",
+    "EXPERIENCE_TITLE":  "Experiencia Profesional",
+    "EXPERIENCE_LIST":  [
+                            {
+                                "EXPERIENCE_PERIOD":  "Sept 2025 — Actualidad",
+                                "EXPERIENCE_TITLE":  "Frontend Engineer",
+                                "EXPERIENCE_TYPECONTRACT":  "Contrato indefinido — Jornada Completa",
+                                "EXPERIENCE_COMPANY":  "Infoport",
+                                "EXPERIENCE_COMPANYLINK":  "https://www.infoport.es/",
+                                "EXPERIENCE_DESCRIPTION":  "Contribuyo al desarrollo de soluciones digitales que optimizan la operativa del sector logístico portuario, creando interfaces accesibles, escalables y centradas en el usuario con Angular y TypeScript, apoyándome en tecnologías como SCSS, RxJS y librerías de componentes personalizadas. Integro herramientas de asistencia al desarrollo basadas en IA en el flujo de trabajo para acelerar tareas de desarrollo, refactorización y revisión de código, manteniendo altos estándares de calidad. Trabajo en un entorno ágil, colaborando estrechamente con analistas y desarrolladores backend para entregar soluciones robustas y de valor para el sector.",
+                                "EXPERIENCE_TECNOLOGIES":  [
+                                                               "Angular",
+                                                               "TypeScript",
+                                                               "SCSS",
+                                                               "RxJS",
+                                                               "Signals",
+                                                               "Kendo UI",
+                                                               "Web Components",
+                                                               "AI-Assisted Development"
+                                                           ],
+                                "EXPERIENCE_OTHERS":  [
+                                                          "Scrum",
+                                                          "Jira",
+                                                          "Web accessibility"
+                                                      ]
+                            },
+                            {
+                                "EXPERIENCE_PERIOD":  "Jul 2023 — Sept 2025",
+                                "EXPERIENCE_TITLE":  "Ingeniero de Software Independiente — I+D en IA y Frontend",
+                                "EXPERIENCE_TYPECONTRACT":  "Investigación aplicada y desarrollo independiente",
+                                "EXPERIENCE_COMPANY":  "Proyectos de Código Abierto",
+                                "EXPERIENCE_COMPANYLINK":  "https://github.com/pablodiazjorge",
+                                "EXPERIENCE_DESCRIPTION":  "Período de investigación aplicada y desarrollo independiente centrado en la convergencia entre arquitectura de sistemas frontend e ingeniería de inteligencia artificial. Diseñé y prototipé cuatro soluciones de código abierto: Attention Matrix Explorer (2023) — visualización interactiva de matrices de atención de transformers con D3.js y Web Workers; Semantic Search Engine (2024) — motor de búsqueda semántica corporativa con PostgreSQL + pgvector e indexación HNSW; Cognitive Agent Orchestrator (2024-2025) — orquestador de agentes cognitivos con patrón ReAct y streaming en tiempo real vía SSE; Token Cost Analyzer (2025) — analizador de costes y tokenización de prompts LLM con tiktoken WebAssembly. Stack: Angular (16 → 19), TypeScript, RxJS, Signals, D3.js, Spring Boot, PostgreSQL, pgvector, Node.js, Express, Web Workers, WebAssembly, SSE, Docker, Ollama.",
+                                "EXPERIENCE_TECNOLOGIES":  [
+                                                               "Angular (16 → 19)",
+                                                               "TypeScript",
+                                                               "RxJS \u0026 Signals",
+                                                               "D3.js",
+                                                               "Spring Boot",
+                                                               "PostgreSQL + pgvector",
+                                                               "Node.js \u0026 Express",
+                                                               "Web Workers \u0026 WASM",
+                                                               "Server-Sent Events",
+                                                               "Docker",
+                                                               "Ollama \u0026 Qwen"
+                                                           ],
+                                "EXPERIENCE_OTHERS":  [
+                                                          "Código Abierto",
+                                                          "I+D",
+                                                          "Documentación técnica"
+                                                      ]
+                            },
+                            {
+                                "EXPERIENCE_PERIOD":  "Mar 2022 — Jul 2022",
+                                "EXPERIENCE_TITLE":  "Full Stack Developer",
+                                "EXPERIENCE_TYPECONTRACT":  "Contrato de prácticas — Jornada completa",
+                                "EXPERIENCE_COMPANY":  "NTT DATA Europe \u0026 Latam",
+                                "EXPERIENCE_COMPANYLINK":  "https://es.nttdata.com/",
+                                "EXPERIENCE_DESCRIPTION":  "Como Full Stack en NTT DATA Valencia, colaboré en el desarrollo end-to-end de una solución corporativa para la gestión de personal. Participé en la implementación de servicios REST en la capa backend y desarrollé un módulo interactivo en el frontend enfocado en la visualización dinámica de datos estructurados, asegurando la mantenibilidad del código bajo los estándares de calidad del equipo.",
+                                "EXPERIENCE_TECNOLOGIES":  [
+                                                               "Angular",
+                                                               "TypeScript",
+                                                               "Java",
+                                                               "Spring Boot"
+                                                           ],
+                                "EXPERIENCE_OTHERS":  [
+                                                          "Scrum"
+                                                      ]
+                            },
+                            {
+                                "EXPERIENCE_PERIOD":  "Mar 2018 — Jun 2018",
+                                "EXPERIENCE_TITLE":  "Analista de Datos",
+                                "EXPERIENCE_TYPECONTRACT":  "Contrato de prácticas — Jornada completa",
+                                "EXPERIENCE_COMPANY":  "Sothis",
+                                "EXPERIENCE_COMPANYLINK":  "https://www.sothis.tech/",
+                                "EXPERIENCE_DESCRIPTION":  "Análisis y diseño de base de datos para el plan retributivo de la UNE de Consultoría y Sistemas de la Información (CSI) y la UNE de Automatización y Control (AC).",
+                                "EXPERIENCE_TECNOLOGIES":  [
+                                                               "MySQL",
+                                                               "Power BI"
+                                                           ],
+                                "EXPERIENCE_OTHERS":  [
+
+                                                      ]
+                            }
+                        ],
+    "PROJECTS_TITLE":  "Proyectos",
+    "PROJECTS_LIST":  [
+                          {
+                              "PROJECTS_TITLE":  "Candle AI",
+                              "PROJECTS_DESCRIPTION":  "Dashboard de análisis técnico con gráficos de velas de calidad profesional que se ejecuta completamente en el navegador — sin cuentas, sin suscripciones, sin datos que salgan de tu máquina. Combina un motor de confluencia bayesiano determinista (que puntúa más de 15 patrones de velas y chartistas en 7 jerarquías de señales) con una capa narrativa de IA opcional que explica el análisis en lenguaje natural. El LLM nunca anula al motor cuantitativo — narra los resultados. Construido con Angular 22 (Zoneless + Signals), Lightweight Charts v5, Web Workers para cómputo no bloqueante, caché IndexedDB, exportación a Pine Script v5, y 160 tests Vitest + 5 tests E2E Playwright. Desarrollado con infraestructura agentica prompt-forge a lo largo de 9 épicas como desarrollador en solitario.",
+                              "PROJECTS_IMAGE":  "/assets/images/candle-ai.png",
+                              "PROJECTS_LINK":  "https://github.com/pablodiazjorge/candle-ai",
+                              "PROJECTS_DEMO":  "https://candle-ai.pablodiazjorge.com/",
+                              "PROJECTS_DEMO_ACTIVE":  "true",
+                              "PROJECTS_TECNOLOGIES":  [
+                                                           "Angular 22 (Zoneless + Signals)",
+                                                           "Motor de Confluencia Bayesiano",
+                                                           "Web Workers (Indicadores)",
+                                                           "Lightweight Charts v5 (TradingView)",
+                                                           "Integración LLM (Ollama/DeepSeek/OpenAI)",
+                                                           "Exportación Pine Script v5",
+                                                           "Playwright E2E + Vitest (165 tests)"
+                                                       ]
+                          },
+                          {
+                              "PROJECTS_TITLE":  "prompt-forge",
+                              "PROJECTS_DESCRIPTION":  "Toolkit de infraestructura agentica que proporciona memoria persistente entre sesiones a los agentes de codificación con IA. Diseñado para resolver un problema real: los agentes de IA no tienen estado — olvidan lecciones aprendidas, repiten errores y gastan tokens redescubriendo las mismas soluciones. prompt-forge captura errores recurrentes, cambios de API y workarounds como issues estructurados que se promueven automáticamente a skills permanentes tras 3+ ocurrencias. Cero dependencias de runtime, sin paso de build, sin backend — solo archivos Markdown que cualquier agente de IA (Copilot, Claude Code, Codex) puede leer. Soporte multi-proveedor con divulgación progresiva (~700 tokens de overhead en 7 skills). Sobre él se construyó Candle AI — la infraestructura que hizo manejables 9 épicas de desarrollo en solitario con calidad consistente y retención de conocimiento.",
+                              "PROJECTS_IMAGE":  "/assets/images/prompt-forge-terminal.svg",
+                              "PROJECTS_LINK":  "https://github.com/pablodiazjorge/prompt-forge/tree/master",
+                              "PROJECTS_DEMO":  "",
+                              "PROJECTS_DEMO_ACTIVE":  "",
+                              "PROJECTS_TECNOLOGIES":  [
+                                                           "Infraestructura Agentica",
+                                                           "Agent Skills (agentskills.io)",
+                                                           "Gestión de Conocimiento",
+                                                           "Developer Tooling",
+                                                           "Persistencia Nativa Git",
+                                                           "Divulgación Progresiva",
+                                                           "Multi-proveedor"
+                                                       ]
+                          },
+                          {
+                              "PROJECTS_TITLE":  "TestMaker",
+                              "PROJECTS_DESCRIPTION":  "Plataforma de exámenes segura con acceso multiusuario y bancos de preguntas cifrados (AES-256-CBC). Desarrollada con Angular 21 (Señales) y una API serverless en Vercel. Incluye autenticación, configuración de sesiones por temas, atajos de teclado avanzados, exportación de resultados a PDF profesional, internacionalización ES/EN, y 18 tests unitarios con Vitest. Construida con asistencia de IA para resolver una necesidad real de estudio con preguntas protegidas contra difusión.",
+                              "PROJECTS_IMAGE":  "/assets/images/test-maker.svg",
+                              "PROJECTS_LINK":  "https://github.com/pablodiazjorge/test-maker",
+                              "PROJECTS_DEMO":  "https://test-maker.pablodiazjorge.com/",
+                              "PROJECTS_DEMO_ACTIVE":  "true",
+                              "PROJECTS_TECNOLOGIES":  [
+                                                           "Angular 21 (Signals)",
+                                                           "AES-256-CBC",
+                                                           "Tailwind CSS",
+                                                           "Serverless API",
+                                                           "PDF (jsPDF)",
+                                                           "Vitest (18 tests)",
+                                                           "i18n ES/EN"
+                                                       ]
+                          },
+                          {
+                              "PROJECTS_TITLE":  "Token Cost Analyzer",
+                              "PROJECTS_DESCRIPTION":  "Analizador de costes y tokenización de prompts para LLMs, 100% en el lado del cliente. Ejecuta tiktoken WebAssembly dentro de un Web Worker para tokenizar sin bloquear la interfaz. Visualiza la distribución de tokens con gráficos D3.js y proporciona estimaciones de coste para 10 modelos de LLM. Construido con Angular 19.1.8 (detección de cambios zoneless), TypeScript 5.7.3 y D3.js 7.9.0. Publicado como código abierto en 2026, conservando el stack tecnológico original de 2025.",
+                              "PROJECTS_IMAGE":  "/assets/images/token-cost-analyzer.svg",
+                              "PROJECTS_LINK":  "https://github.com/pablodiazjorge/token-cost-analyzer",
+                              "PROJECTS_DEMO":  "https://token-cost-analyzer.pablodiazjorge.com/",
+                              "PROJECTS_DEMO_ACTIVE":  "true",
+                              "PROJECTS_TECNOLOGIES":  [
+                                                           "Angular 19 (Zoneless)",
+                                                           "WebAssembly (tiktoken)",
+                                                           "Web Workers",
+                                                           "D3.js",
+                                                           "TypeScript",
+                                                           "RxJS \u0026 Signals"
+                                                       ]
+                          },
+                          {
+                              "PROJECTS_TITLE":  "Cognitive Agent Orchestrator",
+                              "PROJECTS_DESCRIPTION":  "Orquestador de agentes cognitivos con patrón ReAct (Reasoning + Acting) y streaming en tiempo real mediante Server-Sent Events. Implementa una máquina de estados determinista que razona, invoca herramientas (calculadora, clima, búsqueda), observa resultados y transmite cada pensamiento a un frontend Angular 18 zoneless. Soporte dual de proveedor LLM: modo simulado y Ollama + Qwen 2.5 Coder 7B. Backend Node.js/Express con TypeScript 5.5.4. Publicado como código abierto en 2026, conservando el stack original de 2024-2025.",
+                              "PROJECTS_IMAGE":  "/assets/images/cognitive-agent.svg",
+                              "PROJECTS_LINK":  "https://github.com/pablodiazjorge/cognitive-agent-orchestrator",
+                              "PROJECTS_DEMO":  "",
+                              "PROJECTS_DEMO_ACTIVE":  "",
+                              "PROJECTS_TECNOLOGIES":  [
+                                                           "Angular 18 (Zoneless)",
+                                                           "TypeScript",
+                                                           "Node.js \u0026 Express",
+                                                           "Server-Sent Events",
+                                                           "ReAct Pattern",
+                                                           "Ollama \u0026 Qwen 2.5",
+                                                           "Docker"
+                                                       ]
+                          },
+                          {
+                              "PROJECTS_TITLE":  "Semantic Search Engine",
+                              "PROJECTS_DESCRIPTION":  "Motor de búsqueda semántica corporativa con almacenamiento vectorial en PostgreSQL mediante la extensión pgvector. Implementa búsqueda por similitud coseno con indexación HNSW sobre embeddings de 384 dimensiones. Backend construido con Java 21 y Spring Boot 3.2.6; frontend con Angular 17.3.12 con carga diferida de resultados mediante @defer. Infraestructura orquestada con Docker Compose. Publicado como código abierto en 2026, conservando el stack original de 2024.",
+                              "PROJECTS_IMAGE":  "/assets/images/semantic-search.svg",
+                              "PROJECTS_LINK":  "https://github.com/pablodiazjorge/semantic-search-engine",
+                              "PROJECTS_DEMO":  "",
+                              "PROJECTS_DEMO_ACTIVE":  "",
+                              "PROJECTS_TECNOLOGIES":  [
+                                                           "Java 21 \u0026 Spring Boot 3.2",
+                                                           "PostgreSQL + pgvector",
+                                                           "Angular 17 (@defer)",
+                                                           "TypeScript",
+                                                           "HNSW Indexing",
+                                                           "Docker Compose"
+                                                       ]
+                          },
+                          {
+                              "PROJECTS_TITLE":  "Attention Matrix Explorer",
+                              "PROJECTS_DESCRIPTION":  "Visualizador interactivo de matrices de atención de transformers (Query, Key, Value) inspirado en el paper \"Attention Is All You Need\". Renderiza heatmaps en tiempo real con D3.js (escala de color Viridis, tooltips) y descarga los cálculos matriciales (softmax, transpuesta, multiplicación) en un Web Worker dedicado. Construido con Angular 16.2.12, Signals (Developer Preview) y D3.js 7.8.5. Publicado como código abierto en 2026, conservando el stack original de 2023.",
+                              "PROJECTS_IMAGE":  "/assets/images/attention-matrix.svg",
+                              "PROJECTS_LINK":  "https://github.com/pablodiazjorge/attention-matrix-explorer",
+                              "PROJECTS_DEMO":  "https://attention-matrix-explorer.pablodiazjorge.com/",
+                              "PROJECTS_DEMO_ACTIVE":  "true",
+                              "PROJECTS_TECNOLOGIES":  [
+                                                           "Angular 16 (Signals Preview)",
+                                                           "D3.js (Heatmaps)",
+                                                           "Web Workers",
+                                                           "Transformers (Q/K/V)",
+                                                           "TypeScript"
+                                                       ]
+                          },
+                          {
+                              "PROJECTS_TITLE":  "Mi Portfolio",
+                              "PROJECTS_DESCRIPTION":  "Portfolio personal desarrollado con Angular 19.1.7 y Tailwind CSS 4.1, con SSR, i18n (ES/EN), dark/light mode y lazy-loading para una experiencia rápida y accesible. Construido con Angular Universal y Express.js para Server-Side Rendering en producción.",
+                              "PROJECTS_IMAGE":  "/assets/images/my-portfolio-project.svg",
+                              "PROJECTS_LINK":  "https://github.com/pablodiazjorge/my-portfolio",
+                              "PROJECTS_DEMO":  "https://www.pablodiazjorge.com/",
+                              "PROJECTS_DEMO_ACTIVE":  "true",
+                              "PROJECTS_TECNOLOGIES":  [
+                                                           "Angular 19.1.7",
+                                                           "Angular Universal (SSR)",
+                                                           "Tailwind CSS 4.1",
+                                                           "ngx-translate",
+                                                           "Express.js",
+                                                           "PostCSS"
+                                                       ]
+                          },
+                          {
+                              "PROJECTS_TITLE":  "Palaze (TFG · legacy)",
+                              "PROJECTS_DESCRIPTION":  "Biblioteca de componentes web nativos desarrollada con Stencil.js. Componentes ligeros, fáciles de implementar y con carga rápida. Instalable vía npm o CDN. Incluye documentación propia. Surgió como proyecto de final de grado para adentrarme en el desarrollo web.",
+                              "PROJECTS_IMAGE":  "/assets/images/palace-project.svg",
+                              "PROJECTS_LINK":  "https://github.com/pablodiazjorge/palaze",
+                              "PROJECTS_DEMO":  "https://palaze.pablodiazjorge.com/",
+                              "PROJECTS_DEMO_ACTIVE":  "true",
+                              "PROJECTS_TECNOLOGIES":  [
+                                                           "Stencil.js",
+                                                           "Web Components",
+                                                           "TypeScript",
+                                                           "HTML \u0026 CSS",
+                                                           "Figma"
+                                                       ]
+                          }
+                      ],
+    "ABOUT_TITLE":  "Acerca De",
+    "ABOUT_CONTENT":  "\u003cp\u003eLo que empezó en el instituto como un simple experimento se ha convertido en mi vocación. Hoy me centro en diseñar y construir sistemas frontend escalables en la intersección entre la arquitectura de software y la ingeniería de inteligencia artificial, combinando un diseño cuidado con buenas prácticas de ingeniería.\u003c/p\u003e\u003cp\u003eActualmente trabajo como \u003cstrong\u003eFrontend Engineer en \u003ca href=\"https://www.infoportvalencia.com/\" target=\"_blank\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\"\u003eInfoport Valencia\u003c/a\u003e\u003c/strong\u003e, donde contribuyo al desarrollo de soluciones digitales que optimizan la operativa del sector logístico portuario. Mi rol implica diseñar interfaces accesibles, escalables y centradas en el usuario con \u003cstrong\u003eAngular y TypeScript\u003c/strong\u003e, apoyándome en tecnologías como SCSS, RxJS y librerías de componentes personalizadas. Además, integro herramientas de asistencia al desarrollo basadas en IA en el flujo de trabajo para acelerar tareas de desarrollo, refactorización y revisión de código, manteniendo altos estándares de calidad.\u003c/p\u003e\u003cp\u003eEntre 2023 y 2025, antes de mi incorporación a Infoport, dediqué un período de \u003cstrong\u003einvestigación aplicada y desarrollo independiente\u003c/strong\u003e centrado en la convergencia entre arquitectura frontend e ingeniería de IA. Durante esta etapa diseñé y prototipé cuatro soluciones de código abierto: \u003ca href=\"https://attention-matrix-explorer.pablodiazjorge.com/\" target=\"_blank\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\"\u003eAttention Matrix Explorer\u003c/a\u003e — visualización interactiva de matrices de atención de transformers con D3.js y Web Workers; \u003ca href=\"https://github.com/pablodiazjorge/semantic-search-engine\" target=\"_blank\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\"\u003eSemantic Search Engine\u003c/a\u003e — motor de búsqueda semántica corporativa con PostgreSQL + pgvector e indexación HNSW; \u003ca href=\"https://github.com/pablodiazjorge/cognitive-agent-orchestrator\" target=\"_blank\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\"\u003eCognitive Agent Orchestrator\u003c/a\u003e — orquestador de agentes cognitivos con patrón ReAct y streaming en tiempo real vía SSE; y \u003ca href=\"https://token-cost-analyzer.pablodiazjorge.com/\" target=\"_blank\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\"\u003eToken Cost Analyzer\u003c/a\u003e — analizador de costes y tokenización de prompts LLM 100% en cliente con WebAssembly.\u003c/p\u003e\u003cp\u003eEn 2026, llevé esta convergencia un paso más allá con dos nuevos proyectos de código abierto: \u003ca href=\"https://github.com/pablodiazjorge/prompt-forge\" target=\"_blank\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\"\u003eprompt-forge\u003c/a\u003e — un toolkit de infraestructura agentica que proporciona memoria persistente entre sesiones a los agentes de codificación con IA, diseñado para resolver el problema de falta de estado que enfrenta todo desarrollador asistido por IA; y \u003ca href=\"https://candle-ai.pablodiazjorge.com/\" target=\"_blank\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\"\u003eCandle AI\u003c/a\u003e — un dashboard de análisis técnico de calidad profesional con un motor de confluencia bayesiano determinista y una capa narrativa de IA opcional, construido sobre prompt-forge como proyecto cumbre que valida la infraestructura. Juntos representan el espectro completo de mi trabajo: desde infraestructura de herramientas para desarrolladores hasta aplicaciones de usuario final, siempre en la intersección entre arquitectura frontend e ingeniería de IA.\u003c/p\u003e\u003cp\u003eAnteriormente, formé parte de \u003ca href=\"https://es.nttdata.com/\" target=\"_blank\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\"\u003eNTTData\u003c/a\u003e como desarrollador Full Stack en prácticas, donde trabajé en el diseño e implementación de una plataforma de gestión de empleados con Angular y Java. También realicé prácticas como analista de datos en Sothis, donde participé en el análisis y diseño de bases de datos para planes retributivos.\u003c/p\u003e\u003cp\u003eEn mi tiempo libre suelo hacer deporte, puede que me veas sufrir en el gimnasio, por la montaña haciendo senderismo, leyendo novelas o sentado en un bar con amigos.\u003c/p\u003e"
 }

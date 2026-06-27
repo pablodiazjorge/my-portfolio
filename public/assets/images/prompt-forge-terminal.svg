@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="400" y2="250">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6e5de7"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="termGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="250" rx="12" fill="url(#bgGrad)"/>
+  <rect x="0" y="0" width="400" height="4" fill="url(#accentGrad)"/>
+
+  <!-- Terminal window -->
+  <rect x="30" y="30" width="340" height="120" rx="8" fill="url(#termGrad)" stroke="#334155" stroke-width="1"/>
+  <circle cx="48" cy="44" r="4" fill="#ef4444"/>
+  <circle cx="62" cy="44" r="4" fill="#f59e0b"/>
+  <circle cx="76" cy="44" r="4" fill="#10b981"/>
+
+  <text x="48" y="68" fill="#10b981" font-family="monospace" font-size="10" font-weight="bold">❯</text>
+  <text x="62" y="68" fill="#e2e8f0" font-family="monospace" font-size="10">prompt-forge session-start</text>
+
+  <text x="48" y="88" fill="#10b981" font-family="monospace" font-size="10" font-weight="bold">❯</text>
+  <text x="62" y="88" fill="#94a3b8" font-family="monospace" font-size="10">developer skill loaded (1.2k tokens)</text>
+
+  <text x="48" y="108" fill="#10b981" font-family="monospace" font-size="10" font-weight="bold">❯</text>
+  <text x="62" y="108" fill="#94a3b8" font-family="monospace" font-size="10">scanning chat for signals...</text>
+
+  <text x="48" y="128" fill="#10b981" font-family="monospace" font-size="10" font-weight="bold">❯</text>
+  <text x="62" y="128" fill="#8b5cf6" font-family="monospace" font-size="10">ISSUE-20260627-a1b2 → open/</text>
+
+  <text x="62" y="143" fill="#64748b" font-family="monospace" font-size="8">issues: 1 open | 7 promoted | 1 discarded</text>
+
+  <!-- Skills grid below terminal -->
+  <rect x="35" y="170" width="75" height="28" rx="6" fill="#1e293b" stroke="#8b5cf6" stroke-width="0.8"/>
+  <text x="72" y="188" text-anchor="middle" fill="#a78bfa" font-family="monospace" font-size="9">developer</text>
+
+  <rect x="118" y="170" width="75" height="28" rx="6" fill="#1e293b" stroke="#f59e0b" stroke-width="0.8"/>
+  <text x="155" y="188" text-anchor="middle" fill="#fcd34d" font-family="monospace" font-size="9">ai-engineer</text>
+
+  <rect x="201" y="170" width="75" height="28" rx="6" fill="#1e293b" stroke="#6e5de7" stroke-width="0.8"/>
+  <text x="238" y="188" text-anchor="middle" fill="#a78bfa" font-family="monospace" font-size="8">git-workflow</text>
+
+  <rect x="284" y="170" width="75" height="28" rx="6" fill="#1e293b" stroke="#6e5de7" stroke-width="0.8"/>
+  <text x="321" y="188" text-anchor="middle" fill="#a78bfa" font-family="monospace" font-size="8">explore</text>
+
+  <text x="200" y="240" text-anchor="middle" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="14" font-weight="600">prompt-forge</text>
+</svg>

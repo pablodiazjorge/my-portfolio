@@ -22,6 +22,11 @@
       "source": "/token-cost-analyzer/:path*",
       "destination": "https://token-cost-analyzer.pablodiazjorge.com/:path*",
       "permanent": true
+    },
+    {
+      "source": "/candle-ai/:path*",
+      "destination": "https://candle-ai.pablodiazjorge.com/:path*",
+      "permanent": true
     }
   ],
 

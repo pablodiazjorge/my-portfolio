@@ -10,7 +10,9 @@ Angular 19.1.7 · Angular Universal · Tailwind CSS 4.1 · ngx-translate 16 · E
 
 Los datos de experiencia y proyectos se sirven desde los archivos de traducción
 (`public/assets/i18n/`), lo que permite cambiar contenido sin tocar componentes.
-Los componentes son standalone, con lazy loading gestionado por el router.
+Los componentes son standalone. La aplicación usa un layout de scroll
+single-page con navegación por anclas — todas las secciones (About,
+Experience, Projects) se renderizan dentro del Home component.
 
 ```
 src/app/
