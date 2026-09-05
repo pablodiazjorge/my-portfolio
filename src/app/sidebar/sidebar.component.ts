@@ -30,10 +30,13 @@ export class SidebarComponent {
 
   /**
    * Handles click events on navigation links, emitting the selected href.
+   * The default anchor navigation is cancelled: it would jump to the section
+   * instantly, before the parent can scroll to it smoothly.
    * @param item - The navigation item clicked
    * @param event - The DOM click event
    */
   onClick(item: NavItem, event: Event) {
+    event.preventDefault();
     this.navigate.emit(item.href);
   }
 }

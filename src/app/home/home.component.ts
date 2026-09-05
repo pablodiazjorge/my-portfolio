@@ -116,6 +116,9 @@ export class HomeComponent implements OnInit, OnDestroy {
    * Lifecycle hook called just before the component is destroyed.
    */
   ngOnDestroy(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      cancelAnimationFrame(this.scrollFrame);
+    }
     // Emit a value to signal that the component is being destroyed
     this.destroy$.next();
     // Complete the subject, unsubscribing all its subscribers
@@ -221,9 +224,61 @@ export class HomeComponent implements OnInit, OnDestroy {
    * @param href URL fragment of the target section
    */
   scrollTo(href: string) {
-    document
-      .querySelector<HTMLElement>(href)
-      ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const target = document.querySelector<HTMLElement>(href);
+    if (!target) {
+      return;
+    }
+    // Honour the section's scroll-margin-top, like scrollIntoView would
+    const margin = parseFloat(getComputedStyle(target).scrollMarginTop) || 0;
+    const maxY = document.documentElement.scrollHeight - window.innerHeight;
+    const end = Math.max(0, Math.min(target.getBoundingClientRect().top + window.scrollY - margin, maxY));
+    this.animateScrollTo(end);
+    // Keep the section in the URL without triggering the browser's own jump.
+    // The path is kept explicitly: a bare "#id" would resolve against
+    // <base href="/"> and drop the /es prefix.
+    history.replaceState(history.state, '', location.pathname + location.search + href);
+    this.activeHref = href;
+  }
+
+  /** Handle of the running scroll animation frame, if any */
+  private scrollFrame = 0;
+
+  /**
+   * Scrolls the window to `end` with an ease-out curve driven by
+   * requestAnimationFrame. Native smooth scrolling (CSS `scroll-behavior`
+   * and `scrollIntoView({ behavior: 'smooth' })`) is not used on purpose:
+   * Chrome disables it entirely when the OS has animation effects turned
+   * off, which made the sidebar links jump instead of glide.
+   * A manual wheel, touch or keyboard scroll cancels the animation.
+   */
+  private animateScrollTo(end: number) {
+    cancelAnimationFrame(this.scrollFrame);
+    const from = window.scrollY;
+    const distance = end - from;
+    if (Math.abs(distance) < 1) {
+      return;
+    }
+    const duration = Math.min(900, 300 + Math.abs(distance) * 0.2);
+    const start = performance.now();
+    const easeOut = (t: number) => 1 - Math.pow(1 - t, 3);
+
+    const cancelEvents = ['wheel', 'touchmove', 'keydown'] as const;
+    const cancel = () => {
+      cancelAnimationFrame(this.scrollFrame);
+      cancelEvents.forEach((e) => window.removeEventListener(e, cancel));
+    };
+    cancelEvents.forEach((e) => window.addEventListener(e, cancel, { passive: true }));
+
+    const step = (now: number) => {
+      const t = Math.min(1, (now - start) / duration);
+      window.scrollTo(0, from + distance * easeOut(t));
+      if (t < 1) {
+        this.scrollFrame = requestAnimationFrame(step);
+      } else {
+        cancel();
+      }
+    };
+    this.scrollFrame = requestAnimationFrame(step);
   }
 
   /**
