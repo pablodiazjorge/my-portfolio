@@ -4,6 +4,19 @@
 
   "redirects": [
     {
+      "source": "/",
+      "has": [{ "type": "cookie", "key": "language", "value": "es" }],
+      "destination": "/es",
+      "permanent": false
+    },
+    {
+      "source": "/",
+      "missing": [{ "type": "cookie", "key": "language" }],
+      "has": [{ "type": "header", "key": "accept-language", "value": "^(es|ES).*" }],
+      "destination": "/es",
+      "permanent": false
+    },
+    {
       "source": "/test-maker/:path*",
       "destination": "https://test-maker.pablodiazjorge.com/:path*",
       "permanent": true
@@ -28,6 +41,10 @@
       "destination": "https://candle-ai.pablodiazjorge.com/:path*",
       "permanent": true
     }
+  ],
+
+  "rewrites": [
+    { "source": "/es", "destination": "/es/index.html" }
   ],
 
   "headers": [

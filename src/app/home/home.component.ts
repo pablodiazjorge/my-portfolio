@@ -8,7 +8,8 @@ import {
   ElementRef,
   ViewChild,
 } from '@angular/core';
-import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { CommonModule, DOCUMENT, isPlatformBrowser } from '@angular/common';
+import { Router } from '@angular/router';
 import { ExperienceComponent } from '../experience/experience.component';
 import { AboutComponent } from '../about/about.component';
 import { SidebarComponent } from '../sidebar/sidebar.component';
@@ -18,7 +19,7 @@ import { LangChangeEvent, TranslateModule, TranslateService } from '@ngx-transla
 import { SafeHtmlPipe } from '../pipes/safe-html.pipe';
 import { Subject, fromEvent, takeUntil, debounceTime } from 'rxjs';
 import { Meta, Title } from '@angular/platform-browser';
-import { resolveInitialLang } from '../i18n/initial-lang';
+import { AppLang, DEFAULT_LANG, pathForLang, rememberLang, urlForLang } from '../i18n/lang';
 
 @Component({
   selector: 'app-home',
@@ -47,8 +48,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   /** List of section URL fragments for navigation */
   sections = ['#about', '#experience', '#projects'];
 
-  /** Current language (en or es) */
-  currentLang: string;
+  /** Current language (en or es), derived from the URL by langResolver */
+  currentLang: AppLang;
 
   /** Indicates if dark theme is active */
   isDarkTheme = false;
@@ -61,19 +62,14 @@ export class HomeComponent implements OnInit, OnDestroy {
     //Seo description
     private meta: Meta,
     private titleService: Title,
+    private router: Router,
+    @Inject(DOCUMENT) private document: Document,
     @Inject(PLATFORM_ID) private platformId: Object
   ) {
-    // Language was already loaded by the app initializer (see app.config.ts);
-    // fall back to resolving it again only if that load failed.
-    this.currentLang =
-      this.translate.currentLang ||
-      resolveInitialLang(this.platformId, this.translate.getBrowserLang());
-    this.translate.use(this.currentLang);
-
-    // Update <html lang> attribute for SEO/accessibility
-    if (isPlatformBrowser(this.platformId)) {
-      document.documentElement.lang = this.currentLang;
-    }
+    // Translations for the URL's language were loaded by langResolver before
+    // this component was created, on the server and in the browser alike.
+    this.currentLang = (this.translate.currentLang as AppLang) || DEFAULT_LANG;
+    this.applyLangToDocument();
 
     // Initialize theme from localStorage
     if (isPlatformBrowser(this.platformId)) {
@@ -92,12 +88,14 @@ export class HomeComponent implements OnInit, OnDestroy {
    * Lifecycle hook called after data-bound properties are initialized.
    */
   ngOnInit(): void {
-    //Updates meta desc everytime the language changes
-    this.updateMetaDescription();
+    // Keep <html lang>, meta tags and hreflang links in sync with the language.
+    // The component is reused across `/` and `/es` (see app.config.ts), so
+    // language switches arrive here as onLangChange events from the resolver.
     this.translate.onLangChange
       .pipe(takeUntil(this.destroy$))
       .subscribe((event: LangChangeEvent) => {
-        this.updateMetaDescription();
+        this.currentLang = event.lang as AppLang;
+        this.applyLangToDocument();
       });
     // Check if the code is running in the browser
     if (isPlatformBrowser(this.platformId)) {
@@ -124,22 +122,47 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.destroy$.complete();
   }
 
-  private updateMetaDescription() {
-    const desc = this.translate.instant('HOME_META_DESCRIPTION');
-    this.meta.updateTag({ name: 'description', content: desc });
-    // Opcional, si quieres título dinámico:
-    const title = this.translate.instant('HOME_HEADER_NAME');
-    this.titleService.setTitle(title);
+  /**
+   * Writes everything language-dependent outside the template: <html lang>,
+   * title, meta description and the canonical / hreflang links. Runs on the
+   * server too, so each prerendered HTML file carries its own SEO tags.
+   */
+  private applyLangToDocument() {
+    const lang = this.currentLang;
+    this.document.documentElement.lang = lang;
+    this.titleService.setTitle(this.translate.instant('HOME_HEADER_NAME'));
+    this.meta.updateTag({
+      name: 'description',
+      content: this.translate.instant('HOME_META_DESCRIPTION'),
+    });
+
+    const head = this.document.head;
+    head.querySelectorAll('link[data-lang-seo]').forEach((el) => el.remove());
+    const links: Record<string, string>[] = [
+      { rel: 'canonical', href: urlForLang(lang) },
+      { rel: 'alternate', hreflang: 'en', href: urlForLang('en') },
+      { rel: 'alternate', hreflang: 'es', href: urlForLang('es') },
+      { rel: 'alternate', hreflang: 'x-default', href: urlForLang(DEFAULT_LANG) },
+    ];
+    for (const attrs of links) {
+      const link = this.document.createElement('link');
+      Object.entries(attrs).forEach(([k, v]) => link.setAttribute(k, v));
+      link.setAttribute('data-lang-seo', '');
+      head.appendChild(link);
+    }
   }
 
-  /** Switches between English and Spanish languages */
+  /**
+   * Switches between English and Spanish by navigating to the other
+   * language's URL. The choice is stored in a cookie so the edge redirect
+   * serves the right language directly on the next visit.
+   */
   switchLanguage() {
-    this.currentLang = this.currentLang === 'en' ? 'es' : 'en';
-    this.translate.use(this.currentLang);
+    const next: AppLang = this.currentLang === 'en' ? 'es' : 'en';
     if (isPlatformBrowser(this.platformId)) {
-      localStorage.setItem('language', this.currentLang);
-      document.documentElement.lang = this.currentLang;
+      rememberLang(this.document, next);
     }
+    this.router.navigateByUrl(pathForLang(next));
   }
 
   /** Toggles between light and dark theme */

@@ -9,6 +9,22 @@ const browserDistFolder = resolve(serverDistFolder, '../browser');
 const app = express();
 const angularApp = new AngularNodeAppEngine();
 
+/**
+ * Sends Spanish visitors from `/` to the prerendered `/es` page before any
+ * HTML is served. Mirrors the redirect rules in vercel.json so local runs of
+ * this server behave like production. An explicit choice (cookie) wins over
+ * the browser's Accept-Language header.
+ */
+app.get('/', (req, res, next) => {
+  const cookie = /(?:^|;\s*)language=(en|es)(?:;|$)/.exec(req.headers.cookie ?? '')?.[1];
+  const acceptsSpanish = /^\s*es\b/i.test(req.headers['accept-language'] ?? '');
+  if (cookie === 'es' || (!cookie && acceptsSpanish)) {
+    res.redirect(307, '/es');
+    return;
+  }
+  next();
+});
+
 // Serve static files from /browser
 app.use(
   express.static(browserDistFolder, {

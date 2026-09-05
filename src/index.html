@@ -7,32 +7,17 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--
-    Runs before first paint: applies the persisted theme/language so the
-    prerendered HTML is not painted with the default theme and then flipped
-    once Angular hydrates. It also preloads the translation file the app will
-    request, so it downloads in parallel with the JS bundle instead of after it.
+    Runs before first paint: applies the persisted theme so the prerendered
+    HTML is not painted dark and then flipped to light once Angular hydrates.
+    Language needs no script here: each language is its own prerendered URL.
   -->
   <script>
     (function () {
-      var d = document.documentElement;
-      var theme = 'dark', lang = 'en';
       try {
-        if (localStorage.getItem('theme') === 'light') theme = 'light';
-        var l = localStorage.getItem('language') || (navigator.language || 'en').slice(0, 2);
-        if (l === 'es') lang = 'es';
+        if (localStorage.getItem('theme') === 'light') {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
       } catch (e) {}
-      d.setAttribute('data-theme', theme);
-      d.lang = lang;
-      // The page is prerendered in English and its translations travel inside
-      // the HTML (Angular transfer state), so only other languages need a fetch.
-      if (lang !== 'en') {
-        var link = document.createElement('link');
-        link.rel = 'preload';
-        link.as = 'fetch';
-        link.crossOrigin = 'anonymous';
-        link.href = '/assets/i18n/' + lang + '.json';
-        document.head.appendChild(link);
-      }
     })();
   </script>
   <!-- Description SEO -->

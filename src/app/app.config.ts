@@ -1,13 +1,11 @@
-import { ApplicationConfig, inject, PLATFORM_ID, provideAppInitializer } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { ApplicationConfig } from '@angular/core';
+import { ActivatedRouteSnapshot, BaseRouteReuseStrategy, provideRouter, RouteReuseStrategy } from '@angular/router';
 import { routes } from './app.routes';
 import { HttpClient, withFetch } from '@angular/common/http';
 import { provideHttpClient } from '@angular/common/http';
-import { TranslateModule, TranslateLoader, TranslateService } from '@ngx-translate/core';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { provideClientHydration } from '@angular/platform-browser';
-import { catchError, lastValueFrom, of } from 'rxjs';
-import { resolveInitialLang } from './i18n/initial-lang';
 
 /** Factory function to create TranslateHttpLoader for loading translation files */
 export function HttpLoaderFactory(http: HttpClient) {
@@ -15,34 +13,34 @@ export function HttpLoaderFactory(http: HttpClient) {
 }
 
 /**
- * Loads the user's language before the first render.
- *
- * Without this, hydration runs while the translation file is still pending:
- * every `| translate` binding resolves to an empty string, the prerendered
- * content is wiped and then re-rendered once the file arrives (visible blank
- * flash + large layout shift). The JSON is preloaded from index.html, so this
- * normally costs no extra network time.
+ * Keeps the page component alive when navigating between `/` and `/es`.
+ * Both routes render the same component; without this Angular would destroy
+ * and recreate it on every language switch.
  */
-function preloadTranslations() {
-  const translate = inject(TranslateService);
-  const lang = resolveInitialLang(inject(PLATFORM_ID), translate.getBrowserLang());
-  return lastValueFrom(translate.use(lang).pipe(catchError(() => of(null))));
+export class SameComponentReuseStrategy extends BaseRouteReuseStrategy {
+  override shouldReuseRoute(future: ActivatedRouteSnapshot, curr: ActivatedRouteSnapshot): boolean {
+    return (
+      future.routeConfig === curr.routeConfig ||
+      (!!future.component && future.component === curr.component)
+    );
+  }
 }
 
 /** Application configuration with providers for routing, HTTP, and translation */
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
+    { provide: RouteReuseStrategy, useClass: SameComponentReuseStrategy },
     provideClientHydration(),
     provideHttpClient(withFetch()),
+    // No defaultLanguage: the language comes from the URL and is loaded by
+    // langResolver, so a second translation file is never fetched.
     TranslateModule.forRoot({
-      defaultLanguage: 'en',
       loader: {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
         deps: [HttpClient],
       },
     }).providers!,
-    provideAppInitializer(preloadTranslations),
   ],
 };
