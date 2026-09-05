@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 /** Interface for social media link data */
 interface SocialLink {
@@ -18,7 +19,7 @@ interface SocialLink {
 @Component({
   selector: 'app-social',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './social.component.html',
   styleUrl: './social.component.css',
 })

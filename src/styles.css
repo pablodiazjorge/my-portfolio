@@ -52,7 +52,7 @@
   /* Text colors */
   --color-d-text-default:             oklch(70.4% 0.04 256.788);           /* was text-slate-400 */  
   --color-d-text-heading:             oklch(92.9% 0.013 255.508);          /* was text-slate-200 */  
-  --color-d-text-secondary:           oklch(55.4% 0.046 257.417);          /* was text-slate-500 */  
+  --color-d-text-secondary:           oklch(61% 0.046 257.417);            /* slate-500 lightened to reach 4.7:1 contrast on the dark background (WCAG AA) */
   --color-d-text-hover-accent:        oklch(85.5% 0.138 181.071);          /* was text-teal-300 */  
 
   /* Badge styles */

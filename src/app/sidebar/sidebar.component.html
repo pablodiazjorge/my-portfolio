@@ -1,7 +1,7 @@
 <!-- Sidebar navigation with responsive display -->
 <nav
   class="sidebar-nav hidden lg:[display:contents]"
-  aria-label="In-page jump links"
+  [attr.aria-label]="'A11Y_SECTION_NAV' | translate"
 >
   <!-- Navigation list with Tailwind styling -->
   <ul class="mt-16 pl-0 ml-0 w-max list-none">
@@ -12,6 +12,7 @@
         class="group nav-link py-3 flex items-center cursor-pointer no-underline"
         href="{{ item.href }}"
         [class.active]="item.href === activeHref"
+        [attr.aria-current]="item.href === activeHref ? 'true' : null"
         (click)="onClick(item, $event)"
       >
         <!-- Indicador -->

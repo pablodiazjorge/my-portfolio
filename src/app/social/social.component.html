@@ -1,5 +1,5 @@
 <!-- Social media links list -->
-<ul class="social-list mt-8 mb-8 flex list-none p-0" aria-label="Social media">
+<ul class="social-list mt-8 mb-8 flex list-none p-0" [attr.aria-label]="'A11Y_SOCIAL_LINKS' | translate">
   <!-- Social link items -->
   <li
     *ngFor="let link of socialLinks"
@@ -11,7 +11,7 @@
       [href]="link.url"
       target="_blank"
       rel="noreferrer noopener"
-      [attr.aria-label]="link.name + ' (opens in a new tab)'"
+      [attr.aria-label]="link.name + ' ' + ('A11Y_OPENS_NEW_TAB' | translate)"
       [title]="link.title"
     >
       <!-- Screen-reader-only link name -->

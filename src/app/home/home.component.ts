@@ -220,6 +220,21 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   /**
+   * Skip link handler: moves keyboard focus to the main content.
+   * The anchor's default navigation is cancelled because "#main" resolves
+   * against <base href="/"> and would reload the English root page.
+   */
+  skipToContent(event: Event) {
+    event.preventDefault();
+    const main = document.getElementById('main');
+    if (!main) {
+      return;
+    }
+    main.focus();
+    main.scrollIntoView({ block: 'start' });
+  }
+
+  /**
    * Scrolls smoothly to the specified section
    * @param href URL fragment of the target section
    */

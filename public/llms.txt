@@ -1,0 +1,20 @@
+# Pablo Díaz-Jorge
+
+> Portfolio of Pablo Díaz-Jorge, Frontend Engineer focused on frontend architecture and AI engineering (Angular, TypeScript, WebAssembly, SSE, D3.js, PostgreSQL + pgvector).
+
+The site is a single page available in two languages. It lists professional experience and open-source projects, each with a GitHub link and, where available, a live demo.
+
+## Pages
+
+- [English](https://www.pablodiazjorge.com/): about, experience and projects in English.
+- [Español](https://www.pablodiazjorge.com/es): the same content in Spanish.
+
+## Documents
+
+- [CV (English, PDF)](https://www.pablodiazjorge.com/assets/docs/Pablo%20D%C3%ADaz-Jorge%20Garc%C3%ADa_CV_EN.pdf)
+- [CV (Español, PDF)](https://www.pablodiazjorge.com/assets/docs/Pablo%20D%C3%ADaz-Jorge%20Garc%C3%ADa_CV_ES.pdf)
+
+## Profiles
+
+- [GitHub](https://github.com/pablodiazjorge)
+- [LinkedIn](https://www.linkedin.com/in/pablodiazjorge/)
