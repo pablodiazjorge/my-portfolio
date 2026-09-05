@@ -97,7 +97,7 @@
                           {
                               "PROJECTS_TITLE":  "Candle AI",
                               "PROJECTS_DESCRIPTION":  "Professional-grade candlestick charting and technical analysis dashboard that runs entirely in the browser — no accounts, no subscriptions, no data leaving your machine. Combines a deterministic Bayesian confluence engine (scoring 15+ candlestick and chart patterns across 7 signal hierarchies) with an optional AI narrative layer that explains the analysis in natural language. The LLM never overrides the quantitative engine — it narrates the results. Built with Angular 22 (Zoneless + Signals), Lightweight Charts v5, Web Workers for non-blocking computation, IndexedDB caching, Pine Script v5 export, and 160 Vitest + 5 Playwright E2E tests. Developed using prompt-forge agentic infrastructure across 9 epics as a solo developer.",
-                              "PROJECTS_IMAGE":  "/assets/images/candle-ai.png",
+                              "PROJECTS_IMAGE":  "/assets/images/candle-ai.webp",
                               "PROJECTS_LINK":  "https://github.com/pablodiazjorge/candle-ai",
                               "PROJECTS_DEMO":  "https://candle-ai.pablodiazjorge.com/",
                               "PROJECTS_DEMO_ACTIVE":  "true",
@@ -228,7 +228,7 @@
                           {
                               "PROJECTS_TITLE":  "Palaze (BSc capstone · legacy)",
                               "PROJECTS_DESCRIPTION":  "Native web component library built with Stencil.js. Lightweight, easy-to-implement components with fast loading. Installable via npm or CDN. Includes dedicated documentation. Created as a final degree project to dive deep into web development.",
-                              "PROJECTS_IMAGE":  "/assets/images/palace-project.svg",
+                              "PROJECTS_IMAGE":  "/assets/images/palace-project.webp",
                               "PROJECTS_LINK":  "https://github.com/pablodiazjorge/palaze",
                               "PROJECTS_DEMO":  "https://palaze.pablodiazjorge.com/",
                               "PROJECTS_DEMO_ACTIVE":  "true",

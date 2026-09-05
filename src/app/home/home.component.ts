@@ -18,6 +18,7 @@ import { LangChangeEvent, TranslateModule, TranslateService } from '@ngx-transla
 import { SafeHtmlPipe } from '../pipes/safe-html.pipe';
 import { Subject, fromEvent, takeUntil, debounceTime } from 'rxjs';
 import { Meta, Title } from '@angular/platform-browser';
+import { resolveInitialLang } from '../i18n/initial-lang';
 
 @Component({
   selector: 'app-home',
@@ -62,16 +63,11 @@ export class HomeComponent implements OnInit, OnDestroy {
     private titleService: Title,
     @Inject(PLATFORM_ID) private platformId: Object
   ) {
-    // Initialize language from localStorage or browser settings
-    const savedLang = isPlatformBrowser(this.platformId)
-      ? localStorage.getItem('language')
-      : null;
+    // Language was already loaded by the app initializer (see app.config.ts);
+    // fall back to resolving it again only if that load failed.
     this.currentLang =
-      savedLang && savedLang.match(/en|es/)
-        ? savedLang
-        : this.translate.getBrowserLang()?.match(/en|es/)
-        ? this.translate.getBrowserLang()!
-        : 'en';
+      this.translate.currentLang ||
+      resolveInitialLang(this.platformId, this.translate.getBrowserLang());
     this.translate.use(this.currentLang);
 
     // Update <html lang> attribute for SEO/accessibility

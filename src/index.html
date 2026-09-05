@@ -1,23 +1,66 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth" data-theme="dark">
 
 <head>
   <meta charset="utf-8">
   <title>Pablo Díaz-Jorge</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--
+    Runs before first paint: applies the persisted theme/language so the
+    prerendered HTML is not painted with the default theme and then flipped
+    once Angular hydrates. It also preloads the translation file the app will
+    request, so it downloads in parallel with the JS bundle instead of after it.
+  -->
+  <script>
+    (function () {
+      var d = document.documentElement;
+      var theme = 'dark', lang = 'en';
+      try {
+        if (localStorage.getItem('theme') === 'light') theme = 'light';
+        var l = localStorage.getItem('language') || (navigator.language || 'en').slice(0, 2);
+        if (l === 'es') lang = 'es';
+      } catch (e) {}
+      d.setAttribute('data-theme', theme);
+      d.lang = lang;
+      // The page is prerendered in English and its translations travel inside
+      // the HTML (Angular transfer state), so only other languages need a fetch.
+      if (lang !== 'en') {
+        var link = document.createElement('link');
+        link.rel = 'preload';
+        link.as = 'fetch';
+        link.crossOrigin = 'anonymous';
+        link.href = '/assets/i18n/' + lang + '.json';
+        document.head.appendChild(link);
+      }
+    })();
+  </script>
   <!-- Description SEO -->
   <meta name="google-site-verification" content="6uPzmSLBQr9LlX4UsN5PwEXRFh-34mXX05Htqu9e92k" />
   <meta name="description" content="Portfolio profesional de Pablo Díaz-Jorge — Frontend Engineer especializado en Arquitectura Frontend e Ingeniería de IA. Angular, TypeScript, WebAssembly, SSE, D3.js y PostgreSQL + pgvector.">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/x-icon" href="/assets/images/Logo-component.svg">
-  <link rel="preconnect" href="https://rsms.me/">
-  <link rel="preload" href="https://rsms.me/inter/inter.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://rsms.me/inter/inter.css"></noscript>
+  <!-- Self-hosted Inter (latin subset, variable weight). Faces declared in styles.css -->
+  <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <!--
+    Metric-compatible fallback (Arial scaled to Inter's metrics) kept here so it
+    is always available at first paint, even before the full stylesheet loads.
+    This keeps text from reflowing when Inter swaps in.
+  -->
+  <style>
+    @font-face {
+      font-family: "Inter Fallback";
+      src: local("Arial");
+      ascent-override: 90.2%;
+      descent-override: 22.48%;
+      line-gap-override: 0%;
+      size-adjust: 107.4%;
+    }
+  </style>
 </head>
 
-<body class="antialiased js-focus-visible overflow-x-hidden dark:bg-d-background-primary dark:text-d-text-default light:bg-l-background-primary light:text-l-text-default"></body>
-<app-root></app-root>
+<body class="antialiased js-focus-visible overflow-x-hidden dark:bg-d-background-primary dark:text-d-text-default light:bg-l-background-primary light:text-l-text-default">
+  <app-root></app-root>
 </body>
 
 </html>

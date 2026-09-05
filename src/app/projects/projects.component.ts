@@ -44,6 +44,11 @@ export class ProjectsComponent implements OnInit, OnDestroy {
       });
   }
 
+  /** Keeps the same DOM nodes when the list is replaced on language change */
+  trackByIndex(index: number): number {
+    return index;
+  }
+
   /** Cleans up subscription to prevent memory leaks */
   ngOnDestroy(): void {
     this.dataSubscription?.unsubscribe();

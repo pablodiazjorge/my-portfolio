@@ -97,7 +97,7 @@
                           {
                               "PROJECTS_TITLE":  "Candle AI",
                               "PROJECTS_DESCRIPTION":  "Dashboard de análisis técnico con gráficos de velas de calidad profesional que se ejecuta completamente en el navegador — sin cuentas, sin suscripciones, sin datos que salgan de tu máquina. Combina un motor de confluencia bayesiano determinista (que puntúa más de 15 patrones de velas y chartistas en 7 jerarquías de señales) con una capa narrativa de IA opcional que explica el análisis en lenguaje natural. El LLM nunca anula al motor cuantitativo — narra los resultados. Construido con Angular 22 (Zoneless + Signals), Lightweight Charts v5, Web Workers para cómputo no bloqueante, caché IndexedDB, exportación a Pine Script v5, y 160 tests Vitest + 5 tests E2E Playwright. Desarrollado con infraestructura agentica prompt-forge a lo largo de 9 épicas como desarrollador en solitario.",
-                              "PROJECTS_IMAGE":  "/assets/images/candle-ai.png",
+                              "PROJECTS_IMAGE":  "/assets/images/candle-ai.webp",
                               "PROJECTS_LINK":  "https://github.com/pablodiazjorge/candle-ai",
                               "PROJECTS_DEMO":  "https://candle-ai.pablodiazjorge.com/",
                               "PROJECTS_DEMO_ACTIVE":  "true",
@@ -228,7 +228,7 @@
                           {
                               "PROJECTS_TITLE":  "Palaze (TFG · legacy)",
                               "PROJECTS_DESCRIPTION":  "Biblioteca de componentes web nativos desarrollada con Stencil.js. Componentes ligeros, fáciles de implementar y con carga rápida. Instalable vía npm o CDN. Incluye documentación propia. Surgió como proyecto de final de grado para adentrarme en el desarrollo web.",
-                              "PROJECTS_IMAGE":  "/assets/images/palace-project.svg",
+                              "PROJECTS_IMAGE":  "/assets/images/palace-project.webp",
                               "PROJECTS_LINK":  "https://github.com/pablodiazjorge/palaze",
                               "PROJECTS_DEMO":  "https://palaze.pablodiazjorge.com/",
                               "PROJECTS_DEMO_ACTIVE":  "true",

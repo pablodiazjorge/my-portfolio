@@ -17,7 +17,7 @@
   <div class="space-y-12 projects-list">
     <!-- Project item with hover effects -->
     <div
-      *ngFor="let project of projects"
+      *ngFor="let project of projects; trackBy: trackByIndex"
       class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50 projects-item"
     >
       <!-- Hover background overlay -->
@@ -34,7 +34,9 @@
             <img
               [src]="project.PROJECTS_IMAGE"
               alt="{{ project.PROJECTS_TITLE| translate }}"
-              class="z-3 aspect-video object-cover rounded border-2 dark:border-d-text-heading/10 light:border-l-text-heading/10 transition dark:hover:border-d-text-heading/30 dark:group-hover:border-d-text-heading/30 dark:lg:group-hover/list:border-d-text-heading/30 light:hover:border-l-text-heading/30 light:group-hover:border-l-text-heading/30 light:lg:group-hover/list:border-l-text-heading/30"
+              width="640"
+              height="360"
+              class="z-3 w-full aspect-video object-cover rounded border-2 dark:border-d-text-heading/10 light:border-l-text-heading/10 transition dark:hover:border-d-text-heading/30 dark:group-hover:border-d-text-heading/30 dark:lg:group-hover/list:border-d-text-heading/30 light:hover:border-l-text-heading/30 light:group-hover:border-l-text-heading/30 light:lg:group-hover/list:border-l-text-heading/30"
               loading="lazy"
             />
           </a>
