@@ -1,8 +1,8 @@
 ﻿{
-    "HOME_META_DESCRIPTION":  "Portfolio of Pablo Díaz-Jorge — Frontend Engineer specialized in Frontend Systems Architecture \u0026 AI Engineering. Angular, TypeScript, WebAssembly, SSE, D3.js \u0026 PostgreSQL + pgvector.",
+    "HOME_META_DESCRIPTION":  "Portfolio of Pablo Díaz-Jorge, software engineer and AI engineer. Frontend architecture with Angular and TypeScript, AI agents, MCP and agent evaluation.",
     "HOME_HEADER_NAME":  "Pablo Díaz-Jorge",
-    "HOME_JOB_TITLE":  "Frontend Engineer\u003cbr\u003eFrontend Architecture · AI Engineering",
-    "HOME_DESCRIPTION":  "I design and build scalable frontend systems at the intersection of software architecture and artificial intelligence engineering.",
+    "HOME_JOB_TITLE":  "Software Engineer \u0026amp; AI Engineer\u003cbr\u003eAI agents, MCP and frontend architecture",
+    "HOME_DESCRIPTION":  "I design and build scalable software with a focus on architecture and quality, and I apply AI engineering to development: agents, MCP and measuring what they add.",
     "HOME_FOOTER_TEXT":  "Built with \u003ca href=\"https://angular.io/\" class=\"light:font-semibold dark:text-d-text-default light:text-l-text-default\"\u003eAngular\u003c/a\u003e and \u003ca href=\"https://tailwindcss.com/\" class=\"light:font-semibold dark:text-d-text-default light:text-l-text-default\"\u003eTailwind CSS.\u003c/a\u003e",
     "HOME_CV":  "Curriculum vitae",
     "A11Y_SKIP_TO_CONTENT":  "Skip to content",
@@ -23,9 +23,9 @@
     "EXPERIENCE_TITLE":  "Professional Experience",
     "EXPERIENCE_LIST":  [
                             {
-                                "EXPERIENCE_PERIOD":  "Sept 2025 — Present",
+                                "EXPERIENCE_PERIOD":  "Sept 2025 - Present",
                                 "EXPERIENCE_TITLE":  "Frontend Engineer",
-                                "EXPERIENCE_TYPECONTRACT":  "Indefinite contract — Full time",
+                                "EXPERIENCE_TYPECONTRACT":  "Indefinite contract - Full time",
                                 "EXPERIENCE_COMPANY":  "Infoport",
                                 "EXPERIENCE_COMPANYLINK":  "https://www.infoport.es/",
                                 "EXPERIENCE_DESCRIPTION":  "I contribute to the development of digital solutions that optimize port logistics operations, building accessible, scalable, and user-centered interfaces with Angular and TypeScript, supported by technologies such as SCSS, RxJS, and custom component libraries. I integrate AI-assisted development tools into the workflow to accelerate development, refactoring, and code review tasks, maintaining high quality standards. I work in an agile environment, collaborating closely with analysts and backend developers to deliver robust, high-value solutions for the sector.",
@@ -46,12 +46,35 @@
                                                       ]
                             },
                             {
-                                "EXPERIENCE_PERIOD":  "Jul 2023 — Sept 2025",
-                                "EXPERIENCE_TITLE":  "Independent Software Engineer — AI \u0026 Frontend R\u0026D",
+                                "EXPERIENCE_PERIOD":  "Jan 2026 - Present",
+                                "EXPERIENCE_TITLE":  "AI Engineer (open source)",
+                                "EXPERIENCE_TYPECONTRACT":  "Own projects and open-source contributions",
+                                "EXPERIENCE_COMPANY":  "Open source",
+                                "EXPERIENCE_COMPANYLINK":  "https://github.com/pablodiazjorge",
+                                "EXPERIENCE_DESCRIPTION":  "I build tools for AI agents and measure what they add, in my own projects and in open-source contributions. In rea (130,000+ stars) I have three merged PRs, which brought the real Ghidra verification on Windows back to green and moved the Claude Code and Gemini CLI checks to native Windows, plus an open PR in the MCP server\u0027s input validation (Node.js and TypeScript), design proposals and verification of other contributors\u0027 PRs with real Ghidra. In rea-lab I built a reproducible environment, 40 challenges with known answers and a TypeScript benchmark; its preregistered study of 70 Claude Code runs, graded with no LLM as judge, showed that rea did not change the solve rate, doubled time and cost, and that every cited evidence record was authentic. I have published two Claude Code mods, rea-casebook and impact-radius, with CI on Windows, macOS and Ubuntu, as well as prompt-forge and applications built end to end with agents, such as Candle AI, TestMaker and gym-log.",
+                                "EXPERIENCE_TECNOLOGIES":  [
+                                                               "TypeScript",
+                                                               "Node.js",
+                                                               "Model Context Protocol",
+                                                               "Claude Code (mods and skills)",
+                                                               "Agent evaluation",
+                                                               "Angular 22",
+                                                               "Vitest",
+                                                               "GitHub Actions"
+                                                           ],
+                                "EXPERIENCE_OTHERS":  [
+                                                          "Open source",
+                                                          "Preregistered studies",
+                                                          "Technical writing"
+                                                      ]
+                            },
+                            {
+                                "EXPERIENCE_PERIOD":  "Jul 2023 - Sept 2025",
+                                "EXPERIENCE_TITLE":  "Independent Software Engineer (AI \u0026 Frontend R\u0026D)",
                                 "EXPERIENCE_TYPECONTRACT":  "Applied research and independent development",
                                 "EXPERIENCE_COMPANY":  "Open Source Projects",
                                 "EXPERIENCE_COMPANYLINK":  "https://github.com/pablodiazjorge",
-                                "EXPERIENCE_DESCRIPTION":  "Applied research and independent development period focused on the convergence between frontend systems architecture and artificial intelligence engineering. I designed and prototyped four open-source solutions: Attention Matrix Explorer (2023) — interactive visualization of transformer attention matrices with D3.js and Web Workers; Semantic Search Engine (2024) — corporate semantic search engine with PostgreSQL + pgvector and HNSW indexing; Cognitive Agent Orchestrator (2024-2025) — cognitive agent orchestrator with ReAct pattern and real-time streaming via SSE; Token Cost Analyzer (2025) — LLM prompt cost and tokenization analyzer with tiktoken WebAssembly. Stack: Angular (16 → 19), TypeScript, RxJS, Signals, D3.js, Spring Boot, PostgreSQL, pgvector, Node.js, Express, Web Workers, WebAssembly, SSE, Docker, Ollama.",
+                                "EXPERIENCE_DESCRIPTION":  "Applied research and independent development period focused on the convergence between frontend systems architecture and artificial intelligence engineering. I designed and prototyped four open-source solutions: Attention Matrix Explorer (2023), an interactive visualization of transformer attention matrices with D3.js and Web Workers; Semantic Search Engine (2024), a corporate semantic search engine with PostgreSQL, pgvector and HNSW indexing; Cognitive Agent Orchestrator (2024-2025), a cognitive agent orchestrator with the ReAct pattern and real-time streaming via SSE; and Token Cost Analyzer (2025), an LLM prompt cost and tokenization analyzer with tiktoken in WebAssembly. Stack: Angular (16 → 19), TypeScript, RxJS, Signals, D3.js, Spring Boot, PostgreSQL, pgvector, Node.js, Express, Web Workers, WebAssembly, SSE, Docker, Ollama.",
                                 "EXPERIENCE_TECNOLOGIES":  [
                                                                "Angular (16 → 19)",
                                                                "TypeScript",
@@ -72,9 +95,9 @@
                                                       ]
                             },
                             {
-                                "EXPERIENCE_PERIOD":  "Mar 2022 — Jul 2022",
+                                "EXPERIENCE_PERIOD":  "Mar 2022 - Jul 2022",
                                 "EXPERIENCE_TITLE":  "Full Stack Developer",
-                                "EXPERIENCE_TYPECONTRACT":  "Internship — Full time",
+                                "EXPERIENCE_TYPECONTRACT":  "Internship - Full time",
                                 "EXPERIENCE_COMPANY":  "NTT DATA Europe \u0026 Latam",
                                 "EXPERIENCE_COMPANYLINK":  "https://es.nttdata.com/",
                                 "EXPERIENCE_DESCRIPTION":  "As a Full Stack Developer at NTT DATA Valencia, I contributed to the end-to-end development of a corporate personnel management solution. I took part in implementing REST services on the backend and developed an interactive frontend module focused on dynamic visualization of structured data, ensuring code maintainability under the team\u0027s quality standards.",
@@ -89,9 +112,9 @@
                                                       ]
                             },
                             {
-                                "EXPERIENCE_PERIOD":  "Mar 2018 — Jun 2018",
+                                "EXPERIENCE_PERIOD":  "Mar 2018 - Jun 2018",
                                 "EXPERIENCE_TITLE":  "Data Analyst",
-                                "EXPERIENCE_TYPECONTRACT":  "Internship — Full time",
+                                "EXPERIENCE_TYPECONTRACT":  "Internship - Full time",
                                 "EXPERIENCE_COMPANY":  "Sothis",
                                 "EXPERIENCE_COMPANYLINK":  "https://www.sothis.tech/",
                                 "EXPERIENCE_DESCRIPTION":  "Database analysis and design for the compensation plan of the UNE of Consulting and Information Systems (CSI) and the UNE of Automation and Control (AC).",
@@ -107,8 +130,55 @@
     "PROJECTS_TITLE":  "Projects",
     "PROJECTS_LIST":  [
                           {
+                              "PROJECTS_TITLE":  "rea-lab",
+                              "PROJECTS_DESCRIPTION":  "Public lab for reverse engineering with AI agents on Windows, built on rea and Ghidra. A reproducible environment with pinned versions and hashes, 40 C challenges with known answers and a TypeScript benchmark that isolates every run and grades with no LLM as judge. Its first study, preregistered and with 70 Claude Code runs, showed that rea did not change the solve rate (28 of 30 with and without), doubled time and cost, and that all 80 cited evidence records were authentic. Its data has led to issues and PRs for rea.",
+                              "PROJECTS_IMAGE":  "/assets/images/rea-lab.svg",
+                              "PROJECTS_LINK":  "https://github.com/pablodiazjorge/rea-lab",
+                              "PROJECTS_DEMO":  "",
+                              "PROJECTS_DEMO_ACTIVE":  "",
+                              "PROJECTS_TECNOLOGIES":  [
+                                                           "TypeScript",
+                                                           "Node.js",
+                                                           "Model Context Protocol",
+                                                           "Claude Code",
+                                                           "Ghidra",
+                                                           "Agent evaluation",
+                                                           "Statistics (Wilson, McNemar)"
+                                                       ]
+                          },
+                          {
+                              "PROJECTS_TITLE":  "rea-casebook",
+                              "PROJECTS_DESCRIPTION":  "Claude Code mod that shows, live in a panel, the evidence rea gives the agent: the Ghidra wait, findings, open questions and the evidence timeline. Findings are recorded through a tool that rejects any evidence_id rea did not deliver, and the session exports to Markdown or to an artifact. TypeScript, 43 tests and CI on Windows, macOS and Ubuntu. Submitted to the Claude plugin directory.",
+                              "PROJECTS_IMAGE":  "/assets/images/rea-casebook.webp",
+                              "PROJECTS_LINK":  "https://github.com/pablodiazjorge/rea-casebook",
+                              "PROJECTS_DEMO":  "",
+                              "PROJECTS_DEMO_ACTIVE":  "",
+                              "PROJECTS_TECNOLOGIES":  [
+                                                           "TypeScript",
+                                                           "Claude Code (mod)",
+                                                           "Model Context Protocol",
+                                                           "Vitest",
+                                                           "GitHub Actions (3 OSes)"
+                                                       ]
+                          },
+                          {
+                              "PROJECTS_TITLE":  "impact-radius",
+                              "PROJECTS_DESCRIPTION":  "Claude Code mod that holds risky shell commands before they run (rm -rf, git reset --hard, force pushes, migrations, global installs, curl | sh), shows what they would change and waits for you to press Run or Cancel. Works with Bash and PowerShell on Windows, macOS and Linux, in English and Spanish, with AAA contrast and CI on three operating systems.",
+                              "PROJECTS_IMAGE":  "/assets/images/impact-radius.webp",
+                              "PROJECTS_LINK":  "https://github.com/pablodiazjorge/impact-radius",
+                              "PROJECTS_DEMO":  "",
+                              "PROJECTS_DEMO_ACTIVE":  "",
+                              "PROJECTS_TECNOLOGIES":  [
+                                                           "TypeScript",
+                                                           "Claude Code (mod)",
+                                                           "Bash and PowerShell",
+                                                           "AAA accessibility",
+                                                           "i18n EN/ES"
+                                                       ]
+                          },
+                          {
                               "PROJECTS_TITLE":  "Candle AI",
-                              "PROJECTS_DESCRIPTION":  "Professional-grade candlestick charting and technical analysis dashboard that runs entirely in the browser — no accounts, no subscriptions, no data leaving your machine. Combines a deterministic Bayesian confluence engine (scoring 15+ candlestick and chart patterns across 7 signal hierarchies) with an optional AI narrative layer that explains the analysis in natural language. The LLM never overrides the quantitative engine — it narrates the results. Built with Angular 22 (Zoneless + Signals), Lightweight Charts v5, Web Workers for non-blocking computation, IndexedDB caching, Pine Script v5 export, and 160 Vitest + 5 Playwright E2E tests. Developed using prompt-forge agentic infrastructure across 9 epics as a solo developer.",
+                              "PROJECTS_DESCRIPTION":  "Professional-grade candlestick charting and technical analysis dashboard that runs entirely in the browser: no accounts, no subscriptions, no data leaving your machine. Combines a deterministic Bayesian confluence engine (scoring 15+ candlestick and chart patterns across 7 signal hierarchies) with an optional AI narrative layer that explains the analysis in natural language. The LLM never overrides the quantitative engine; it narrates the results. Built with Angular 22 (Zoneless + Signals), Lightweight Charts v5, Web Workers for non-blocking computation, IndexedDB caching, Pine Script v5 export, and 160 Vitest + 5 Playwright E2E tests. Developed using prompt-forge agentic infrastructure across 9 epics as a solo developer.",
                               "PROJECTS_IMAGE":  "/assets/images/candle-ai.webp",
                               "PROJECTS_LINK":  "https://github.com/pablodiazjorge/candle-ai",
                               "PROJECTS_DEMO":  "https://candle-ai.pablodiazjorge.com/",
@@ -125,7 +195,7 @@
                           },
                           {
                               "PROJECTS_TITLE":  "prompt-forge",
-                              "PROJECTS_DESCRIPTION":  "Agentic infrastructure toolkit that gives AI coding agents persistent memory across sessions. Designed to solve a real problem: AI agents are stateless — they forget lessons learned, repeat mistakes, and waste tokens rediscovering the same solutions. prompt-forge captures recurring errors, API changes, and workarounds as structured issues that are automatically promoted to permanent skills after 3+ occurrences. Zero runtime dependencies, no build step, no backend — just Markdown files that any AI coding agent (Copilot, Claude Code, Codex) can read. Multi-provider support with progressive disclosure (~700 tokens overhead across 7 skills). Built Candle AI on top of it — the infrastructure that made 9 epics of solo development manageable with consistent quality and knowledge retention.",
+                              "PROJECTS_DESCRIPTION":  "Agentic infrastructure toolkit that gives AI coding agents persistent memory across sessions. Designed to solve a real problem: AI agents are stateless: they forget lessons learned, repeat mistakes, and waste tokens rediscovering the same solutions. prompt-forge captures recurring errors, API changes, and workarounds as structured issues that are automatically promoted to permanent skills after 3+ occurrences. Zero runtime dependencies, no build step, no backend, just Markdown files that any AI coding agent (Copilot, Claude Code, Codex) can read. Multi-provider support with progressive disclosure (~700 tokens overhead across 7 skills). Built Candle AI on top of it; it was the infrastructure that made 9 epics of solo development manageable with consistent quality and knowledge retention.",
                               "PROJECTS_IMAGE":  "/assets/images/prompt-forge-terminal.svg",
                               "PROJECTS_LINK":  "https://github.com/pablodiazjorge/prompt-forge/tree/master",
                               "PROJECTS_DEMO":  "",
@@ -138,6 +208,22 @@
                                                            "Git-native Persistence",
                                                            "Progressive Disclosure",
                                                            "Multi-provider"
+                                                       ]
+                          },
+                          {
+                              "PROJECTS_TITLE":  "gym-log",
+                              "PROJECTS_DESCRIPTION":  "Mobile-first workout tracker for the gym floor: calculated progression targets for the next session (double progression autoregulated by RIR), volume and stagnation analysis, report export, and all data kept on your own device. Angular 22 with Signals and zoneless change detection, Tailwind CSS 4, Chart.js and Vitest.",
+                              "PROJECTS_IMAGE":  "/assets/images/gym-log.webp",
+                              "PROJECTS_LINK":  "https://github.com/pablodiazjorge/gym-log",
+                              "PROJECTS_DEMO":  "https://gym-log.pablodiazjorge.com/",
+                              "PROJECTS_DEMO_ACTIVE":  "true",
+                              "PROJECTS_TECNOLOGIES":  [
+                                                           "Angular 22 (Zoneless + Signals)",
+                                                           "TypeScript",
+                                                           "Tailwind CSS 4",
+                                                           "Chart.js",
+                                                           "Vitest",
+                                                           "Local-first"
                                                        ]
                           },
                           {
@@ -238,7 +324,7 @@
                                                        ]
                           },
                           {
-                              "PROJECTS_TITLE":  "Palaze (BSc capstone · legacy)",
+                              "PROJECTS_TITLE":  "Palaze (BSc capstone, legacy)",
                               "PROJECTS_DESCRIPTION":  "Native web component library built with Stencil.js. Lightweight, easy-to-implement components with fast loading. Installable via npm or CDN. Includes dedicated documentation. Created as a final degree project to dive deep into web development.",
                               "PROJECTS_IMAGE":  "/assets/images/palace-project.webp",
                               "PROJECTS_LINK":  "https://github.com/pablodiazjorge/palaze",
@@ -254,5 +340,5 @@
                           }
                       ],
     "ABOUT_TITLE":  "About",
-    "ABOUT_CONTENT":  "\u003cp\u003eWhat started back in high school as a simple experiment has grown into my true vocation. Today, I focus on designing and building scalable frontend systems at the intersection of software architecture and artificial intelligence engineering, combining thoughtful design with sound engineering practices.\u003c/p\u003e\u003cp\u003eI am currently working as a \u003cstrong\u003eFrontend Engineer at \u003ca href=\"https://www.infoportvalencia.com/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\"\u003eInfoport Valencia\u003c/a\u003e\u003c/strong\u003e, where I contribute to the development of digital solutions that optimize port logistics operations. My role involves designing accessible, scalable, and user-centered interfaces with \u003cstrong\u003eAngular and TypeScript\u003c/strong\u003e, supported by technologies such as SCSS, RxJS, and custom component libraries. I also integrate AI-assisted development tools into the workflow to accelerate development, refactoring, and code review tasks while maintaining high quality standards.\u003c/p\u003e\u003cp\u003eBetween 2023 and 2025, prior to joining Infoport, I dedicated a period to \u003cstrong\u003eapplied research and independent development\u003c/strong\u003e focused on the convergence between frontend architecture and AI engineering. During this phase I designed and prototyped four open-source solutions: \u003ca href=\"https://attention-matrix-explorer.pablodiazjorge.com/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\"\u003eAttention Matrix Explorer\u003c/a\u003e — interactive visualization of transformer attention matrices with D3.js and Web Workers; \u003ca href=\"https://github.com/pablodiazjorge/semantic-search-engine\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\"\u003eSemantic Search Engine\u003c/a\u003e — corporate semantic search engine with PostgreSQL + pgvector and HNSW indexing; \u003ca href=\"https://github.com/pablodiazjorge/cognitive-agent-orchestrator\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\"\u003eCognitive Agent Orchestrator\u003c/a\u003e — cognitive agent orchestrator with ReAct pattern and real-time SSE streaming; and \u003ca href=\"https://token-cost-analyzer.pablodiazjorge.com/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\"\u003eToken Cost Analyzer\u003c/a\u003e — 100% client-side LLM prompt cost and tokenization analyzer with WebAssembly.\u003c/p\u003e\u003cp\u003eIn 2026, I extended this convergence further with two new open-source projects: \u003ca href=\"https://github.com/pablodiazjorge/prompt-forge\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\"\u003eprompt-forge\u003c/a\u003e — an agentic infrastructure toolkit that gives AI coding agents persistent memory across sessions, designed to solve the statelessness problem that every AI-assisted developer faces; and \u003ca href=\"https://candle-ai.pablodiazjorge.com/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\"\u003eCandle AI\u003c/a\u003e — a professional-grade technical analysis dashboard with a deterministic Bayesian confluence engine and an optional LLM narrative layer, built on top of prompt-forge as the capstone project validating the infrastructure. Together, they represent the full spectrum of my work: from developer tooling infrastructure to end-user applications, all at the intersection of frontend architecture and AI engineering.\u003c/p\u003e\u003cp\u003ePreviously, I was part of \u003ca href=\"https://es.nttdata.com/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\"\u003eNTTData\u003c/a\u003e as a Full Stack Developer intern, where I worked on the design and implementation of an employee management platform with Angular and Java. I also interned as a data analyst at Sothis, where I contributed to database analysis and design for compensation plans.\u003c/p\u003e\u003cp\u003eOutside of coding, you will often find me working out at the gym, hiking in the mountains, reading novels, or enjoying good company at a bar with friends.\u003c/p\u003e"
+    "ABOUT_CONTENT":  "\u003cp\u003eWhat started back in high school as a simple experiment has grown into my true vocation. Today I work as a software engineer and AI engineer: I design and build scalable systems with a focus on architecture, thoughtful design and sound engineering practices, and I apply artificial intelligence to improve the way software gets built.\u003c/p\u003e\u003cp\u003eI am currently working as a \u003cstrong\u003eFrontend Engineer at \u003ca href=\"https://www.infoportvalencia.com/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\"\u003eInfoport Valencia\u003c/a\u003e\u003c/strong\u003e, where I contribute to the development of digital solutions that optimize port logistics operations. My role involves designing accessible, scalable, and user-centered interfaces with \u003cstrong\u003eAngular and TypeScript\u003c/strong\u003e, supported by technologies such as SCSS, RxJS, and custom component libraries. I also integrate AI-assisted development tools into the workflow to accelerate development, refactoring, and code review tasks while maintaining high quality standards.\u003c/p\u003e\u003cp\u003eBetween 2023 and 2025, prior to joining Infoport, I dedicated a period to \u003cstrong\u003eapplied research and independent development\u003c/strong\u003e focused on the convergence between frontend architecture and AI engineering. During this phase I designed and prototyped four open-source solutions: \u003ca href=\"https://attention-matrix-explorer.pablodiazjorge.com/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\"\u003eAttention Matrix Explorer\u003c/a\u003e, an interactive visualization of transformer attention matrices with D3.js and Web Workers; \u003ca href=\"https://github.com/pablodiazjorge/semantic-search-engine\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\"\u003eSemantic Search Engine\u003c/a\u003e, a corporate semantic search engine with PostgreSQL, pgvector and HNSW indexing; \u003ca href=\"https://github.com/pablodiazjorge/cognitive-agent-orchestrator\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\"\u003eCognitive Agent Orchestrator\u003c/a\u003e, an agent orchestrator with the ReAct pattern and real-time SSE streaming; and \u003ca href=\"https://token-cost-analyzer.pablodiazjorge.com/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\"\u003eToken Cost Analyzer\u003c/a\u003e, an LLM prompt cost and tokenization analyzer that runs entirely in the browser thanks to WebAssembly.\u003c/p\u003e\u003cp\u003eSince 2026 I have taken that work into AI agents and open source. I published \u003ca href=\"https://github.com/pablodiazjorge/prompt-forge\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\"\u003eprompt-forge\u003c/a\u003e, a toolkit that gives AI coding agents persistent memory across sessions, and \u003ca href=\"https://candle-ai.pablodiazjorge.com/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\"\u003eCandle AI\u003c/a\u003e, a technical analysis dashboard with a deterministic Bayesian confluence engine and an optional LLM narrative layer. I contribute to \u003ca href=\"https://github.com/morluto/rea\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\"\u003erea\u003c/a\u003e, an open-source project for reverse engineering with agents with more than 130,000 GitHub stars, where several of my contributions have been accepted, and in \u003ca href=\"https://github.com/pablodiazjorge/rea-lab\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\"\u003erea-lab\u003c/a\u003e I measure, with a preregistered study, what it adds to a coding agent. I have also published two Claude Code mods, \u003ca href=\"https://github.com/pablodiazjorge/rea-casebook\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\"\u003erea-casebook\u003c/a\u003e and \u003ca href=\"https://github.com/pablodiazjorge/impact-radius\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\"\u003eimpact-radius\u003c/a\u003e, and complete applications such as \u003ca href=\"https://gym-log.pablodiazjorge.com/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\"\u003egym-log\u003c/a\u003e. I am now expanding my profile into backend and databases.\u003c/p\u003e\u003cp\u003ePreviously, I was part of \u003ca href=\"https://es.nttdata.com/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"dark:font-medium light:font-bold dark:text-d-text-heading light:text-l-text-heading dark:hover:text-d-text-hover-accent light:hover:text-l-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:focus-visible:text-l-text-hover-accent\"\u003eNTT DATA\u003c/a\u003e as a Full Stack Developer intern, where I worked on the design and implementation of an employee management platform with Angular and Java. I also interned as a data analyst at Sothis, where I contributed to database analysis and design for compensation plans.\u003c/p\u003e\u003cp\u003eOutside of coding, you will often find me working out at the gym, hiking in the mountains, reading novels, or enjoying good company at a bar with friends.\u003c/p\u003e"
 }

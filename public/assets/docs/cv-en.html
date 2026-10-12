@@ -33,37 +33,34 @@
   .skill-text { color: #374151; }
   .projects-list li { margin-bottom: 2pt; }
   .project-title { font-weight: 600; }
-  .project-link { font-size: 8pt; color: #6b7280; }
+  .project-link { font-size: 8pt; color: #6b7280; white-space: nowrap; }
   .summary { font-size: 9.5pt; text-align: justify; margin-bottom: 2pt; }
 </style>
 </head>
 <body>
 
 <h1>Pablo Díaz-Jorge García</h1>
-<div class="headline">Frontend Engineer | Frontend Architecture · AI Engineering</div>
+<div class="headline">Software Engineer &amp; AI Engineer | AI agents, MCP and agent evaluation | Frontend architecture with Angular and TypeScript</div>
 <div class="contact">
-  Vilamarxant, Valencia, Spain ·
-  <a href="https://www.pablodiazjorge.com">pablodiazjorge.com</a> ·
-  <a href="https://github.com/pablodiazjorge">github.com/pablodiazjorge</a> ·
-  <a href="https://linkedin.com/in/pablodiazjorge">linkedin.com/in/pablodiazjorge</a>
+  Vilamarxant, Valencia, Spain&nbsp;- <a href="https://www.pablodiazjorge.com">pablodiazjorge.com</a>&nbsp;- <a href="https://github.com/pablodiazjorge">github.com/pablodiazjorge</a>&nbsp;- <a href="https://linkedin.com/in/pablodiazjorge">linkedin.com/in/pablodiazjorge</a>
 </div>
 
 <div class="summary">
-  Software engineer specialized in the intersection of <strong>frontend systems architecture</strong> and <strong>AI engineering</strong>. I design and build scalable interfaces with Angular, TypeScript, Signals, and RxJS, integrating AI coding assistants (Claude Code, GitHub Copilot, OpenCode, MCP, agentic infrastructure) to accelerate development, refactoring, and code review workflows. Author of 9 open-source projects spanning WebAssembly, SSE, PostgreSQL + pgvector, and AES-256 encryption, with public deployment and automated testing.
+  Software engineer focused on <strong>architecture</strong>, thoughtful design and sound engineering practices. I build scalable, accessible web applications with Angular, TypeScript, Signals and RxJS, and I apply <strong>AI engineering</strong> to development: I bring AI agents and MCP into the workflow and measure with data what they add. Contributor to rea (130,000+ GitHub stars, three merged PRs) and author of open-source projects with public deployments and automated tests. Expanding into backend and databases with Node.js, Java and PostgreSQL.
 </div>
 
 <div class="section-title">Technical Skills</div>
 <div class="skills-line">
-  <span class="skill-cat">Frontend Architecture:</span>
-  <span class="skill-text">Angular 16–22, TypeScript, Signals, RxJS, Web Components, SSR, Tailwind CSS, SCSS</span>
+  <span class="skill-cat">Frontend:</span>
+  <span class="skill-text">Angular (16 → 22), TypeScript, Signals, RxJS, Web Components, SSR, web accessibility, Tailwind CSS, SCSS</span>
 </div>
 <div class="skills-line">
   <span class="skill-cat">AI Engineering:</span>
-  <span class="skill-text">AI-Assisted Development, Agentic Infrastructure, MCP, Web Workers, WebAssembly, SSE, D3.js, Ollama</span>
+  <span class="skill-text">AI agents, Model Context Protocol (MCP), Claude Code (mods, skills and hooks), agent evaluation</span>
 </div>
 <div class="skills-line">
   <span class="skill-cat">Backend &amp; Tooling:</span>
-  <span class="skill-text">Node.js, Express, Java, Spring Boot, PostgreSQL, pgvector, Docker, Vitest, Git, Scrum</span>
+  <span class="skill-text">Node.js, Express, Java, Spring Boot, PostgreSQL, pgvector, Docker, Vitest, Playwright, GitHub Actions, Scrum</span>
 </div>
 
 <div class="section-title">Professional Experience</div>
@@ -71,49 +68,67 @@
 <div class="entry">
   <div class="entry-header">
     <span class="entry-title">Frontend Engineer</span>
-    <span class="entry-date">Infoport · Sept 2025 – Present</span>
+    <span class="entry-date">Infoport, Sept 2025&nbsp;- Present</span>
   </div>
   <ul>
     <li>Design and development of accessible, scalable interfaces for the port logistics sector using Angular, TypeScript, Signals, and RxJS.</li>
-    <li>Integration of AI coding assistants and MCP into the team workflow to accelerate refactoring, code review, and testing.</li>
-    <li>Implementation of reusable components with SCSS and custom libraries in an agile Scrum environment alongside analysts and backend developers.</li>
+    <li>Integration of AI coding assistants and MCP into the team workflow to speed up refactoring, code review and testing.</li>
+    <li>Reusable components with SCSS and custom libraries, in an agile Scrum team alongside analysts and backend developers.</li>
   </ul>
 </div>
 
 <div class="entry">
   <div class="entry-header">
-    <span class="entry-title">Independent Software Engineer — AI &amp; Frontend R&amp;D</span>
-    <span class="entry-date">Jul 2023 – Sept 2025</span>
+    <span class="entry-title">AI Engineer (open source)</span>
+    <span class="entry-date">Own projects, Jan 2026&nbsp;- Present</span>
   </div>
   <ul>
-    <li>Researched and prototyped 6 open-source solutions at the convergence of frontend architecture and AI engineering: <strong>Candle AI</strong> (Bayesian engine + Angular 22, 165 tests), <strong>prompt-forge</strong> (zero-runtime agentic infrastructure), <strong>Token Cost Analyzer</strong> (tiktoken WASM + D3.js + Angular 19), <strong>Cognitive Agent Orchestrator</strong> (ReAct agents + SSE + Ollama/Qwen), <strong>Semantic Search Engine</strong> (PostgreSQL + pgvector + HNSW + Java 21 + Angular 17), and <strong>Attention Matrix Explorer</strong> (D3.js + Web Workers + Angular 16).</li>
-    <li>Stack: Angular (16→22), TypeScript, RxJS, Signals, D3.js, Spring Boot, PostgreSQL, pgvector, Node.js, Express, WebAssembly, SSE, Docker, Ollama.</li>
+    <li>Contributor to <strong>rea</strong> (130,000+ stars): three merged PRs on the Ghidra verification and the Claude Code and Gemini CLI client checks on Windows, and an open PR in the MCP server (Node.js and TypeScript).</li>
+    <li><strong>rea-lab</strong>: TypeScript benchmark and a preregistered study of 70 Claude Code runs, graded with no LLM as judge and analysed with Wilson intervals and McNemar tests.</li>
+    <li>Published Claude Code mods (<strong>rea-casebook</strong>, <strong>impact-radius</strong>) with CI on Windows, macOS and Ubuntu; <strong>prompt-forge</strong>, <strong>Candle AI</strong>, <strong>TestMaker</strong> and <strong>gym-log</strong>, built with agents.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="entry-header">
+    <span class="entry-title">Independent Software Engineer&nbsp;- AI &amp; Frontend R&amp;D</span>
+    <span class="entry-date">Jul 2023&nbsp;- Sept 2025</span>
+  </div>
+  <ul>
+    <li>Researched and prototyped 4 open-source solutions between frontend architecture and AI engineering: <strong>Token Cost Analyzer</strong> (tiktoken in WASM, D3.js, Angular 19), <strong>Cognitive Agent Orchestrator</strong> (ReAct agents, SSE, Node.js, Ollama), <strong>Semantic Search Engine</strong> (Java 21, Spring Boot, PostgreSQL, pgvector, Angular 17) and <strong>Attention Matrix Explorer</strong> (D3.js, Web Workers, Angular 16).</li>
   </ul>
 </div>
 
 <div class="entry">
   <div class="entry-header">
     <span class="entry-title">Full Stack Developer (internship)</span>
-    <span class="entry-date">NTT DATA · Mar 2022 – Jul 2022</span>
+    <span class="entry-date">NTT DATA, Mar 2022&nbsp;- Jul 2022</span>
   </div>
   <ul>
-    <li>End-to-end development of a corporate personnel management system with Angular and Java (Spring Boot), implementing REST services and an interactive data visualization module.</li>
+    <li>End-to-end personnel management system with Angular and Java (Spring Boot): REST services and data visualization.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="entry-header">
+    <span class="entry-title">Data Analyst (internship)</span>
+    <span class="entry-date">Sothis, Mar 2018&nbsp;- Jun 2018</span>
+  </div>
+  <ul>
+    <li>Database analysis and design for corporate compensation plans (MySQL, Power BI).</li>
   </ul>
 </div>
 
 <div class="section-title">Featured Projects</div>
 <ul class="projects-list">
   <li>
-    <span class="project-title">Candle AI</span> — Technical analysis dashboard with Bayesian confluence engine, Angular 22, Pine Script v5, 165 tests.<br>
-    <a class="project-link" href="https://candle-ai.pablodiazjorge.com">candle-ai.pablodiazjorge.com</a>
+    <span class="project-title">rea-lab</span>: public lab for reverse engineering with AI agents: reproducible environment, 40 challenges with known answers and a preregistered study. <a class="project-link" href="https://github.com/pablodiazjorge/rea-lab">github.com/pablodiazjorge/rea-lab</a>
   </li>
   <li>
-    <span class="project-title">prompt-forge</span> — Zero-runtime agentic infrastructure with persistent memory for AI coding agents.<br>
-    <a class="project-link" href="https://github.com/pablodiazjorge/prompt-forge">github.com/pablodiazjorge/prompt-forge</a>
+    <span class="project-title">Candle AI</span>: technical analysis dashboard with a Bayesian confluence engine, Angular 22, Pine Script v5 and 165 tests. <a class="project-link" href="https://candle-ai.pablodiazjorge.com">candle-ai.pablodiazjorge.com</a>
   </li>
   <li>
-    <span class="project-title">TestMaker</span> — Secure exam platform with AES-256-CBC, Angular 21, serverless API, PDF export, 18 Vitest tests.<br>
-    <a class="project-link" href="https://test-maker.pablodiazjorge.com">test-maker.pablodiazjorge.com</a>
+    <span class="project-title">TestMaker</span>: secure exam platform with AES-256-CBC, Angular 21, serverless API, PDF export and 18 Vitest tests. <a class="project-link" href="https://test-maker.pablodiazjorge.com">test-maker.pablodiazjorge.com</a>
   </li>
 </ul>
 
@@ -121,20 +136,20 @@
 <div class="entry">
   <div class="entry-header">
     <span class="entry-title">Bachelor's Degree in Computer Science</span>
-    <span class="entry-date">UPV · 2018 – 2023</span>
+    <span class="entry-date">UPV, 2018 to 2023</span>
   </div>
 </div>
 <div class="entry">
   <div class="entry-header">
     <span class="entry-title">Higher Technician in Multiplatform App Development</span>
-    <span class="entry-date">CIPFP Cheste · 2016 – 2018</span>
+    <span class="entry-date">CIPFP Cheste, 2016 to 2018</span>
   </div>
 </div>
 
 <div class="section-title">Certifications &amp; Languages</div>
 <ul>
-  <li><strong>Scrum Master Professional (SMPC)</strong> — CertiProf, June 2026</li>
-  <li><strong>Claude Code in Action</strong> — Anthropic, January 2026</li>
+  <li><strong>Scrum Master Professional (SMPC)</strong>, CertiProf, June 2026</li>
+  <li><strong>Claude Code in Action</strong>, Anthropic, January 2026</li>
   <li><strong>Languages:</strong> Spanish and Valencian (native), English (full professional proficiency)</li>
 </ul>
 

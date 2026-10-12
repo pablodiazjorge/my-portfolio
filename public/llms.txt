@@ -1,6 +1,6 @@
 # Pablo Díaz-Jorge
 
-> Portfolio of Pablo Díaz-Jorge, Frontend Engineer focused on frontend architecture and AI engineering (Angular, TypeScript, WebAssembly, SSE, D3.js, PostgreSQL + pgvector).
+> Portfolio of Pablo Díaz-Jorge, software engineer and AI engineer: frontend architecture with Angular and TypeScript, AI agents, MCP and agent evaluation. Contributor to rea and author of rea-lab, rea-casebook and impact-radius.
 
 The site is a single page available in two languages. It lists professional experience and open-source projects, each with a GitHub link and, where available, a live demo.
 
