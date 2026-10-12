@@ -132,7 +132,7 @@
                           {
                               "PROJECTS_TITLE":  "rea-lab",
                               "PROJECTS_DESCRIPTION":  "Laboratorio público de ingeniería inversa con agentes de IA en Windows, sobre rea y Ghidra. Entorno reproducible con versiones y hashes fijados, 40 retos en C con respuesta conocida y un banco de evaluación en TypeScript que aísla cada ejecución y califica sin ningún LLM como juez. Su primer estudio, preregistrado y con 70 ejecuciones de Claude Code, mostró que rea no cambiaba la tasa de resolución (28 de 30 con y sin), duplicaba tiempo y coste, y que las 80 evidencias citadas eran auténticas. De sus datos han salido issues y PR para rea.",
-                              "PROJECTS_IMAGE":  "/assets/images/rea-lab.svg",
+                              "PROJECTS_IMAGE":  "/assets/images/covers/rea-lab.webp",
                               "PROJECTS_LINK":  "https://github.com/pablodiazjorge/rea-lab",
                               "PROJECTS_DEMO":  "",
                               "PROJECTS_DEMO_ACTIVE":  "",
@@ -149,7 +149,7 @@
                           {
                               "PROJECTS_TITLE":  "rea-casebook",
                               "PROJECTS_DESCRIPTION":  "Mod de Claude Code que muestra en un panel, en directo, la evidencia que rea entrega al agente: la espera de Ghidra, los hallazgos, las preguntas abiertas y la línea de tiempo de la evidencia. Los hallazgos se registran con una herramienta que rechaza cualquier evidence_id que rea no haya entregado, y la sesión se exporta a Markdown o a un artifact. TypeScript, 43 tests y CI en Windows, macOS y Ubuntu. Enviado al directorio de plugins de Claude.",
-                              "PROJECTS_IMAGE":  "/assets/images/rea-casebook.webp",
+                              "PROJECTS_IMAGE":  "/assets/images/covers/rea-casebook.webp",
                               "PROJECTS_LINK":  "https://github.com/pablodiazjorge/rea-casebook",
                               "PROJECTS_DEMO":  "",
                               "PROJECTS_DEMO_ACTIVE":  "",
@@ -164,7 +164,7 @@
                           {
                               "PROJECTS_TITLE":  "impact-radius",
                               "PROJECTS_DESCRIPTION":  "Mod de Claude Code que retiene las órdenes de consola arriesgadas antes de ejecutarlas (rm -rf, git reset --hard, push forzados, migraciones, instalaciones globales, curl | sh), enseña lo que cambiarían y espera a que pulses Ejecutar o Cancelar. Funciona con Bash y PowerShell en Windows, macOS y Linux, en inglés y en castellano, con contraste AAA y CI en tres sistemas.",
-                              "PROJECTS_IMAGE":  "/assets/images/impact-radius.webp",
+                              "PROJECTS_IMAGE":  "/assets/images/covers/impact-radius.webp",
                               "PROJECTS_LINK":  "https://github.com/pablodiazjorge/impact-radius",
                               "PROJECTS_DEMO":  "",
                               "PROJECTS_DEMO_ACTIVE":  "",
@@ -179,7 +179,7 @@
                           {
                               "PROJECTS_TITLE":  "Candle AI",
                               "PROJECTS_DESCRIPTION":  "Dashboard de análisis técnico con gráficos de velas de calidad profesional que se ejecuta completamente en el navegador, sin cuentas, sin suscripciones y sin que tus datos salgan de tu máquina. Combina un motor de confluencia bayesiano determinista (que puntúa más de 15 patrones de velas y chartistas en 7 jerarquías de señales) con una capa narrativa de IA opcional que explica el análisis en lenguaje natural. El LLM nunca anula al motor cuantitativo: se limita a narrar los resultados. Construido con Angular 22 (Zoneless + Signals), Lightweight Charts v5, Web Workers para cómputo no bloqueante, caché IndexedDB, exportación a Pine Script v5, y 160 tests Vitest + 5 tests E2E Playwright. Desarrollado con infraestructura agentica prompt-forge a lo largo de 9 épicas como desarrollador en solitario.",
-                              "PROJECTS_IMAGE":  "/assets/images/candle-ai.webp",
+                              "PROJECTS_IMAGE":  "/assets/images/covers/candle-ai.webp",
                               "PROJECTS_LINK":  "https://github.com/pablodiazjorge/candle-ai",
                               "PROJECTS_DEMO":  "https://candle-ai.pablodiazjorge.com/",
                               "PROJECTS_DEMO_ACTIVE":  "true",
@@ -196,7 +196,7 @@
                           {
                               "PROJECTS_TITLE":  "prompt-forge",
                               "PROJECTS_DESCRIPTION":  "Memoria compartida y revisada para los agentes de IA de un equipo. Cuando el agente de un desarrollador tropieza con algo del repositorio, lo registra como una lección; cuando la misma lección aparece en dos o más personas, un paso de curación la convierte en una regla breve que leen los agentes de todo el equipo, sea Claude Code, GitHub Copilot, Codex, Cursor o Gemini CLI. La promoción pasa por una pull request normal, así que siempre la revisa una persona, y sigue una escalera de soluciones: arreglar el código, añadir una comprobación, escribir memoria y, solo al final, crear una skill. Solo Markdown y git: un bloque de AGENTS.md, cuatro Agent Skills y un directorio knowledge/, con instaladores para Bash y PowerShell que se integran sin sobrescribir nada y CI en Linux, macOS y Windows. Su versión 1.0 fue la infraestructura sobre la que se construyó Candle AI.",
-                              "PROJECTS_IMAGE":  "/assets/images/prompt-forge-terminal.svg",
+                              "PROJECTS_IMAGE":  "/assets/images/covers/prompt-forge.webp",
                               "PROJECTS_LINK":  "https://github.com/pablodiazjorge/prompt-forge",
                               "PROJECTS_DEMO":  "",
                               "PROJECTS_DEMO_ACTIVE":  "",
@@ -213,7 +213,7 @@
                           {
                               "PROJECTS_TITLE":  "gym-log",
                               "PROJECTS_DESCRIPTION":  "Aplicación mobile-first para registrar entrenamientos en el gimnasio: objetivos de progresión calculados para la siguiente sesión (doble progresión ajustada por RIR), análisis de volumen y estancamiento, exportación de informes y todos los datos en el propio dispositivo. Angular 22 con Signals y zoneless, Tailwind CSS 4, Chart.js y Vitest.",
-                              "PROJECTS_IMAGE":  "/assets/images/gym-log.webp",
+                              "PROJECTS_IMAGE":  "/assets/images/covers/gym-log.webp",
                               "PROJECTS_LINK":  "https://github.com/pablodiazjorge/gym-log",
                               "PROJECTS_DEMO":  "https://gym-log.pablodiazjorge.com/",
                               "PROJECTS_DEMO_ACTIVE":  "true",
@@ -229,7 +229,7 @@
                           {
                               "PROJECTS_TITLE":  "TestMaker",
                               "PROJECTS_DESCRIPTION":  "Plataforma de exámenes segura con acceso multiusuario y bancos de preguntas cifrados (AES-256-CBC). Desarrollada con Angular 21 (Señales) y una API serverless en Vercel. Incluye autenticación, configuración de sesiones por temas, atajos de teclado avanzados, exportación de resultados a PDF profesional, internacionalización ES/EN, y 18 tests unitarios con Vitest. Construida con asistencia de IA para resolver una necesidad real de estudio con preguntas protegidas contra difusión.",
-                              "PROJECTS_IMAGE":  "/assets/images/test-maker.svg",
+                              "PROJECTS_IMAGE":  "/assets/images/covers/test-maker.webp",
                               "PROJECTS_LINK":  "https://github.com/pablodiazjorge/test-maker",
                               "PROJECTS_DEMO":  "https://test-maker.pablodiazjorge.com/",
                               "PROJECTS_DEMO_ACTIVE":  "true",
@@ -246,7 +246,7 @@
                           {
                               "PROJECTS_TITLE":  "Token Cost Analyzer",
                               "PROJECTS_DESCRIPTION":  "Analizador de costes y tokenización de prompts para LLMs, 100% en el lado del cliente. Ejecuta tiktoken WebAssembly dentro de un Web Worker para tokenizar sin bloquear la interfaz. Visualiza la distribución de tokens con gráficos D3.js y proporciona estimaciones de coste para 10 modelos de LLM. Construido con Angular 19.1.8 (detección de cambios zoneless), TypeScript 5.7.3 y D3.js 7.9.0. Publicado como código abierto en 2026, conservando el stack tecnológico original de 2025.",
-                              "PROJECTS_IMAGE":  "/assets/images/token-cost-analyzer.svg",
+                              "PROJECTS_IMAGE":  "/assets/images/covers/token-cost-analyzer.webp",
                               "PROJECTS_LINK":  "https://github.com/pablodiazjorge/token-cost-analyzer",
                               "PROJECTS_DEMO":  "https://token-cost-analyzer.pablodiazjorge.com/",
                               "PROJECTS_DEMO_ACTIVE":  "true",
@@ -262,7 +262,7 @@
                           {
                               "PROJECTS_TITLE":  "Cognitive Agent Orchestrator",
                               "PROJECTS_DESCRIPTION":  "Orquestador de agentes cognitivos con patrón ReAct (Reasoning + Acting) y streaming en tiempo real mediante Server-Sent Events. Implementa una máquina de estados determinista que razona, invoca herramientas (calculadora, clima, búsqueda), observa resultados y transmite cada pensamiento a un frontend Angular 18 zoneless. Soporte dual de proveedor LLM: modo simulado y Ollama + Qwen 2.5 Coder 7B. Backend Node.js/Express con TypeScript 5.5.4. Publicado como código abierto en 2026, conservando el stack original de 2024-2025.",
-                              "PROJECTS_IMAGE":  "/assets/images/cognitive-agent.svg",
+                              "PROJECTS_IMAGE":  "/assets/images/covers/cognitive-agent-orchestrator.webp",
                               "PROJECTS_LINK":  "https://github.com/pablodiazjorge/cognitive-agent-orchestrator",
                               "PROJECTS_DEMO":  "",
                               "PROJECTS_DEMO_ACTIVE":  "",
@@ -279,7 +279,7 @@
                           {
                               "PROJECTS_TITLE":  "Semantic Search Engine",
                               "PROJECTS_DESCRIPTION":  "Motor de búsqueda semántica corporativa con almacenamiento vectorial en PostgreSQL mediante la extensión pgvector. Implementa búsqueda por similitud coseno con indexación HNSW sobre embeddings de 384 dimensiones. Backend construido con Java 21 y Spring Boot 3.2.6; frontend con Angular 17.3.12 con carga diferida de resultados mediante @defer. Infraestructura orquestada con Docker Compose. Publicado como código abierto en 2026, conservando el stack original de 2024.",
-                              "PROJECTS_IMAGE":  "/assets/images/semantic-search.svg",
+                              "PROJECTS_IMAGE":  "/assets/images/covers/semantic-search-engine.webp",
                               "PROJECTS_LINK":  "https://github.com/pablodiazjorge/semantic-search-engine",
                               "PROJECTS_DEMO":  "",
                               "PROJECTS_DEMO_ACTIVE":  "",
@@ -295,7 +295,7 @@
                           {
                               "PROJECTS_TITLE":  "Attention Matrix Explorer",
                               "PROJECTS_DESCRIPTION":  "Visualizador interactivo de matrices de atención de transformers (Query, Key, Value) inspirado en el paper \"Attention Is All You Need\". Renderiza heatmaps en tiempo real con D3.js (escala de color Viridis, tooltips) y descarga los cálculos matriciales (softmax, transpuesta, multiplicación) en un Web Worker dedicado. Construido con Angular 16.2.12, Signals (Developer Preview) y D3.js 7.8.5. Publicado como código abierto en 2026, conservando el stack original de 2023.",
-                              "PROJECTS_IMAGE":  "/assets/images/attention-matrix.svg",
+                              "PROJECTS_IMAGE":  "/assets/images/covers/attention-matrix-explorer.webp",
                               "PROJECTS_LINK":  "https://github.com/pablodiazjorge/attention-matrix-explorer",
                               "PROJECTS_DEMO":  "https://attention-matrix-explorer.pablodiazjorge.com/",
                               "PROJECTS_DEMO_ACTIVE":  "true",
@@ -310,7 +310,7 @@
                           {
                               "PROJECTS_TITLE":  "Mi Portfolio",
                               "PROJECTS_DESCRIPTION":  "Portfolio personal desarrollado con Angular 19.1.7 y Tailwind CSS 4.1, con SSR, i18n (ES/EN), dark/light mode y lazy-loading para una experiencia rápida y accesible. Construido con Angular Universal y Express.js para Server-Side Rendering en producción.",
-                              "PROJECTS_IMAGE":  "/assets/images/my-portfolio-project.svg",
+                              "PROJECTS_IMAGE":  "/assets/images/covers/portfolio.webp",
                               "PROJECTS_LINK":  "https://github.com/pablodiazjorge/my-portfolio",
                               "PROJECTS_DEMO":  "https://www.pablodiazjorge.com/",
                               "PROJECTS_DEMO_ACTIVE":  "true",
@@ -326,7 +326,7 @@
                           {
                               "PROJECTS_TITLE":  "Palaze (TFG, legacy)",
                               "PROJECTS_DESCRIPTION":  "Biblioteca de componentes web nativos desarrollada con Stencil.js. Componentes ligeros, fáciles de implementar y con carga rápida. Instalable vía npm o CDN. Incluye documentación propia. Surgió como proyecto de final de grado para adentrarme en el desarrollo web.",
-                              "PROJECTS_IMAGE":  "/assets/images/palace-project.webp",
+                              "PROJECTS_IMAGE":  "/assets/images/covers/palaze.webp",
                               "PROJECTS_LINK":  "https://github.com/pablodiazjorge/palaze",
                               "PROJECTS_DEMO":  "https://palaze.pablodiazjorge.com/",
                               "PROJECTS_DEMO_ACTIVE":  "true",
