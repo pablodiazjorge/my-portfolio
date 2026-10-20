@@ -11,8 +11,8 @@ The site is a single page available in two languages. It lists professional expe
 
 ## Documents
 
-- [CV (English, PDF)](https://www.pablodiazjorge.com/assets/docs/Pablo%20D%C3%ADaz-Jorge%20Garc%C3%ADa_CV_EN.pdf)
-- [CV (Español, PDF)](https://www.pablodiazjorge.com/assets/docs/Pablo%20D%C3%ADaz-Jorge%20Garc%C3%ADa_CV_ES.pdf)
+- [CV (English, PDF)](https://www.pablodiazjorge.com/assets/docs/cv-pablo-diaz-jorge-en-2026-10.pdf)
+- [CV (Español, PDF)](https://www.pablodiazjorge.com/assets/docs/cv-pablo-diaz-jorge-es-2026-10.pdf)
 
 ## Profiles
 
