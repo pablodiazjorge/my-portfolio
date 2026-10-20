@@ -25,7 +25,21 @@ app.get('/', (req, res, next) => {
   next();
 });
 
-// Serve static files from /browser
+/**
+ * Translations and CV files keep their URL from one deploy to the next, so
+ * browsers must revalidate them instead of caching them for a year. Mirrors
+ * the Cache-Control rules in vercel.json. Mounted before the generic static
+ * handler, which would otherwise serve them with `maxAge: '1y'`.
+ */
+const revalidate = {
+  index: false,
+  redirect: false,
+  setHeaders: (res: express.Response) => res.setHeader('Cache-Control', 'public, max-age=0, must-revalidate'),
+};
+app.use('/assets/i18n', express.static(resolve(browserDistFolder, 'assets/i18n'), revalidate));
+app.use('/assets/docs', express.static(resolve(browserDistFolder, 'assets/docs'), revalidate));
+
+// Serve the remaining static files from /browser (hashed bundles, fonts, images)
 app.use(
   express.static(browserDistFolder, {
     maxAge: '1y',
