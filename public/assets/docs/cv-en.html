@@ -19,9 +19,9 @@
   .section-title {
     font-size: 9.5pt; font-weight: 700; text-transform: uppercase;
     letter-spacing: 0.7pt; border-bottom: 1pt solid #2563eb;
-    padding-bottom: 1pt; margin-bottom: 4pt; margin-top: 8pt;
+    padding-bottom: 1pt; margin-bottom: 4pt; margin-top: 6pt;
   }
-  .entry { margin-bottom: 5pt; }
+  .entry { margin-bottom: 4pt; }
   .entry-header { display: flex; justify-content: space-between; margin-bottom: 1pt; }
   .entry-title { font-weight: 600; }
   .entry-sub { color: #4b5563; font-size: 9pt; }
@@ -34,6 +34,7 @@
   .projects-list li { margin-bottom: 2pt; }
   .project-title { font-weight: 600; }
   .project-link { font-size: 8pt; color: #6b7280; white-space: nowrap; }
+  .inline-link { color: #2563eb; text-decoration: none; }
   .summary { font-size: 9.5pt; text-align: justify; margin-bottom: 2pt; }
 </style>
 </head>
@@ -42,11 +43,11 @@
 <h1>Pablo Díaz-Jorge García</h1>
 <div class="headline">Software Engineer &amp; AI Engineer | AI agents, MCP and agent evaluation | Frontend architecture with Angular and TypeScript</div>
 <div class="contact">
-  Vilamarxant, Valencia, Spain&nbsp;- <a href="https://www.pablodiazjorge.com">pablodiazjorge.com</a>&nbsp;- <a href="https://github.com/pablodiazjorge">github.com/pablodiazjorge</a>&nbsp;- <a href="https://linkedin.com/in/pablodiazjorge">linkedin.com/in/pablodiazjorge</a>
+  Valencia, Spain&nbsp;- <a href="https://www.pablodiazjorge.com">pablodiazjorge.com</a>&nbsp;- <a href="https://github.com/pablodiazjorge">github.com/pablodiazjorge</a>&nbsp;- <a href="https://linkedin.com/in/pablodiazjorge">linkedin.com/in/pablodiazjorge</a>
 </div>
 
 <div class="summary">
-  Software engineer focused on <strong>architecture</strong>, thoughtful design and sound engineering practices. I build scalable, accessible web applications with Angular, TypeScript, Signals and RxJS, and I apply <strong>AI engineering</strong> to development: I bring AI agents and MCP into the workflow and measure with data what they add. Contributor to rea (290,000+ GitHub stars, eight merged PRs) and author of open-source projects with public deployments and automated tests. Expanding into backend and databases with Node.js, Java and PostgreSQL.
+  Software engineer focused on <strong>architecture</strong>, thoughtful design and sound engineering practices. I build scalable, accessible web applications with Angular, TypeScript, Signals and RxJS, and I apply <strong>AI engineering</strong> to development: I bring AI agents and MCP into the workflow and measure with data what they add. Contributor to rea (9 merged pull requests) and author of open-source projects with public deployments and automated tests. Expanding into backend and databases with Node.js, Java and PostgreSQL.
 </div>
 
 <div class="section-title">Technical Skills</div>
@@ -60,7 +61,7 @@
 </div>
 <div class="skills-line">
   <span class="skill-cat">Backend &amp; Tooling:</span>
-  <span class="skill-text">Node.js, Express, Java, Spring Boot, PostgreSQL, pgvector, Docker, Vitest, Playwright, GitHub Actions, Scrum</span>
+  <span class="skill-text">Node.js, Express, Java, Spring Boot, PostgreSQL, pgvector, Docker, Vitest, GitHub Actions, Scrum</span>
 </div>
 
 <div class="section-title">Professional Experience</div>
@@ -83,8 +84,8 @@
     <span class="entry-date">Own projects, Jan 2026&nbsp;- Present</span>
   </div>
   <ul>
-    <li>Contributor to <strong>rea</strong> (290,000+ stars): eight merged PRs on the Ghidra verification, the Claude Code and Gemini CLI client checks and MCP tests on Windows, NativeAOT documentation, Solidity and HAR decoding and Windows test paths, and open PRs in the MCP server, Ghidra and provider diagnostics (Node.js and TypeScript).</li>
-    <li><strong>rea-lab</strong>: TypeScript benchmark and four preregistered studies (302 Claude Code runs), graded with no LLM as judge and analysed with Wilson intervals and McNemar tests.</li>
+    <li>Contributor to <strong>rea</strong>, an open-source agent toolkit for reverse engineering with more than 300,000 stars (Oct 2026): <a class="inline-link" href="https://github.com/morluto/rea/pulls?q=is%3Apr+author%3Apablodiazjorge">9 merged pull requests</a> on the Ghidra verification, the Claude Code and Gemini CLI client checks and MCP tests on Windows, NativeAOT documentation, Solidity and HAR decoding and Windows test paths (Node.js and TypeScript).</li>
+    <li><strong>rea-lab</strong>: TypeScript benchmark and five preregistered studies (482 Claude Code runs), graded with no LLM as judge and analysed with Wilson intervals and McNemar tests; result: rea did not improve the solve rate and doubled the cost.</li>
     <li>Published Claude Code mods (<strong>rea-casebook</strong>, <strong>impact-radius</strong>) with CI on Windows, macOS and Ubuntu; <strong>prompt-forge</strong>, <strong>Candle AI</strong>, <strong>TestMaker</strong> and <strong>gym-log</strong>, built with agents.</li>
   </ul>
 </div>
@@ -122,13 +123,16 @@
 <div class="section-title">Featured Projects</div>
 <ul class="projects-list">
   <li>
-    <span class="project-title">rea-lab</span>: public lab for reverse engineering with AI agents: reproducible environment, seeded challenges with known answers and four preregistered studies. <a class="project-link" href="https://github.com/pablodiazjorge/rea-lab">github.com/pablodiazjorge/rea-lab</a>
+    <span class="project-title">rea-lab</span>: public lab for reverse engineering with AI agents: reproducible environment, seeded challenges with known answers and five preregistered studies. <a class="project-link" href="https://github.com/pablodiazjorge/rea-lab">github.com/pablodiazjorge/rea-lab</a>
   </li>
   <li>
-    <span class="project-title">Candle AI</span>: technical analysis dashboard with a Bayesian confluence engine, Angular 22, Pine Script v5 and 165 tests. <a class="project-link" href="https://candle-ai.pablodiazjorge.com">candle-ai.pablodiazjorge.com</a>
+    <span class="project-title">Candle AI</span>: technical analysis dashboard: deterministic confluence engine with log-odds scoring (naive Bayes style, hand-set weights, uncalibrated), Angular 22, Pine Script v5 and 160 tests (Vitest). <a class="project-link" href="https://candle-ai.pablodiazjorge.com">candle-ai.pablodiazjorge.com</a>
   </li>
   <li>
-    <span class="project-title">TestMaker</span>: secure exam platform with AES-256-CBC, Angular 21, serverless API, PDF export and 18 Vitest tests. <a class="project-link" href="https://test-maker.pablodiazjorge.com">test-maker.pablodiazjorge.com</a>
+    <span class="project-title">TestMaker</span>: personal exam platform with encrypted question banks (AES-256) and credential-based access, Angular 21, serverless API, PDF export and 89 unit tests (Vitest). <a class="project-link" href="https://test-maker.pablodiazjorge.com">test-maker.pablodiazjorge.com</a>
+  </li>
+  <li>
+    <span class="project-title">Portfolio</span> (Apr 2025 → present): SSR and prerendering with @angular/ssr in English and Spanish; CLS from 0.86 to 0.07. <a class="project-link" href="https://www.pablodiazjorge.com">pablodiazjorge.com</a>
   </li>
 </ul>
 
@@ -146,10 +150,10 @@
   </div>
 </div>
 
-<div class="section-title">Certifications &amp; Languages</div>
+<div class="section-title">Certifications, Courses &amp; Languages</div>
 <ul>
   <li><strong>Scrum Master Professional (SMPC)</strong>, CertiProf, June 2026</li>
-  <li><strong>Claude Code in Action</strong>, Anthropic, January 2026</li>
+  <li><strong>Claude Code in Action</strong> (course), Anthropic, January 2026</li>
   <li><strong>Languages:</strong> Spanish and Valencian (native), English (full professional proficiency)</li>
 </ul>
 
