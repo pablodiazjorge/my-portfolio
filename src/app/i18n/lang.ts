@@ -13,6 +13,15 @@ export const DEFAULT_LANG: AppLang = 'en';
 export const SITE_ORIGIN = 'https://www.pablodiazjorge.com';
 
 /**
+ * Version suffix for the translation files (`/assets/i18n/en.json?v=…`).
+ * Until October 2026 those files were served as immutable for a year, so
+ * browsers that kept the old copy never asked again; a new URL makes them
+ * fetch the current one. They are now served with `max-age=0,
+ * must-revalidate`, so this only needs to change if that ever goes back.
+ */
+export const I18N_VERSION = '2026-10-20';
+
+/**
  * Cookie that stores an explicit language choice. It is read at the edge
  * (see vercel.json and server.ts) to redirect `/` to `/es` before any HTML
  * is sent, so the visitor never sees the page in the wrong language.

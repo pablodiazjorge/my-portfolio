@@ -10,7 +10,7 @@ const docsDir = path.join(__dirname, '..', 'public', 'assets', 'docs');
   const pageES = await browser.newPage();
   await pageES.goto('file://' + path.join(docsDir, 'cv-es.html'), { waitUntil: 'networkidle0' });
   await pageES.pdf({
-    path: path.join(docsDir, 'Pablo Díaz-Jorge García_CV_ES.pdf'),
+    path: path.join(docsDir, 'cv-pablo-diaz-jorge-es-2026-10.pdf'),
     format: 'A4',
     printBackground: true,
     margin: { top: '14mm', bottom: '14mm', left: '14mm', right: '14mm' },
@@ -21,7 +21,7 @@ const docsDir = path.join(__dirname, '..', 'public', 'assets', 'docs');
   const pageEN = await browser.newPage();
   await pageEN.goto('file://' + path.join(docsDir, 'cv-en.html'), { waitUntil: 'networkidle0' });
   await pageEN.pdf({
-    path: path.join(docsDir, 'Pablo Díaz-Jorge García_CV_EN.pdf'),
+    path: path.join(docsDir, 'cv-pablo-diaz-jorge-en-2026-10.pdf'),
     format: 'A4',
     printBackground: true,
     margin: { top: '14mm', bottom: '14mm', left: '14mm', right: '14mm' },

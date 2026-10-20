@@ -6,10 +6,16 @@ import { provideHttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { provideClientHydration } from '@angular/platform-browser';
+import { I18N_VERSION } from './i18n/lang';
 
-/** Factory function to create TranslateHttpLoader for loading translation files */
+/**
+ * Factory function to create TranslateHttpLoader for loading translation files.
+ * The `?v=` suffix gives the files a URL that no browser has cached as
+ * immutable. Prerendering reads them from disk by pathname, so the query
+ * string does not affect it.
+ */
 export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http, '/assets/i18n/', '.json');
+  return new TranslateHttpLoader(http, '/assets/i18n/', `.json?v=${I18N_VERSION}`);
 }
 
 /**

@@ -40,6 +40,16 @@
       "source": "/candle-ai/:path*",
       "destination": "https://candle-ai.pablodiazjorge.com/:path*",
       "permanent": true
+    },
+    {
+      "source": "/assets/docs/Pablo%20D%C3%ADaz-Jorge%20Garc%C3%ADa_CV_EN.pdf",
+      "destination": "/assets/docs/cv-pablo-diaz-jorge-en-2026-10.pdf",
+      "statusCode": 301
+    },
+    {
+      "source": "/assets/docs/Pablo%20D%C3%ADaz-Jorge%20Garc%C3%ADa_CV_ES.pdf",
+      "destination": "/assets/docs/cv-pablo-diaz-jorge-es-2026-10.pdf",
+      "statusCode": 301
     }
   ],
 
