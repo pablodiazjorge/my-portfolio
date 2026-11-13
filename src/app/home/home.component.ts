@@ -38,9 +38,14 @@ import { AppLang, DEFAULT_LANG, pathForLang, rememberLang, urlForLang } from '..
   styleUrl: './home.component.css',
 })
 export class HomeComponent implements OnInit, OnDestroy {
-  /** Reference to the home container element for DOM manipulation */
-  @ViewChild('homeContainer', { static: true })
-  container!: ElementRef<HTMLElement>;
+  /**
+   * Capa que pinta el degradado que sigue al cursor. Va fija a la ventana, así
+   * que el foco se queda bajo el puntero aunque la página se desplace sin que
+   * el ratón se mueva. Las coordenadas se miden contra el rectángulo de esta
+   * capa, no contra el del contenedor, que sí se desplaza con el documento.
+   */
+  @ViewChild('spotlight', { static: true })
+  spotlight!: ElementRef<HTMLElement>;
 
   /** Currently active section URL fragment */
   activeHref = '#about';
@@ -394,16 +399,19 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   /**
-   * Updates CSS variables based on mouse position within the container
+   * Updates CSS variables based on mouse position within the gradient layer
    * @param event Mouse event containing client coordinates
    */
   onMouseMove(event: MouseEvent) {
-    const rect = this.container.nativeElement.getBoundingClientRect();
+    // El rectángulo es el de la propia capa del degradado, que es la que lee
+    // las dos variables. Al ir fija a la ventana, ese rectángulo empieza en su
+    // esquina, de modo que las coordenadas coinciden con las del puntero.
+    const el = this.spotlight.nativeElement;
+    const rect = el.getBoundingClientRect();
     const x = event.clientX - rect.left;
     const y = event.clientY - rect.top;
 
     // Update CSS variables
-    const el = this.container.nativeElement;
     el.style.setProperty('--cursor-x', `${x}px`);
     el.style.setProperty('--cursor-y', `${y}px`);
   }

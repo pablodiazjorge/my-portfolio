@@ -9,9 +9,19 @@
   border: 1px solid transparent;
 }
 
-.proj-butt:hover {
+/*
+  El borde de realce toma el color del tema en curso. Antes usaba el del tema
+  oscuro en los dos, y sobre el fondo claro se quedaba en 1,34:1, de modo que
+  el botón no daba respuesta visible al pasar el puntero. La declaración de
+  `color` que había aquí se ha quitado: no llegaba nunca a la etiqueta, porque
+  el div interior fija el suyo.
+*/
+:host-context([data-theme='dark']) .proj-butt:hover {
   border-color: var(--color-d-text-hover-accent);
-  color: var(--color-d-text-hover-accent);
+}
+
+:host-context([data-theme='light']) .proj-butt:hover {
+  border-color: var(--color-l-text-hover-accent);
 }
 
 @media (min-width: 639px) {
