@@ -40,6 +40,9 @@
         [attr.aria-label]="
           (motionOverride ? 'A11Y_MOTION_OFF' : 'A11Y_MOTION_ON') | translate
         "
+        [appTooltip]="
+          (motionOverride ? 'TIP_MOTION_OFF' : 'TIP_MOTION_ON') | translate
+        "
       >
         <svg
           class="w-5 h-5"
@@ -61,6 +64,7 @@
         (click)="switchLanguage()"
         class="dark:text-d-text-heading dark:hover:text-d-badge-other-text light:text-l-text-heading light:hover:text-l-badge-other-text h-8 flex items-center justify-center cursor-pointer"
         [attr.aria-label]="'A11Y_SWITCH_LANGUAGE' | translate"
+        [appTooltip]="'TIP_SWITCH_LANGUAGE' | translate"
       >
         {{ currentLang === "en" ? "EN" : "ES" }}
       </button>
@@ -69,6 +73,9 @@
         (click)="toggleTheme()"
         class="h-8 flex items-center justify-center cursor-pointer"
         [attr.aria-label]="
+          (isDarkTheme ? 'A11Y_THEME_TO_LIGHT' : 'A11Y_THEME_TO_DARK') | translate
+        "
+        [appTooltip]="
           (isDarkTheme ? 'A11Y_THEME_TO_LIGHT' : 'A11Y_THEME_TO_DARK') | translate
         "
       >
@@ -142,6 +149,7 @@
             rel="noopener noreferrer"
             class="mt-6 inline-block text-sm font-medium underline-offset-2 hover:underline dark:text-d-text-heading light:text-l-text-heading group/cv-link dark:hover:text-d-text-hover-accent dark:focus-visible:text-d-text-heading light:hover:text-l-text-hover-accent light:focus-visible:text-l-text-heading"
             [attr.aria-label]="'A11Y_CV_LINK' | translate"
+            [appTooltip]="'TIP_CV_LINK' | translate"
           >
             <span class="relative inline-flex items-center cv-link-content">
               <!-- Hit-area amplified -->

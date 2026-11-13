@@ -17,6 +17,7 @@ import { socialComponent } from '../social/social.component';
 import { ProjectsComponent } from '../projects/projects.component';
 import { LangChangeEvent, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { SafeHtmlPipe } from '../pipes/safe-html.pipe';
+import { TooltipDirective } from '../directives/tooltip.directive';
 import { Subject, fromEvent, takeUntil, debounceTime } from 'rxjs';
 import { Meta, Title } from '@angular/platform-browser';
 import { AppLang, DEFAULT_LANG, pathForLang, rememberLang, urlForLang } from '../i18n/lang';
@@ -33,6 +34,7 @@ import { AppLang, DEFAULT_LANG, pathForLang, rememberLang, urlForLang } from '..
     SidebarComponent,
     socialComponent,
     SafeHtmlPipe,
+    TooltipDirective,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',

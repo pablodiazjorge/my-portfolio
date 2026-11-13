@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TooltipDirective } from '../directives/tooltip.directive';
 import { TranslateModule } from '@ngx-translate/core';
 
 /** Interface for social media link data */
@@ -19,7 +20,7 @@ interface SocialLink {
 @Component({
   selector: 'app-social',
   standalone: true,
-  imports: [CommonModule, TranslateModule],
+  imports: [CommonModule, TranslateModule, TooltipDirective],
   templateUrl: './social.component.html',
   styleUrl: './social.component.css',
 })

@@ -12,7 +12,7 @@
       target="_blank"
       rel="noreferrer noopener"
       [attr.aria-label]="link.name + ' ' + ('A11Y_OPENS_NEW_TAB' | translate)"
-      [title]="link.title"
+      [appTooltip]="link.title"
     >
       <!-- Screen-reader-only link name -->
       <span class="sr-only">{{ link.name }}</span>
