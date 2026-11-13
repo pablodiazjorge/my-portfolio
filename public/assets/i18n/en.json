@@ -9,6 +9,8 @@
     "A11Y_SWITCH_LANGUAGE":  "EN: switch to Spanish",
     "A11Y_THEME_TO_LIGHT":  "Switch to light theme",
     "A11Y_THEME_TO_DARK":  "Switch to dark theme",
+    "A11Y_MOTION_ON":  "Turn on animated scrolling, which your system asks to reduce",
+    "A11Y_MOTION_OFF":  "Go back to your system's motion setting",
     "A11Y_CV_LINK":  "Curriculum vitae (PDF, opens in a new tab)",
     "A11Y_OPENS_NEW_TAB":  "(opens in a new tab)",
     "A11Y_SOCIAL_LINKS":  "Social links",

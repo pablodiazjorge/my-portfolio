@@ -9,6 +9,8 @@
     "A11Y_SWITCH_LANGUAGE":  "ES: cambiar a inglés",
     "A11Y_THEME_TO_LIGHT":  "Cambiar a tema claro",
     "A11Y_THEME_TO_DARK":  "Cambiar a tema oscuro",
+    "A11Y_MOTION_ON":  "Activar el desplazamiento animado, que tu sistema pide reducir",
+    "A11Y_MOTION_OFF":  "Volver al ajuste de movimiento de tu sistema",
     "A11Y_CV_LINK":  "Currículum vitae (PDF, se abre en una pestaña nueva)",
     "A11Y_OPENS_NEW_TAB":  "(se abre en una pestaña nueva)",
     "A11Y_SOCIAL_LINKS":  "Enlaces a redes",

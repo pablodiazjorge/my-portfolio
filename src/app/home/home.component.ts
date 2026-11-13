@@ -54,6 +54,22 @@ export class HomeComponent implements OnInit, OnDestroy {
   /** Indicates if dark theme is active */
   isDarkTheme = false;
 
+  /**
+   * Si el visitante ha pedido explícitamente ver el movimiento aunque su
+   * sistema lo tenga reducido. El ajuste del sistema sigue mandando mientras
+   * nadie toque este interruptor: solo quien lo pulsa recupera la animación,
+   * y la elección se guarda para las siguientes visitas.
+   *
+   * Alcance: gobierna el desplazamiento animado a las secciones, que es lo
+   * único que esta aplicación anima desde el código. Las transiciones que
+   * están en la hoja de estilos siguen colgando de la consulta de medios y no
+   * se ven afectadas.
+   */
+  motionOverride = false;
+
+  /** Verdadero cuando el sistema pide reducir el movimiento */
+  systemPrefersReducedMotion = false;
+
   /** Subject to manage unsubscription from observables */
   private readonly destroy$ = new Subject<void>();
 
@@ -81,7 +97,36 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.isDarkTheme ? 'dark' : 'light'
       );
       localStorage.setItem('theme', this.isDarkTheme ? 'dark' : 'light');
+
+      // El interruptor de movimiento solo tiene sentido cuando el sistema pide
+      // reducirlo: si no lo pide, no hay nada que devolver y el botón no se
+      // pinta. La consulta se guarda para no repetirla en cada desplazamiento.
+      this.systemPrefersReducedMotion = window.matchMedia(
+        '(prefers-reduced-motion: reduce)'
+      ).matches;
+      this.motionOverride = localStorage.getItem('motion') === 'full';
     }
+  }
+
+  /**
+   * Enciende o apaga el interruptor de movimiento y guarda la elección. Al
+   * apagarlo se borra la marca, de modo que vuelve a mandar el sistema en vez
+   * de quedar fijado un «movimiento reducido» que el visitante no pidió.
+   */
+  toggleMotion() {
+    this.motionOverride = !this.motionOverride;
+    if (isPlatformBrowser(this.platformId)) {
+      if (this.motionOverride) {
+        localStorage.setItem('motion', 'full');
+      } else {
+        localStorage.removeItem('motion');
+      }
+    }
+  }
+
+  /** Verdadero cuando toca animar: o el sistema no pide reducir, o hay interruptor */
+  private get motionAllowed(): boolean {
+    return !this.systemPrefersReducedMotion || this.motionOverride;
   }
 
   /**
@@ -204,6 +249,12 @@ export class HomeComponent implements OnInit, OnDestroy {
    */
   @HostListener('window:scroll')
   onWindowScroll() {
+    // Mientras corre una animación de desplazamiento, la sección activa ya la
+    // ha fijado scrollTo. Recalcularla aquí en cada fotograma hacía que el
+    // indicador de la barra lateral recorriese las secciones intermedias.
+    if (this.ignoreScrollSpy) {
+      return;
+    }
     const activationPoint = window.scrollY + window.innerHeight * 0.5;
     for (let i = this.sections.length - 1; i >= 0; i--) {
       const sel = this.sections[i];
@@ -258,13 +309,32 @@ export class HomeComponent implements OnInit, OnDestroy {
   /** Handle of the running scroll animation frame, if any */
   private scrollFrame = 0;
 
+  /** Silencia el cálculo de la sección activa mientras dura un desplazamiento */
+  private ignoreScrollSpy = false;
+
   /**
-   * Scrolls the window to `end` with an ease-out curve driven by
-   * requestAnimationFrame. Native smooth scrolling (CSS `scroll-behavior`
-   * and `scrollIntoView({ behavior: 'smooth' })`) is not used on purpose:
-   * Chrome disables it entirely when the OS has animation effects turned
-   * off, which made the sidebar links jump instead of glide.
-   * A manual wheel, touch or keyboard scroll cancels the animation.
+   * Numera cada desplazamiento, para que la liberación aplazada de uno no
+   * alcance al siguiente cuando se pulsan dos enlaces seguidos.
+   */
+  private scrollRun = 0;
+
+  /**
+   * Lleva la ventana hasta `end` con una curva de desaceleración movida por
+   * requestAnimationFrame. El desplazamiento nativo (`scroll-behavior` en CSS
+   * y `scrollIntoView({ behavior: 'smooth' })`) no se usa a propósito: Chrome
+   * lo desactiva por completo cuando el sistema tiene los efectos de animación
+   * apagados, y entonces los enlaces de la barra lateral saltan en vez de
+   * deslizarse.
+   *
+   * Esa es, sin embargo, la misma condición que Chrome comunica como
+   * `prefers-reduced-motion: reduce`, así que lo que aquel apaño devolvía era
+   * justo el movimiento que el usuario había pedido no ver. Por eso la
+   * preferencia se mira primero y, si está puesta, se salta al destino de una
+   * vez. Quien quiera la animación de todos modos tiene el interruptor de
+   * `toggleMotion`, que es lo que `motionAllowed` consulta: el ajuste del
+   * sistema manda por defecto, pero no es una condena.
+   *
+   * Un desplazamiento manual con la rueda, el tacto o el teclado la cancela.
    */
   private animateScrollTo(end: number) {
     cancelAnimationFrame(this.scrollFrame);
@@ -273,14 +343,40 @@ export class HomeComponent implements OnInit, OnDestroy {
     if (Math.abs(distance) < 1) {
       return;
     }
+
+    // Se silencia el cálculo de la sección activa mientras el desplazamiento
+    // esté en marcha, y se libera un fotograma después de terminarlo: el
+    // último window.scrollTo emite su evento cuando la animación ya ha
+    // acabado, y ese evento rezagado volvería a sobrescribir el indicador.
+    const run = ++this.scrollRun;
+    this.ignoreScrollSpy = true;
+    const releaseScrollSpy = () =>
+      requestAnimationFrame(() => {
+        if (run === this.scrollRun) {
+          this.ignoreScrollSpy = false;
+        }
+      });
+
+    if (!this.motionAllowed) {
+      window.scrollTo(0, end);
+      releaseScrollSpy();
+      return;
+    }
+
     const duration = Math.min(900, 300 + Math.abs(distance) * 0.2);
     const start = performance.now();
     const easeOut = (t: number) => 1 - Math.pow(1 - t, 3);
 
     const cancelEvents = ['wheel', 'touchmove', 'keydown'] as const;
+    const unbind = () =>
+      cancelEvents.forEach((e) => window.removeEventListener(e, cancel));
+    // El usuario toma el mando: se corta la animación y se devuelve el cálculo
+    // de la sección activa en el acto, sin aplazarlo, para que el indicador
+    // marque dónde está de verdad y no el destino al que ya no va a llegar.
     const cancel = () => {
       cancelAnimationFrame(this.scrollFrame);
-      cancelEvents.forEach((e) => window.removeEventListener(e, cancel));
+      unbind();
+      this.ignoreScrollSpy = false;
     };
     cancelEvents.forEach((e) => window.addEventListener(e, cancel, { passive: true }));
 
@@ -290,7 +386,8 @@ export class HomeComponent implements OnInit, OnDestroy {
       if (t < 1) {
         this.scrollFrame = requestAnimationFrame(step);
       } else {
-        cancel();
+        unbind();
+        releaseScrollSpy();
       }
     };
     this.scrollFrame = requestAnimationFrame(step);

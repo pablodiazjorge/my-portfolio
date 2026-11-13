@@ -27,6 +27,35 @@
     <div
       class="absolute top-0 right-0 z-50 m-2 md:fixed md:top-0 md:right-0 ms:fixed ms:top-0 ms:right-0 flex items-center space-x-1"
     >
+      <!--
+        Motion switch. Only rendered when the system asks for reduced motion:
+        otherwise there is nothing to give back. The system setting is the
+        default and this only overrides it for whoever presses the button.
+      -->
+      <button
+        *ngIf="systemPrefersReducedMotion"
+        (click)="toggleMotion()"
+        class="dark:text-d-text-heading dark:hover:text-d-badge-other-text light:text-l-text-heading light:hover:text-l-badge-other-text h-8 min-w-8 flex items-center justify-center cursor-pointer"
+        [attr.aria-pressed]="motionOverride"
+        [attr.aria-label]="
+          (motionOverride ? 'A11Y_MOTION_OFF' : 'A11Y_MOTION_ON') | translate
+        "
+      >
+        <svg
+          class="w-5 h-5"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <!-- Tres trazos de velocidad; tachados cuando el movimiento está apagado -->
+          <path d="M3 8h13M3 12h9M3 16h11" />
+          <path *ngIf="!motionOverride" d="M20 5L5 20" />
+        </svg>
+      </button>
       <!-- Language Switch Button -->
       <button
         (click)="switchLanguage()"
