@@ -18,7 +18,7 @@ import { ProjectsComponent } from '../projects/projects.component';
 import { LangChangeEvent, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { SafeHtmlPipe } from '../pipes/safe-html.pipe';
 import { TooltipDirective } from '../directives/tooltip.directive';
-import { Subject, fromEvent, takeUntil, debounceTime } from 'rxjs';
+import { Subject, takeUntil } from 'rxjs';
 import { Meta, Title } from '@angular/platform-browser';
 import { AppLang, DEFAULT_LANG, pathForLang, rememberLang, urlForLang } from '../i18n/lang';
 
@@ -149,19 +149,6 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.currentLang = event.lang as AppLang;
         this.applyLangToDocument();
       });
-    // Check if the code is running in the browser
-    if (isPlatformBrowser(this.platformId)) {
-      // Create an observable from the window scroll event
-      fromEvent(window, 'scroll')
-        .pipe(
-          // Wait for a specified time after the last scroll event to emit
-          debounceTime(100), // Adjust debounce time as needed (milliseconds)
-          // Take events until the component is destroyed
-          takeUntil(this.destroy$)
-        )
-        // Subscribe to the debounced scroll events and call removeHoverOnScroll
-        .subscribe(() => this.removeHoverOnScroll());
-    }
   }
 
   /**
@@ -170,6 +157,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     if (isPlatformBrowser(this.platformId)) {
       cancelAnimationFrame(this.scrollFrame);
+      this.stopScrollListeners?.();
     }
     // Emit a value to signal that the component is being destroyed
     this.destroy$.next();
@@ -234,20 +222,6 @@ export class HomeComponent implements OnInit, OnDestroy {
       // persist the choice
       localStorage.setItem('theme', this.isDarkTheme ? 'dark' : 'light');
     }
-  }
-
-  /**
-   * Removes the 'hovered' class from all project and experience items.
-   */
-  removeHoverOnScroll() {
-    const projects = document.querySelectorAll('.projects-item');
-    projects.forEach((project) => {
-      project.classList.remove('hovered');
-    });
-    const experience = document.querySelectorAll('.experience-item');
-    experience.forEach((experience) => {
-      experience.classList.remove('hovered');
-    });
   }
 
   /**
@@ -325,6 +299,9 @@ export class HomeComponent implements OnInit, OnDestroy {
    */
   private scrollRun = 0;
 
+  /** Removes the cancel listeners of the running scroll animation, if any */
+  private stopScrollListeners: (() => void) | null = null;
+
   /**
    * Lleva la ventana hasta `end` con una curva de desaceleración movida por
    * requestAnimationFrame. El desplazamiento nativo (`scroll-behavior` en CSS
@@ -341,13 +318,28 @@ export class HomeComponent implements OnInit, OnDestroy {
    * `toggleMotion`, que es lo que `motionAllowed` consulta: el ajuste del
    * sistema manda por defecto, pero no es una condena.
    *
+   * <html> carries `scroll-behavior: smooth` (the `scroll-smooth` class in
+   * index.html), which would turn every plain window.scrollTo into a native
+   * smooth scroll wherever the browser has smooth scrolling on. That is why
+   * each call here forces `behavior: 'instant'`: per frame, so the native
+   * animation does not lag behind this one, and in the reduced-motion jump,
+   * so the browser does not animate what the user asked not to see.
+   *
    * Un desplazamiento manual con la rueda, el tacto o el teclado la cancela.
+   * Pulsar la barra de desplazamiento también, donde el navegador avisa de esa
+   * pulsación (comprobado en Chrome); donde no avisa, la animación sigue.
    */
   private animateScrollTo(end: number) {
     cancelAnimationFrame(this.scrollFrame);
+    // The previous run's frame is gone, so its cancel listeners must go too.
+    this.stopScrollListeners?.();
     const from = window.scrollY;
     const distance = end - from;
     if (Math.abs(distance) < 1) {
+      // A second click on the same link during the last frames lands here
+      // with the previous run already cancelled above, so nothing else would
+      // hand the active-section tracking back.
+      this.ignoreScrollSpy = false;
       return;
     }
 
@@ -365,7 +357,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       });
 
     if (!this.motionAllowed) {
-      window.scrollTo(0, end);
+      window.scrollTo({ top: end, behavior: 'instant' });
       releaseScrollSpy();
       return;
     }
@@ -375,8 +367,13 @@ export class HomeComponent implements OnInit, OnDestroy {
     const easeOut = (t: number) => 1 - Math.pow(1 - t, 3);
 
     const cancelEvents = ['wheel', 'touchmove', 'keydown'] as const;
-    const unbind = () =>
+    const unbind = () => {
       cancelEvents.forEach((e) => window.removeEventListener(e, cancel));
+      window.removeEventListener('pointerdown', onScrollbarPress);
+      if (this.stopScrollListeners === unbind) {
+        this.stopScrollListeners = null;
+      }
+    };
     // El usuario toma el mando: se corta la animación y se devuelve el cálculo
     // de la sección activa en el acto, sin aplazarlo, para que el indicador
     // marque dónde está de verdad y no el destino al que ya no va a llegar.
@@ -384,12 +381,34 @@ export class HomeComponent implements OnInit, OnDestroy {
       cancelAnimationFrame(this.scrollFrame);
       unbind();
       this.ignoreScrollSpy = false;
+      // A press on the scrollbar or a key may not scroll at all, so no scroll
+      // event would come to correct the indicator, which still shows the
+      // destination.
+      this.onWindowScroll();
+    };
+    // Chrome dispatches pointerdown on <html> when the window's scrollbar is
+    // pressed, with coordinates past the root's client box. A press inside the
+    // page scrolls nothing, so it must not stop the animation. Touch is left
+    // out: a tap near the bottom edge can fall past clientHeight on mobile
+    // browsers with a collapsing toolbar, and touch scrolling is already
+    // caught by touchmove.
+    const onScrollbarPress = (e: PointerEvent) => {
+      const root = document.documentElement;
+      if (
+        e.pointerType === 'mouse' &&
+        (e.clientX >= root.clientWidth || e.clientY >= root.clientHeight)
+      ) {
+        cancel();
+      }
     };
     cancelEvents.forEach((e) => window.addEventListener(e, cancel, { passive: true }));
+    window.addEventListener('pointerdown', onScrollbarPress, { passive: true });
+
+    this.stopScrollListeners = unbind;
 
     const step = (now: number) => {
       const t = Math.min(1, (now - start) / duration);
-      window.scrollTo(0, from + distance * easeOut(t));
+      window.scrollTo({ top: from + distance * easeOut(t), behavior: 'instant' });
       if (t < 1) {
         this.scrollFrame = requestAnimationFrame(step);
       } else {
