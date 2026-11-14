@@ -41,10 +41,11 @@ import { AppLang, DEFAULT_LANG, pathForLang, rememberLang, urlForLang } from '..
 })
 export class HomeComponent implements OnInit, OnDestroy {
   /**
-   * Capa que pinta el degradado que sigue al cursor. Va fija a la ventana, así
-   * que el foco se queda bajo el puntero aunque la página se desplace sin que
-   * el ratón se mueva. Las coordenadas se miden contra el rectángulo de esta
-   * capa, no contra el del contenedor, que sí se desplaza con el documento.
+   * Layer that paints the gradient following the cursor. It is fixed to the
+   * window, so the spotlight stays under the pointer even when the page
+   * scrolls without the mouse moving. Coordinates are measured against this
+   * layer's rectangle, not the container's, which does scroll with the
+   * document.
    */
   @ViewChild('spotlight', { static: true })
   spotlight!: ElementRef<HTMLElement>;
@@ -62,19 +63,18 @@ export class HomeComponent implements OnInit, OnDestroy {
   isDarkTheme = false;
 
   /**
-   * Si el visitante ha pedido explícitamente ver el movimiento aunque su
-   * sistema lo tenga reducido. El ajuste del sistema sigue mandando mientras
-   * nadie toque este interruptor: solo quien lo pulsa recupera la animación,
-   * y la elección se guarda para las siguientes visitas.
+   * Whether the visitor has explicitly asked to see motion even though their
+   * system has it reduced. The system setting still rules as long as nobody
+   * touches this switch: only whoever presses it gets the animation back,
+   * and the choice is kept for later visits.
    *
-   * Alcance: gobierna el desplazamiento animado a las secciones, que es lo
-   * único que esta aplicación anima desde el código. Las transiciones que
-   * están en la hoja de estilos siguen colgando de la consulta de medios y no
-   * se ven afectadas.
+   * Scope: it governs the animated scroll to the sections, which is the only
+   * thing this app animates from code. The transitions in the stylesheet
+   * still depend on the media query and are not affected.
    */
   motionOverride = false;
 
-  /** Verdadero cuando el sistema pide reducir el movimiento */
+  /** True when the system asks for reduced motion */
   systemPrefersReducedMotion = false;
 
   /** Subject to manage unsubscription from observables */
@@ -105,9 +105,10 @@ export class HomeComponent implements OnInit, OnDestroy {
       );
       localStorage.setItem('theme', this.isDarkTheme ? 'dark' : 'light');
 
-      // El interruptor de movimiento solo tiene sentido cuando el sistema pide
-      // reducirlo: si no lo pide, no hay nada que devolver y el botón no se
-      // pinta. La consulta se guarda para no repetirla en cada desplazamiento.
+      // The motion switch only makes sense when the system asks to reduce
+      // motion: otherwise there is nothing to give back and the button is not
+      // rendered. The query result is stored so it is not repeated on every
+      // scroll.
       this.systemPrefersReducedMotion = window.matchMedia(
         '(prefers-reduced-motion: reduce)'
       ).matches;
@@ -116,9 +117,9 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   /**
-   * Enciende o apaga el interruptor de movimiento y guarda la elección. Al
-   * apagarlo se borra la marca, de modo que vuelve a mandar el sistema en vez
-   * de quedar fijado un «movimiento reducido» que el visitante no pidió.
+   * Turns the motion switch on or off and stores the choice. Turning it off
+   * removes the stored flag, so the system rules again instead of pinning a
+   * "reduced motion" setting the visitor never asked for.
    */
   toggleMotion() {
     this.motionOverride = !this.motionOverride;
@@ -131,7 +132,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
   }
 
-  /** Verdadero cuando toca animar: o el sistema no pide reducir, o hay interruptor */
+  /** True when animating is allowed: the system does not ask to reduce, or the switch is on */
   private get motionAllowed(): boolean {
     return !this.systemPrefersReducedMotion || this.motionOverride;
   }
@@ -230,9 +231,9 @@ export class HomeComponent implements OnInit, OnDestroy {
    */
   @HostListener('window:scroll')
   onWindowScroll() {
-    // Mientras corre una animación de desplazamiento, la sección activa ya la
-    // ha fijado scrollTo. Recalcularla aquí en cada fotograma hacía que el
-    // indicador de la barra lateral recorriese las secciones intermedias.
+    // While a scroll animation runs, scrollTo has already set the active
+    // section. Recomputing it here on every frame made the sidebar indicator
+    // run through the sections in between.
     if (this.ignoreScrollSpy) {
       return;
     }
@@ -290,12 +291,12 @@ export class HomeComponent implements OnInit, OnDestroy {
   /** Handle of the running scroll animation frame, if any */
   private scrollFrame = 0;
 
-  /** Silencia el cálculo de la sección activa mientras dura un desplazamiento */
+  /** Mutes the active-section tracking while a scroll is running */
   private ignoreScrollSpy = false;
 
   /**
-   * Numera cada desplazamiento, para que la liberación aplazada de uno no
-   * alcance al siguiente cuando se pulsan dos enlaces seguidos.
+   * Numbers each scroll, so the deferred release of one does not reach the
+   * next when two links are clicked in a row.
    */
   private scrollRun = 0;
 
@@ -303,31 +304,30 @@ export class HomeComponent implements OnInit, OnDestroy {
   private stopScrollListeners: (() => void) | null = null;
 
   /**
-   * Lleva la ventana hasta `end` con una curva de desaceleración movida por
-   * requestAnimationFrame. El desplazamiento nativo (`scroll-behavior` en CSS
-   * y `scrollIntoView({ behavior: 'smooth' })`) no se usa a propósito: Chrome
-   * lo desactiva por completo cuando el sistema tiene los efectos de animación
-   * apagados, y entonces los enlaces de la barra lateral saltan en vez de
-   * deslizarse.
+   * Moves the window to `end` along a decelerating curve driven by
+   * requestAnimationFrame. Native smooth scrolling (`scroll-behavior` in CSS
+   * and `scrollIntoView({ behavior: 'smooth' })`) is deliberately not used:
+   * Chrome turns it off entirely when the system has animation effects
+   * disabled, and then the sidebar links jump instead of sliding.
    *
-   * Esa es, sin embargo, la misma condición que Chrome comunica como
-   * `prefers-reduced-motion: reduce`, así que lo que aquel apaño devolvía era
-   * justo el movimiento que el usuario había pedido no ver. Por eso la
-   * preferencia se mira primero y, si está puesta, se salta al destino de una
-   * vez. Quien quiera la animación de todos modos tiene el interruptor de
-   * `toggleMotion`, que es lo que `motionAllowed` consulta: el ajuste del
-   * sistema manda por defecto, pero no es una condena.
+   * That is, however, the same condition Chrome reports as
+   * `prefers-reduced-motion: reduce`, so what that workaround brought back
+   * was exactly the motion the user had asked not to see. That is why the
+   * preference is checked first and, when set, the scroll jumps straight to
+   * the destination. Whoever wants the animation anyway has the
+   * `toggleMotion` switch, which is what `motionAllowed` checks: the system
+   * setting rules by default, but it is not a life sentence.
    *
    * <html> carries `scroll-behavior: smooth` (the `scroll-smooth` class in
    * index.html), which would turn every plain window.scrollTo into a native
-   * smooth scroll wherever the browser has smooth scrolling on. That is why
+   * smooth scroll wherever the browser has smooth scrolling on. So
    * each call here forces `behavior: 'instant'`: per frame, so the native
    * animation does not lag behind this one, and in the reduced-motion jump,
    * so the browser does not animate what the user asked not to see.
    *
-   * Un desplazamiento manual con la rueda, el tacto o el teclado la cancela.
-   * Pulsar la barra de desplazamiento también, donde el navegador avisa de esa
-   * pulsación (comprobado en Chrome); donde no avisa, la animación sigue.
+   * A manual scroll with the wheel, touch or keyboard cancels it. So does
+   * pressing the scrollbar, where the browser reports that press (checked in
+   * Chrome); where it does not, the animation carries on.
    */
   private animateScrollTo(end: number) {
     cancelAnimationFrame(this.scrollFrame);
@@ -343,10 +343,10 @@ export class HomeComponent implements OnInit, OnDestroy {
       return;
     }
 
-    // Se silencia el cálculo de la sección activa mientras el desplazamiento
-    // esté en marcha, y se libera un fotograma después de terminarlo: el
-    // último window.scrollTo emite su evento cuando la animación ya ha
-    // acabado, y ese evento rezagado volvería a sobrescribir el indicador.
+    // Active-section tracking is muted while the scroll runs and released one
+    // frame after it ends: the last window.scrollTo fires its event once the
+    // animation has already finished, and that late event would overwrite
+    // the indicator again.
     const run = ++this.scrollRun;
     this.ignoreScrollSpy = true;
     const releaseScrollSpy = () =>
@@ -374,9 +374,9 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.stopScrollListeners = null;
       }
     };
-    // El usuario toma el mando: se corta la animación y se devuelve el cálculo
-    // de la sección activa en el acto, sin aplazarlo, para que el indicador
-    // marque dónde está de verdad y no el destino al que ya no va a llegar.
+    // The user takes over: the animation stops and active-section tracking
+    // is handed back at once, not deferred, so the indicator shows where the
+    // page really is and not the destination it will no longer reach.
     const cancel = () => {
       cancelAnimationFrame(this.scrollFrame);
       unbind();
@@ -424,9 +424,9 @@ export class HomeComponent implements OnInit, OnDestroy {
    * @param event Mouse event containing client coordinates
    */
   onMouseMove(event: MouseEvent) {
-    // El rectángulo es el de la propia capa del degradado, que es la que lee
-    // las dos variables. Al ir fija a la ventana, ese rectángulo empieza en su
-    // esquina, de modo que las coordenadas coinciden con las del puntero.
+    // The rectangle is the gradient layer's own, since that layer reads both
+    // variables. Being fixed to the window, the rectangle starts at its
+    // corner, so the coordinates match the pointer's.
     const el = this.spotlight.nativeElement;
     const rect = el.getBoundingClientRect();
     const x = event.clientX - rect.left;

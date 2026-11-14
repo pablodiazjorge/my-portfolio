@@ -15,7 +15,7 @@
         [attr.aria-current]="item.href === activeHref ? 'true' : null"
         (click)="onClick(item, $event)"
       >
-        <!-- Indicador -->
+        <!-- Indicator -->
         <span
           class="
             nav-indicator
@@ -34,14 +34,14 @@
             light:group-focus-visible:bg-l-text-heading
             dark:group-focus-visible:bg-d-text-heading
 
-            /* ACTIVE (cuando .active en el <a>) */
+            /* ACTIVE (when the <a> has .active) */
             group-[&.active]:w-16
             light:group-[&.active]:bg-l-text-heading
             dark:group-[&.active]:bg-d-text-heading
           "
         ></span>
 
-        <!-- Texto -->
+        <!-- Text -->
         <span
           class="
             nav-text

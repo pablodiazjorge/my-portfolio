@@ -101,19 +101,18 @@
   }
 }
 /*
-  Rotulo de ayuda de la directiva appTooltip. Sustituye al atributo `title`,
-  que el navegador pinta con su propio estilo, tarda casi un segundo en salir y
-  no se puede recorrer con el puntero ni descartar con Escape, como pide
-  WCAG 1.4.13. Va colgado del body, asi que los estilos son globales.
+  Tooltip of the appTooltip directive. It replaces the `title` attribute, which
+  the browser draws in its own style, takes almost a second to appear and
+  cannot be hovered with the pointer or dismissed with Escape, as WCAG 1.4.13
+  asks. It is attached to body, so the styles are global.
 */
 .app-tooltip {
   position: fixed;
   z-index: 60;
-  /* Ancho segun el texto y no segun el sitio que quede hasta el borde derecho:
-     sin esto, un rotulo arrimado a ese borde se parte en dos lineas. */
+  /* Width from the text and not from the room left up to the right edge:
+     without this, a tooltip pushed against that edge breaks into two lines. */
   width: max-content;
-  /* 32 px: los dos margenes de 8 px y la barra de desplazamiento, que 100vw
-     incluye. */
+  /* 32 px: the two 8 px margins and the scrollbar, which 100vw includes. */
   max-width: min(24rem, calc(100vw - 32px));
   padding: 6px 10px;
   border: 1px solid var(--color-l-badge-tech-border, rgb(148 163 184 / 0.3));
@@ -122,7 +121,7 @@
   color: var(--color-l-text-heading);
   font-size: 12px;
   line-height: 1.4;
-  /* Si el texto no cabe en una linea, que no deje una palabra suelta. */
+  /* If the text does not fit on one line, avoid leaving a single word alone. */
   text-wrap: balance;
   box-shadow: 0 4px 12px rgb(0 0 0 / 0.18);
   opacity: 0;
@@ -131,11 +130,11 @@
     translate 150ms ease-out;
 }
 
-.app-tooltip.debajo {
+.app-tooltip.below {
   translate: 0 -4px;
 }
 
-.app-tooltip.encima {
+.app-tooltip.above {
   translate: 0 4px;
 }
 
@@ -145,8 +144,8 @@
 }
 
 /*
-  Puente sobre el hueco de 10 px que separa el rotulo del control: sin el, el
-  puntero sale de los dos al ir hacia el rotulo y lo cierra.
+  Bridge over the 10 px gap between the tooltip and the control: without it,
+  the pointer leaves both on its way to the tooltip and closes it.
 */
 .app-tooltip::before {
   content: "";
@@ -156,25 +155,26 @@
   height: 10px;
 }
 
-.app-tooltip.debajo::before {
+.app-tooltip.below::before {
   top: -10px;
 }
 
-.app-tooltip.encima::before {
+.app-tooltip.above::before {
   bottom: -10px;
 }
 
 /*
-  Flecha que senala de que control sale el rotulo. Es un cuadrado girado que
-  asoma medio cuerpo por el borde y hereda fondo y borde, asi que cambia de
-  tema sin reglas propias. La directiva deja en --flecha-x el centro del
-  control: cuando el rotulo se arrima al borde de la ventana ya no queda
-  centrado sobre el, y la flecha tiene que seguir apuntandole.
+  Arrow showing which control the tooltip comes from. It is a rotated square
+  that sticks halfway out of the border and inherits background and border,
+  so it follows the theme with no rules of its own. The directive puts the
+  centre of the control in --arrow-x: when the tooltip is pushed against the
+  window edge it is no longer centred on the control, and the arrow still has
+  to point at it.
 */
 .app-tooltip::after {
   content: "";
   position: absolute;
-  left: calc(var(--flecha-x, 50%) - 5px);
+  left: calc(var(--arrow-x, 50%) - 5px);
   width: 10px;
   height: 10px;
   border: inherit;
@@ -182,21 +182,21 @@
   rotate: 45deg;
 }
 
-.app-tooltip.debajo::after {
+.app-tooltip.below::after {
   top: -6px;
   border-right-color: transparent;
   border-bottom-color: transparent;
 }
 
-.app-tooltip.encima::after {
+.app-tooltip.above::after {
   bottom: -6px;
   border-left-color: transparent;
   border-top-color: transparent;
 }
 
 [data-theme="dark"] .app-tooltip {
-  /* El fondo es el de la pagina, asi que el borde es lo unico que dibuja el
-     bocadillo y su flecha: por debajo de este alfa la flecha no se distingue. */
+  /* The background is the page's, so the border is the only thing that draws
+     the bubble and its arrow: below this alpha the arrow cannot be made out. */
   border-color: rgb(148 163 184 / 0.32);
   background: var(--color-d-background-primary);
   color: var(--color-d-text-heading);
@@ -204,13 +204,13 @@
 }
 
 /*
-  Con movimiento reducido se queda el fundido y se va el desplazamiento: la
-  opacidad esta excluida de WCAG 2.3.3 y los 4 px si son recorrido.
+  With reduced motion the fade stays and the slide goes: opacity is excluded
+  from WCAG 2.3.3, and the 4 px are movement.
 */
 @media (prefers-reduced-motion: reduce) {
   .app-tooltip,
-  .app-tooltip.debajo,
-  .app-tooltip.encima {
+  .app-tooltip.below,
+  .app-tooltip.above {
     translate: none;
   }
 }
