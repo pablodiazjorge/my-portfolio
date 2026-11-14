@@ -8,28 +8,6 @@
   min-height: 100vh;
 }
 
-/* Debounced styles */
-
-.projects-item:hover,
-.projects-item.hovered {
-  /* Apply your hover styles here */
-  opacity: 1 !important; /* Or whatever your hover effect is */
-}
-
-.projects-item.hovered .lg\:group-hover\/list\:opacity-50 {
-  opacity: 0.5 !important; /* Revert the list hover opacity */
-}
-
-.experience-item:hover,
-.experience-item.hovered {
-  /* Apply your hover styles here */
-  opacity: 1 !important; /* Or whatever your hover effect is */
-}
-
-.experience-item.hovered .lg\:group-hover\/list\:opacity-50 {
-  opacity: 0.5 !important; /* Revert the list hover opacity */
-}
-
 /* Cursor Gradient */
 
 .home-gradient {

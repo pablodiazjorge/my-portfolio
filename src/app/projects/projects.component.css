@@ -10,11 +10,11 @@
 }
 
 /*
-  El borde de realce toma el color del tema en curso. Antes usaba el del tema
-  oscuro en los dos, y sobre el fondo claro se quedaba en 1,34:1, de modo que
-  el botón no daba respuesta visible al pasar el puntero. La declaración de
-  `color` que había aquí se ha quitado: no llegaba nunca a la etiqueta, porque
-  el div interior fija el suyo.
+  The highlight border takes the colour of the current theme. It used to take
+  the dark theme's in both, and on the light background it stayed at 1.34:1,
+  so the button gave no visible response on hover. The `color` declaration
+  that was here has been removed: it never reached the label, because the
+  inner div sets its own.
 */
 :host-context([data-theme='dark']) .proj-butt:hover {
   border-color: var(--color-d-text-hover-accent);
