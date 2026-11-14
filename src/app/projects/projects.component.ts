@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TooltipDirective } from '../directives/tooltip.directive';
 import { Project } from '../models/project.model';
 import { DataTranslationService } from '../services/data-translation.service';
 import { TranslateModule } from '@ngx-translate/core';
@@ -8,7 +9,7 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule, TranslateModule],
+  imports: [CommonModule, TranslateModule, TooltipDirective],
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.css'],
 })

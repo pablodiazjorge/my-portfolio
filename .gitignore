@@ -43,3 +43,6 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Registros y volcados de la herramienta de navegador
+.playwright-mcp/

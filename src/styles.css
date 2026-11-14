@@ -100,3 +100,117 @@
     color: var(--color-d-text-heading);
   }
 }
+/*
+  Rotulo de ayuda de la directiva appTooltip. Sustituye al atributo `title`,
+  que el navegador pinta con su propio estilo, tarda casi un segundo en salir y
+  no se puede recorrer con el puntero ni descartar con Escape, como pide
+  WCAG 1.4.13. Va colgado del body, asi que los estilos son globales.
+*/
+.app-tooltip {
+  position: fixed;
+  z-index: 60;
+  /* Ancho segun el texto y no segun el sitio que quede hasta el borde derecho:
+     sin esto, un rotulo arrimado a ese borde se parte en dos lineas. */
+  width: max-content;
+  /* 32 px: los dos margenes de 8 px y la barra de desplazamiento, que 100vw
+     incluye. */
+  max-width: min(24rem, calc(100vw - 32px));
+  padding: 6px 10px;
+  border: 1px solid var(--color-l-badge-tech-border, rgb(148 163 184 / 0.3));
+  border-radius: 6px;
+  background: var(--color-l-background-primary);
+  color: var(--color-l-text-heading);
+  font-size: 12px;
+  line-height: 1.4;
+  /* Si el texto no cabe en una linea, que no deje una palabra suelta. */
+  text-wrap: balance;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.18);
+  opacity: 0;
+  transition:
+    opacity 150ms ease-out,
+    translate 150ms ease-out;
+}
+
+.app-tooltip.debajo {
+  translate: 0 -4px;
+}
+
+.app-tooltip.encima {
+  translate: 0 4px;
+}
+
+.app-tooltip.visible {
+  opacity: 1;
+  translate: 0 0;
+}
+
+/*
+  Puente sobre el hueco de 10 px que separa el rotulo del control: sin el, el
+  puntero sale de los dos al ir hacia el rotulo y lo cierra.
+*/
+.app-tooltip::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 10px;
+}
+
+.app-tooltip.debajo::before {
+  top: -10px;
+}
+
+.app-tooltip.encima::before {
+  bottom: -10px;
+}
+
+/*
+  Flecha que senala de que control sale el rotulo. Es un cuadrado girado que
+  asoma medio cuerpo por el borde y hereda fondo y borde, asi que cambia de
+  tema sin reglas propias. La directiva deja en --flecha-x el centro del
+  control: cuando el rotulo se arrima al borde de la ventana ya no queda
+  centrado sobre el, y la flecha tiene que seguir apuntandole.
+*/
+.app-tooltip::after {
+  content: "";
+  position: absolute;
+  left: calc(var(--flecha-x, 50%) - 5px);
+  width: 10px;
+  height: 10px;
+  border: inherit;
+  background: inherit;
+  rotate: 45deg;
+}
+
+.app-tooltip.debajo::after {
+  top: -6px;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.app-tooltip.encima::after {
+  bottom: -6px;
+  border-left-color: transparent;
+  border-top-color: transparent;
+}
+
+[data-theme="dark"] .app-tooltip {
+  /* El fondo es el de la pagina, asi que el borde es lo unico que dibuja el
+     bocadillo y su flecha: por debajo de este alfa la flecha no se distingue. */
+  border-color: rgb(148 163 184 / 0.32);
+  background: var(--color-d-background-primary);
+  color: var(--color-d-text-heading);
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.45);
+}
+
+/*
+  Con movimiento reducido se queda el fundido y se va el desplazamiento: la
+  opacidad esta excluida de WCAG 2.3.3 y los 4 px si son recorrido.
+*/
+@media (prefers-reduced-motion: reduce) {
+  .app-tooltip,
+  .app-tooltip.debajo,
+  .app-tooltip.encima {
+    translate: none;
+  }
+}
