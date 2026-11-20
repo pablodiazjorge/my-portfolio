@@ -160,13 +160,16 @@
 
 /*
   Bridge over the 10 px gap between the tooltip and the control: without it,
-  the pointer leaves both on its way to the tooltip and closes it.
+  the pointer leaves both on its way to the tooltip and closes it. It spans
+  only the stretch where the control and the tooltip overlap, which the
+  directive puts in --bridge-left and --bridge-width; without them it falls
+  back to the tooltip's full width.
 */
 .app-tooltip::before {
   content: "";
   position: absolute;
-  left: 0;
-  right: 0;
+  left: var(--bridge-left, 0);
+  width: var(--bridge-width, 100%);
   height: 10px;
 }
 

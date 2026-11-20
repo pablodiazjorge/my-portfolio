@@ -235,6 +235,18 @@ export class TooltipDirective implements OnDestroy {
       tip.clientWidth - arrowInset
     );
     tip.style.setProperty('--arrow-x', `${Math.round(arrowX)}px`);
+
+    // The bridge over the gap covers only the stretch where the control and
+    // the tooltip overlap across, measured like the arrow. As wide as the
+    // tooltip, it stuck out past the control, invisible, and caught the
+    // pointer over whatever lay beneath: the tooltips of the corner buttons,
+    // pushed against the window edge, overhang the cards on their left.
+    const overlapLeft = Math.max(control.left, roundedLeft);
+    const overlapRight = Math.min(control.right, roundedLeft + tipRect.width);
+    const bridgeLeft = overlapLeft - roundedLeft - tip.clientLeft;
+    const bridgeWidth = Math.max(0, overlapRight - overlapLeft);
+    tip.style.setProperty('--bridge-left', `${Math.floor(bridgeLeft)}px`);
+    tip.style.setProperty('--bridge-width', `${Math.ceil(bridgeWidth)}px`);
     this.renderer.removeClass(tip, fitsBelow ? 'above' : 'below');
     this.renderer.addClass(tip, fitsBelow ? 'below' : 'above');
   }
