@@ -2,12 +2,14 @@ import {
   Directive,
   ElementRef,
   HostListener,
-  Inject,
-  Input,
   OnDestroy,
   PLATFORM_ID,
   Renderer2,
   DOCUMENT,
+  effect,
+  inject,
+  input,
+  untracked,
 } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
@@ -31,34 +33,17 @@ let tooltipCount = 0;
   standalone: true,
 })
 export class TooltipDirective implements OnDestroy {
-  /**
-   * Tooltip text. If it arrives empty, nothing is shown. If it changes while
-   * the tooltip is open, it is updated in place: the theme, language and
-   * motion buttons change their text right when pressed, with the pointer
-   * still over them.
-   */
-  @Input('appTooltip')
-  set text(value: string) {
-    this.tooltipText = value ?? '';
-    if (!this.tip) {
-      return;
-    }
-    if (!this.tooltipText) {
-      this.hide();
-      return;
-    }
-    this.renderer.setProperty(this.tip, 'textContent', this.tooltipText);
-    this.updateDescribedBy();
-    this.position();
-  }
-  get text(): string {
-    return this.tooltipText;
-  }
+  private host = inject<ElementRef<HTMLElement>>(ElementRef);
+  private renderer = inject(Renderer2);
+  private document = inject<Document>(DOCUMENT);
+  private platformId = inject<Object>(PLATFORM_ID);
+
+  /** Tooltip text. If it arrives empty, nothing is shown. */
+  readonly text = input('', { alias: 'appTooltip' });
 
   /** The instance whose tooltip is open, if any. */
   private static openInstance?: TooltipDirective;
 
-  private tooltipText = '';
   private tip?: HTMLElement;
   /** Stops listening to window scroll and resize. */
   private unlisteners: Array<() => void> = [];
@@ -66,12 +51,26 @@ export class TooltipDirective implements OnDestroy {
   private closeTimer?: ReturnType<typeof setTimeout>;
   private readonly id = `tooltip-${++tooltipCount}`;
 
-  constructor(
-    private host: ElementRef<HTMLElement>,
-    private renderer: Renderer2,
-    @Inject(DOCUMENT) private document: Document,
-    @Inject(PLATFORM_ID) private platformId: Object
-  ) {}
+  constructor() {
+    // If the text changes while the tooltip is open, it is updated in place:
+    // the theme, language and motion buttons change their text right when
+    // pressed, with the pointer still over them.
+    effect(() => {
+      const text = this.text();
+      untracked(() => {
+        if (!this.tip) {
+          return;
+        }
+        if (!text) {
+          this.hide();
+          return;
+        }
+        this.renderer.setProperty(this.tip, 'textContent', text);
+        this.updateDescribedBy();
+        this.position();
+      });
+    });
+  }
 
   ngOnDestroy(): void {
     this.hide();
@@ -112,7 +111,7 @@ export class TooltipDirective implements OnDestroy {
   }
 
   private scheduleOpen(delay: number): void {
-    if (!isPlatformBrowser(this.platformId) || !this.text) {
+    if (!isPlatformBrowser(this.platformId) || !this.text()) {
       return;
     }
     clearTimeout(this.closeTimer);
@@ -147,13 +146,23 @@ export class TooltipDirective implements OnDestroy {
     this.renderer.setAttribute(tip, 'id', this.id);
     this.renderer.setAttribute(tip, 'role', 'tooltip');
     this.renderer.addClass(tip, 'app-tooltip');
-    this.renderer.setProperty(tip, 'textContent', this.text);
+    this.renderer.setProperty(tip, 'textContent', this.text());
     this.renderer.appendChild(this.document.body, tip);
 
     // The tooltip receives the pointer so it can be hovered, and it does not
-    // close while the pointer is over it.
-    this.renderer.listen(tip, 'mouseenter', () => clearTimeout(this.closeTimer));
-    this.renderer.listen(tip, 'mouseleave', () => this.scheduleClose());
+    // close while the pointer is over it. Being attached to body, for the
+    // card around the control the pointer has left and `:hover` stops
+    // matching there, so the control is marked while the pointer is on the
+    // tooltip (or on its bridge) and the card keeps its hover look through
+    // `:has()` (the `card-hover` variant in styles.css).
+    this.renderer.listen(tip, 'mouseenter', () => {
+      clearTimeout(this.closeTimer);
+      this.renderer.setAttribute(this.host.nativeElement, 'data-tooltip-hover', '');
+    });
+    this.renderer.listen(tip, 'mouseleave', () => {
+      this.renderer.removeAttribute(this.host.nativeElement, 'data-tooltip-hover');
+      this.scheduleClose();
+    });
 
     // The tooltip is fixed to the window and the control can move with the
     // page (when tabbing to one that is out of view, the browser brings it
@@ -226,6 +235,18 @@ export class TooltipDirective implements OnDestroy {
       tip.clientWidth - arrowInset
     );
     tip.style.setProperty('--arrow-x', `${Math.round(arrowX)}px`);
+
+    // The bridge over the gap covers only the stretch where the control and
+    // the tooltip overlap across, measured like the arrow. As wide as the
+    // tooltip, it stuck out past the control, invisible, and caught the
+    // pointer over whatever lay beneath: the tooltips of the corner buttons,
+    // pushed against the window edge, overhang the cards on their left.
+    const overlapLeft = Math.max(control.left, roundedLeft);
+    const overlapRight = Math.min(control.right, roundedLeft + tipRect.width);
+    const bridgeLeft = overlapLeft - roundedLeft - tip.clientLeft;
+    const bridgeWidth = Math.max(0, overlapRight - overlapLeft);
+    tip.style.setProperty('--bridge-left', `${Math.floor(bridgeLeft)}px`);
+    tip.style.setProperty('--bridge-width', `${Math.ceil(bridgeWidth)}px`);
     this.renderer.removeClass(tip, fitsBelow ? 'above' : 'below');
     this.renderer.addClass(tip, fitsBelow ? 'below' : 'above');
   }
@@ -240,7 +261,7 @@ export class TooltipDirective implements OnDestroy {
     const name = control.getAttribute('aria-label') ?? control.textContent ?? '';
     const isRepeated = name
       .toLocaleLowerCase()
-      .includes(this.tooltipText.toLocaleLowerCase());
+      .includes(this.text().toLocaleLowerCase());
     if (isRepeated) {
       this.renderer.removeAttribute(control, 'aria-describedby');
     } else {
@@ -261,5 +282,6 @@ export class TooltipDirective implements OnDestroy {
       this.tip = undefined;
     }
     this.renderer.removeAttribute(this.host.nativeElement, 'aria-describedby');
+    this.renderer.removeAttribute(this.host.nativeElement, 'data-tooltip-hover');
   }
 }

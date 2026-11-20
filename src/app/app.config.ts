@@ -1,4 +1,4 @@
-import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+import { ApplicationConfig } from '@angular/core';
 import { ActivatedRouteSnapshot, BaseRouteReuseStrategy, provideRouter, RouteReuseStrategy } from '@angular/router';
 import { routes } from './app.routes';
 import { HttpClient, withFetch } from '@angular/common/http';
@@ -35,7 +35,6 @@ export class SameComponentReuseStrategy extends BaseRouteReuseStrategy {
 /** Application configuration with providers for routing, HTTP, and translation */
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideZoneChangeDetection(),
     provideRouter(routes),
     { provide: RouteReuseStrategy, useClass: SameComponentReuseStrategy },
     provideClientHydration(withNoIncrementalHydration()),

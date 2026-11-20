@@ -1,5 +1,4 @@
-import { Component, OnInit, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, OnInit, OnDestroy, inject, signal } from '@angular/core';
 import { TooltipDirective } from '../directives/tooltip.directive';
 import { Project } from '../models/project.model';
 import { DataTranslationService } from '../services/data-translation.service';
@@ -9,19 +8,18 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule, TranslateModule, TooltipDirective],
+  imports: [TranslateModule, TooltipDirective],
   templateUrl: './projects.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./projects.component.css'],
 })
 export class ProjectsComponent implements OnInit, OnDestroy {
+  private dataTranslationService = inject(DataTranslationService);
+
   /** Array of projects to display */
-  projects: Project[] = [];
+  readonly projects = signal<Project[]>([]);
 
   /** Subscription to the project data Observable */
   private dataSubscription: Subscription | undefined;
-
-  constructor(private dataTranslationService: DataTranslationService) {}
 
   /** Initializes component by subscribing to project data */
   ngOnInit(): void {
@@ -30,7 +28,7 @@ export class ProjectsComponent implements OnInit, OnDestroy {
       .subscribe({
         next: (data: Project[]) => {
           // Assign received data to projects property
-          this.projects = Array.isArray(data) ? data : [];
+          this.projects.set(Array.isArray(data) ? data : []);
           if (!Array.isArray(data)) {
             console.warn(
               'ProjectsComponent: Received non-array data for projects:',
@@ -41,7 +39,7 @@ export class ProjectsComponent implements OnInit, OnDestroy {
         error: (err) => {
           // Handle errors from the service Observable
           console.error('ProjectsComponent: Error fetching project data:', err);
-          this.projects = [];
+          this.projects.set([]);
         },
       });
   }

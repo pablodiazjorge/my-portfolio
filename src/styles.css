@@ -1,6 +1,21 @@
 @import "tailwindcss";
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 @custom-variant light (&:where([data-theme=light], [data-theme=light] *));
+/*
+  Same as `group-hover`, but it also holds while the pointer is on the tooltip
+  of a control inside the group. The tooltip is attached to body (see
+  TooltipDirective), so for the card the pointer has left and `:hover` stops
+  matching; the directive marks the control with `data-tooltip-hover` while
+  its tooltip is under the pointer, and `:has()` carries that mark up to the
+  card.
+*/
+@custom-variant card-hover {
+  @media (hover: hover) {
+    &:is(:where(.group):is(:hover, :has([data-tooltip-hover])) *) {
+      @slot;
+    }
+  }
+}
 
 /*
   Self-hosted Inter (variable weight 400-700, split by unicode-range so only the
@@ -145,13 +160,16 @@
 
 /*
   Bridge over the 10 px gap between the tooltip and the control: without it,
-  the pointer leaves both on its way to the tooltip and closes it.
+  the pointer leaves both on its way to the tooltip and closes it. It spans
+  only the stretch where the control and the tooltip overlap, which the
+  directive puts in --bridge-left and --bridge-width; without them it falls
+  back to the tooltip's full width.
 */
 .app-tooltip::before {
   content: "";
   position: absolute;
-  left: 0;
-  right: 0;
+  left: var(--bridge-left, 0);
+  width: var(--bridge-width, 100%);
   height: 10px;
 }
 
