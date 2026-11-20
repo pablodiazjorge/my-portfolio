@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, ChangeDetectionStrategy, inject } from '@angular/core';
+import { Component, OnInit, OnDestroy, inject, signal } from '@angular/core';
 import { Experience } from '../models/experience.model';
 import { DataTranslationService } from '../services/data-translation.service';
 import { TranslateModule } from '@ngx-translate/core';
@@ -9,14 +9,13 @@ import { Subscription } from 'rxjs';
   standalone: true,
   imports: [TranslateModule],
   templateUrl: './experience.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./experience.component.css'],
 })
 export class ExperienceComponent implements OnInit, OnDestroy {
   private dataTranslationService = inject(DataTranslationService);
 
   /** Array of job experiences to display */
-  experience: Experience[] = [];
+  readonly experience = signal<Experience[]>([]);
 
   /** Subscription to the experience data Observable */
   private dataSubscription: Subscription | undefined;
@@ -28,7 +27,7 @@ export class ExperienceComponent implements OnInit, OnDestroy {
       .subscribe({
         next: (data: Experience[]) => {
           // Assign received data to experience property
-          this.experience = Array.isArray(data) ? data : [];
+          this.experience.set(Array.isArray(data) ? data : []);
           if (!Array.isArray(data)) {
             console.warn(
               'ExperienceComponent: Received non-array data for experiences:',
@@ -42,7 +41,7 @@ export class ExperienceComponent implements OnInit, OnDestroy {
             'ExperienceComponent: Error fetching experience data:',
             err
           );
-          this.experience = [];
+          this.experience.set([]);
         },
       });
   }

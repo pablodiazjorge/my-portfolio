@@ -16,7 +16,7 @@
   <!-- Projects list with vertical spacing -->
   <div class="space-y-12 projects-list">
     <!-- Project item with hover effects -->
-    @for (project of projects; track trackByIndex($index)) {
+    @for (project of projects(); track trackByIndex($index)) {
       <div
         class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 projects-item"
       >

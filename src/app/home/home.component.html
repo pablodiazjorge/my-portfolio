@@ -16,7 +16,7 @@
   <div
     #spotlight
     class="pointer-events-none fixed inset-0 z-30 transition duration-300"
-    [ngClass]="isDarkTheme ? 'home-gradient' : ''"
+    [ngClass]="isDarkTheme() ? 'home-gradient' : ''"
   ></div>
 
   <!-- Main container with responsive padding -->
@@ -36,12 +36,12 @@
         <button
           (click)="toggleMotion()"
           class="dark:text-d-text-heading dark:hover:text-d-badge-other-text light:text-l-text-heading light:hover:text-l-badge-other-text h-8 min-w-8 flex items-center justify-center cursor-pointer"
-          [attr.aria-pressed]="motionOverride"
+          [attr.aria-pressed]="motionOverride()"
           [attr.aria-label]="
-            (motionOverride ? 'A11Y_MOTION_OFF' : 'A11Y_MOTION_ON') | translate
+            (motionOverride() ? 'A11Y_MOTION_OFF' : 'A11Y_MOTION_ON') | translate
           "
           [appTooltip]="
-            (motionOverride ? 'TIP_MOTION_OFF' : 'TIP_MOTION_ON') | translate
+            (motionOverride() ? 'TIP_MOTION_OFF' : 'TIP_MOTION_ON') | translate
           "
         >
           <svg
@@ -56,7 +56,7 @@
           >
             <!-- Three speed lines; struck through when motion is off -->
             <path d="M3 8h13M3 12h9M3 16h11" />
-            @if (!motionOverride) {
+            @if (!motionOverride()) {
               <path d="M20 5L5 20" />
             }
           </svg>
@@ -69,21 +69,21 @@
         [attr.aria-label]="'A11Y_SWITCH_LANGUAGE' | translate"
         [appTooltip]="'TIP_SWITCH_LANGUAGE' | translate"
       >
-        {{ currentLang === "en" ? "EN" : "ES" }}
+        {{ currentLang() === "en" ? "EN" : "ES" }}
       </button>
       <!-- Theme Toggle Button -->
       <button
         (click)="toggleTheme()"
         class="h-8 flex items-center justify-center cursor-pointer"
         [attr.aria-label]="
-          (isDarkTheme ? 'A11Y_THEME_TO_LIGHT' : 'A11Y_THEME_TO_DARK') | translate
+          (isDarkTheme() ? 'A11Y_THEME_TO_LIGHT' : 'A11Y_THEME_TO_DARK') | translate
         "
         [appTooltip]="
-          (isDarkTheme ? 'A11Y_THEME_TO_LIGHT' : 'A11Y_THEME_TO_DARK') | translate
+          (isDarkTheme() ? 'A11Y_THEME_TO_LIGHT' : 'A11Y_THEME_TO_DARK') | translate
         "
       >
         <!-- Sun SVG (Light Theme) -->
-        @if (!isDarkTheme) {
+        @if (!isDarkTheme()) {
           <svg
             class="w-8 h-8"
             viewBox="0 0 512 512"
@@ -100,7 +100,7 @@
           </svg>
         }
         <!-- Moon SVG (Dark Theme) -->
-        @if (isDarkTheme) {
+        @if (isDarkTheme()) {
           <svg
             class="w-8 h-8"
             viewBox="0 0 512 512"
@@ -146,7 +146,7 @@
           <!-- CV link -->
           <a
             [href]="
-              currentLang === 'en'
+              currentLang() === 'en'
                 ? 'assets/docs/cv-pablo-diaz-jorge-en-2026-10.pdf'
                 : 'assets/docs/cv-pablo-diaz-jorge-es-2026-10.pdf'
             "
@@ -181,7 +181,7 @@
           </a>
           <!-- Sidebar navigation -->
           <app-sidebar
-            [activeHref]="activeHref"
+            [activeHref]="activeHref()"
             (navigate)="scrollTo($event)"
             class="nav hidden lg:block"
           />

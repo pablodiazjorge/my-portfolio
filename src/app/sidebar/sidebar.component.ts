@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, input, output } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 interface NavItem {
@@ -11,7 +11,6 @@ interface NavItem {
   standalone: true,
   imports: [TranslateModule],
   templateUrl: './sidebar.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./sidebar.component.css'],
 })
 export class SidebarComponent {
@@ -22,7 +21,7 @@ export class SidebarComponent {
   readonly navigate = output<string>();
 
   /** Array of navigation items */
-  navItems: NavItem[] = [
+  readonly navItems: NavItem[] = [
     { label: 'SIDEBAR_ABOUT', href: '#about' },
     { label: 'SIDEBAR_EXPERIENCE', href: '#experience' },
     { label: 'SIDEBAR_PROJECTS', href: '#projects' },

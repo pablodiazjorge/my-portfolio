@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component } from '@angular/core';
 import { TooltipDirective } from '../directives/tooltip.directive';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -21,12 +21,11 @@ interface SocialLink {
   standalone: true,
   imports: [TranslateModule, TooltipDirective],
   templateUrl: './social.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './social.component.css',
 })
 export class socialComponent {
   /** Array of social media links with SVG icon data */
-  socialLinks: SocialLink[] = [
+  readonly socialLinks: SocialLink[] = [
     {
       name: 'GitHub',
       url: 'https://github.com/pablodiazjorge',

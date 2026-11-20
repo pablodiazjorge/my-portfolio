@@ -6,8 +6,8 @@ import {
   OnDestroy,
   ElementRef,
   DOCUMENT,
-  ChangeDetectionStrategy,
   inject,
+  signal,
   viewChild,
 } from '@angular/core';
 import { isPlatformBrowser, NgClass } from '@angular/common';
@@ -39,7 +39,6 @@ import { AppLang, DEFAULT_LANG, pathForLang, rememberLang, urlForLang } from '..
     NgClass,
   ],
   templateUrl: './home.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './home.component.css',
 })
 export class HomeComponent implements OnInit, OnDestroy {
@@ -60,16 +59,22 @@ export class HomeComponent implements OnInit, OnDestroy {
   readonly spotlight = viewChild.required<ElementRef<HTMLElement>>('spotlight');
 
   /** Currently active section URL fragment */
-  activeHref = '#about';
+  readonly activeHref = signal('#about');
 
   /** List of section URL fragments for navigation */
-  sections = ['#about', '#experience', '#projects'];
+  readonly sections = ['#about', '#experience', '#projects'];
 
-  /** Current language (en or es), derived from the URL by langResolver */
-  currentLang: AppLang;
+  /**
+   * Current language (en or es), derived from the URL by langResolver.
+   * Translations for it were loaded before this component was created, on
+   * the server and in the browser alike.
+   */
+  readonly currentLang = signal<AppLang>(
+    (this.translate.currentLang as AppLang) || DEFAULT_LANG
+  );
 
   /** Indicates if dark theme is active */
-  isDarkTheme = false;
+  readonly isDarkTheme = signal(false);
 
   /**
    * Whether the visitor has explicitly asked to see motion even though their
@@ -81,10 +86,10 @@ export class HomeComponent implements OnInit, OnDestroy {
    * thing this app animates from code. The transitions in the stylesheet
    * still depend on the media query and are not affected.
    */
-  motionOverride = false;
+  readonly motionOverride = signal(false);
 
   /** True when the system asks for reduced motion */
-  systemPrefersReducedMotion = false;
+  readonly systemPrefersReducedMotion: boolean = false;
 
   /** Subject to manage unsubscription from observables */
   private readonly destroy$ = new Subject<void>();
@@ -92,21 +97,17 @@ export class HomeComponent implements OnInit, OnDestroy {
   constructor() {
     const document = this.document;
 
-    // Translations for the URL's language were loaded by langResolver before
-    // this component was created, on the server and in the browser alike.
-    this.currentLang = (this.translate.currentLang as AppLang) || DEFAULT_LANG;
     this.applyLangToDocument();
 
     // Initialize theme from localStorage
     if (isPlatformBrowser(this.platformId)) {
-      this.isDarkTheme =
-        localStorage.getItem('theme') === 'light' ? false : true; // default to dark if not explicitly 'light'
+      this.isDarkTheme.set(localStorage.getItem('theme') !== 'light'); // default to dark if not explicitly 'light'
 
       document.documentElement.setAttribute(
         'data-theme',
-        this.isDarkTheme ? 'dark' : 'light'
+        this.isDarkTheme() ? 'dark' : 'light'
       );
-      localStorage.setItem('theme', this.isDarkTheme ? 'dark' : 'light');
+      localStorage.setItem('theme', this.isDarkTheme() ? 'dark' : 'light');
 
       // The motion switch only makes sense when the system asks to reduce
       // motion: otherwise there is nothing to give back and the button is not
@@ -115,7 +116,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       this.systemPrefersReducedMotion = window.matchMedia(
         '(prefers-reduced-motion: reduce)'
       ).matches;
-      this.motionOverride = localStorage.getItem('motion') === 'full';
+      this.motionOverride.set(localStorage.getItem('motion') === 'full');
     }
   }
 
@@ -125,9 +126,9 @@ export class HomeComponent implements OnInit, OnDestroy {
    * "reduced motion" setting the visitor never asked for.
    */
   toggleMotion() {
-    this.motionOverride = !this.motionOverride;
+    this.motionOverride.update((on) => !on);
     if (isPlatformBrowser(this.platformId)) {
-      if (this.motionOverride) {
+      if (this.motionOverride()) {
         localStorage.setItem('motion', 'full');
       } else {
         localStorage.removeItem('motion');
@@ -137,7 +138,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   /** True when animating is allowed: the system does not ask to reduce, or the switch is on */
   private get motionAllowed(): boolean {
-    return !this.systemPrefersReducedMotion || this.motionOverride;
+    return !this.systemPrefersReducedMotion || this.motionOverride();
   }
 
   /**
@@ -150,7 +151,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.translate.onLangChange
       .pipe(takeUntil(this.destroy$))
       .subscribe((event: LangChangeEvent) => {
-        this.currentLang = event.lang as AppLang;
+        this.currentLang.set(event.lang as AppLang);
         this.applyLangToDocument();
       });
   }
@@ -175,7 +176,7 @@ export class HomeComponent implements OnInit, OnDestroy {
    * server too, so each prerendered HTML file carries its own SEO tags.
    */
   private applyLangToDocument() {
-    const lang = this.currentLang;
+    const lang = this.currentLang();
     this.document.documentElement.lang = lang;
     this.titleService.setTitle(this.translate.instant('HOME_HEADER_NAME'));
     this.meta.updateTag({
@@ -205,7 +206,7 @@ export class HomeComponent implements OnInit, OnDestroy {
    * serves the right language directly on the next visit.
    */
   switchLanguage() {
-    const next: AppLang = this.currentLang === 'en' ? 'es' : 'en';
+    const next: AppLang = this.currentLang() === 'en' ? 'es' : 'en';
     if (isPlatformBrowser(this.platformId)) {
       rememberLang(this.document, next);
     }
@@ -215,16 +216,16 @@ export class HomeComponent implements OnInit, OnDestroy {
   /** Toggles between light and dark theme */
   toggleTheme() {
     // flip our boolean…
-    this.isDarkTheme = !this.isDarkTheme;
+    this.isDarkTheme.update((dark) => !dark);
 
     if (isPlatformBrowser(this.platformId)) {
       // …and then write the matching data-theme attribute
       document.documentElement.setAttribute(
         'data-theme',
-        this.isDarkTheme ? 'dark' : 'light'
+        this.isDarkTheme() ? 'dark' : 'light'
       );
       // persist the choice
-      localStorage.setItem('theme', this.isDarkTheme ? 'dark' : 'light');
+      localStorage.setItem('theme', this.isDarkTheme() ? 'dark' : 'light');
     }
   }
 
@@ -248,11 +249,11 @@ export class HomeComponent implements OnInit, OnDestroy {
         sec &&
         sec.getBoundingClientRect().top + window.scrollY <= activationPoint
       ) {
-        this.activeHref = sel;
+        this.activeHref.set(sel);
         return;
       }
     }
-    this.activeHref = this.sections[0];
+    this.activeHref.set(this.sections[0]);
   }
 
   /**
@@ -288,7 +289,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     // The path is kept explicitly: a bare "#id" would resolve against
     // <base href="/"> and drop the /es prefix.
     history.replaceState(history.state, '', location.pathname + location.search + href);
-    this.activeHref = href;
+    this.activeHref.set(href);
   }
 
   /** Handle of the running scroll animation frame, if any */

@@ -14,7 +14,7 @@
   <!-- Experience list with vertical spacing -->
   <div class="space-y-12 experience-list">
     <!-- Experience item with hover effects -->
-    @for (job of experience; track trackByIndex($index)) {
+    @for (job of experience(); track trackByIndex($index)) {
       <div
         class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 experience-item"
       >
