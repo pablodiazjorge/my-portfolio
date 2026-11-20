@@ -1,5 +1,4 @@
 import { Component, OnInit, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { Experience } from '../models/experience.model';
 import { DataTranslationService } from '../services/data-translation.service';
 import { TranslateModule } from '@ngx-translate/core';
@@ -8,7 +7,7 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-experience',
   standalone: true,
-  imports: [CommonModule, TranslateModule],
+  imports: [TranslateModule],
   templateUrl: './experience.component.html',
   changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./experience.component.css'],

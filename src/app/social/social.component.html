@@ -1,35 +1,36 @@
 <!-- Social media links list -->
 <ul class="social-list mt-8 mb-8 flex list-none p-0" [attr.aria-label]="'A11Y_SOCIAL_LINKS' | translate">
   <!-- Social link items -->
-  <li
-    *ngFor="let link of socialLinks"
-    class="social-item mr-5 shrink-0 text-xs leading-4"
-  >
-    <!-- Social media link with hover and focus effects -->
-    <a
-      class="social-link block dark:text-d-text-default light:text-l-text-default transition-colors duration-200 dark:hover:text-d-text-hover-accent dark:focus-visible:text-d-text-heading light:hover:text-l-text-hover-accent light:focus-visible:text-l-text-heading"
-      [href]="link.url"
-      target="_blank"
-      rel="noreferrer noopener"
-      [attr.aria-label]="link.name + ' ' + ('A11Y_OPENS_NEW_TAB' | translate)"
-      [appTooltip]="link.title"
+  @for (link of socialLinks; track link) {
+    <li
+      class="social-item mr-5 shrink-0 text-xs leading-4"
     >
-      <!-- Screen-reader-only link name -->
-      <span class="sr-only">{{ link.name }}</span>
-      <!-- Social media icon -->
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        [attr.viewBox]="link.viewBox"
-        [attr.fill]="link.fill || 'currentColor'"
-        [attr.stroke]="link.stroke || 'none'"
-        [attr.stroke-width]="link.strokeWidth || '0'"
-        [attr.stroke-linecap]="link.strokeLinecap || 'butt'"
-        [attr.stroke-linejoin]="link.strokeLinejoin || 'miter'"
-        class="social-icon h-6 w-6"
-        aria-hidden="true"
+      <!-- Social media link with hover and focus effects -->
+      <a
+        class="social-link block dark:text-d-text-default light:text-l-text-default transition-colors duration-200 dark:hover:text-d-text-hover-accent dark:focus-visible:text-d-text-heading light:hover:text-l-text-hover-accent light:focus-visible:text-l-text-heading"
+        [href]="link.url"
+        target="_blank"
+        rel="noreferrer noopener"
+        [attr.aria-label]="link.name + ' ' + ('A11Y_OPENS_NEW_TAB' | translate)"
+        [appTooltip]="link.title"
       >
-        <path [attr.d]="link.iconPath"></path>
-      </svg>
-    </a>
-  </li>
+        <!-- Screen-reader-only link name -->
+        <span class="sr-only">{{ link.name }}</span>
+        <!-- Social media icon -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          [attr.viewBox]="link.viewBox"
+          [attr.fill]="link.fill || 'currentColor'"
+          [attr.stroke]="link.stroke || 'none'"
+          [attr.stroke-width]="link.strokeWidth || '0'"
+          [attr.stroke-linecap]="link.strokeLinecap || 'butt'"
+          [attr.stroke-linejoin]="link.strokeLinejoin || 'miter'"
+          class="social-icon h-6 w-6"
+          aria-hidden="true"
+        >
+          <path [attr.d]="link.iconPath"></path>
+        </svg>
+      </a>
+    </li>
+  }
 </ul>

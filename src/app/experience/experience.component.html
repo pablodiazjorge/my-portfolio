@@ -14,92 +14,96 @@
   <!-- Experience list with vertical spacing -->
   <div class="space-y-12 experience-list">
     <!-- Experience item with hover effects -->
-    <div
-      *ngFor="let job of experience; trackBy: trackByIndex"
-      class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 experience-item"
-    >
-      <!-- Hover background overlay -->
+    @for (job of experience; track trackByIndex($index)) {
       <div
-        class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md light:border light:border-solid light:border-neutral-200 light:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.02)] light:drop-shadow transition motion-reduce:transition-none lg:-inset-x-6 lg:block dark:lg:group-hover:bg-d-background-card-hover light:lg:group-hover:bg-l-background-card-hover lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"
-      ></div>
-      <!-- Job period and contract type -->
-      <header
-        class="z-10 mb-2 mt-1 text-xs font-semibold tracking-wide dark:text-d-text-secondary light:text-l-text-secondary sm:col-span-2"
+        class="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 experience-item"
       >
-        <!-- Job period -->
-        <p class="uppercase">
-          {{ job.EXPERIENCE_PERIOD | translate }}
-        </p>
-        <!-- Contract type -->
-        <p class="py-2">
-          {{ job.EXPERIENCE_TYPECONTRACT | translate }}
-        </p>
-      </header>
+        <!-- Hover background overlay -->
+        <div
+          class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md light:border light:border-solid light:border-neutral-200 light:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.02)] light:drop-shadow transition motion-reduce:transition-none lg:-inset-x-6 lg:block dark:lg:group-hover:bg-d-background-card-hover light:lg:group-hover:bg-l-background-card-hover lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"
+        ></div>
+        <!-- Job period and contract type -->
+        <header
+          class="z-10 mb-2 mt-1 text-xs font-semibold tracking-wide dark:text-d-text-secondary light:text-l-text-secondary sm:col-span-2"
+        >
+          <!-- Job period -->
+          <p class="uppercase">
+            {{ job.EXPERIENCE_PERIOD | translate }}
+          </p>
+          <!-- Contract type -->
+          <p class="py-2">
+            {{ job.EXPERIENCE_TYPECONTRACT | translate }}
+          </p>
+        </header>
 
-      <!-- Job details -->
-      <div class="z-10 sm:col-span-6">
-        <!-- Job title and company -->
-        <h3 class="font-medium leading-snug dark:text-d-text-heading light:text-l-text-heading">
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            [href]="job.EXPERIENCE_COMPANYLINK | translate"
-            class="group/link relative inline font-medium leading-tight dark:text-d-text-heading dark:hover:text-d-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:text-l-text-heading light:hover:text-l-text-hover-accent light:focus-visible:text-l-text-hover-accent"
-          >
-            <!-- Hover hit area -->
-            <span
-              class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"
-            ></span>
-            {{ job.EXPERIENCE_TITLE | translate }}&nbsp;-
-            <span class="inline-block">
-              {{ job.EXPERIENCE_COMPANY | translate }}</span
+        <!-- Job details -->
+        <div class="z-10 sm:col-span-6">
+          <!-- Job title and company -->
+          <h3 class="font-medium leading-snug dark:text-d-text-heading light:text-l-text-heading">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              [href]="job.EXPERIENCE_COMPANYLINK | translate"
+              class="group/link relative inline font-medium leading-tight dark:text-d-text-heading dark:hover:text-d-text-hover-accent dark:focus-visible:text-d-text-hover-accent light:text-l-text-heading light:hover:text-l-text-hover-accent light:focus-visible:text-l-text-hover-accent"
             >
-            <!-- Link arrow icon -->
-            <svg
-              class="ml-1 inline-block h-4 w-4 shrink-0 align-middle transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 dark:text-d-text-hover-accent light:text-l-text-hover-accent"
-              fill="currentColor"
-              viewBox="0 0 16 16"
-              aria-hidden="true"
-              focusable="false"
-            >
-              <path
-                d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-              />
-            </svg>
-          </a>
-        </h3>
+              <!-- Hover hit area -->
+              <span
+                class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"
+              ></span>
+              {{ job.EXPERIENCE_TITLE | translate }}&nbsp;-
+              <span class="inline-block">
+                {{ job.EXPERIENCE_COMPANY | translate }}</span
+              >
+              <!-- Link arrow icon -->
+              <svg
+                class="ml-1 inline-block h-4 w-4 shrink-0 align-middle transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 dark:text-d-text-hover-accent light:text-l-text-hover-accent"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path
+                  d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                />
+              </svg>
+            </a>
+          </h3>
 
-        <!-- Job description -->
-        <p class="mt-2 text-sm leading-normal text-justify">
-          {{ job.EXPERIENCE_DESCRIPTION | translate }}
-        </p>
+          <!-- Job description -->
+          <p class="mt-2 text-sm leading-normal text-justify">
+            {{ job.EXPERIENCE_DESCRIPTION | translate }}
+          </p>
 
-        <!-- Job technologies -->
-        <ul class="mt-2 flex flex-wrap">
-          <!-- Technology tag -->
-          <li
-            *ngFor="let tech of job.EXPERIENCE_TECNOLOGIES"
-            class="mr-1.5 mt-2"
-          >
-            <div
-              class="flex items-center rounded-full dark:bg-d-badge-tech-background light:bg-l-badge-tech-background px-3 py-1 text-xs font-medium leading-5 dark:text-d-text-hover-accent light:text-l-badge-text light:border light:border-solid light:border-l-badge-tech-border"
-            >
-              {{ tech }}
-            </div>
-          </li>
-        </ul>
-        <!-- Other skills or methodologies -->
-        <ul class="mt-2 flex flex-wrap">
-          <!-- Skill tag -->
-          <li *ngFor="let other of job.EXPERIENCE_OTHERS" class="mr-1.5 mt-2">
-            <div
-              class="flex items-center rounded-full dark:bg-d-badge-tech-background light:bg-l-badge-tech-background px-3 py-1 text-xs font-medium leading-5 dark:text-d-badge-other-text light:text-l-badge-other-text light:border light:border-solid light:border-l-badge-tech-border"
-            >
-              {{ other }}
-            </div>
-          </li>
-        </ul>
+          <!-- Job technologies -->
+          <ul class="mt-2 flex flex-wrap">
+            <!-- Technology tag -->
+            @for (tech of job.EXPERIENCE_TECNOLOGIES; track $index) {
+              <li
+                class="mr-1.5 mt-2"
+              >
+                <div
+                  class="flex items-center rounded-full dark:bg-d-badge-tech-background light:bg-l-badge-tech-background px-3 py-1 text-xs font-medium leading-5 dark:text-d-text-hover-accent light:text-l-badge-text light:border light:border-solid light:border-l-badge-tech-border"
+                >
+                  {{ tech }}
+                </div>
+              </li>
+            }
+          </ul>
+          <!-- Other skills or methodologies -->
+          <ul class="mt-2 flex flex-wrap">
+            <!-- Skill tag -->
+            @for (other of job.EXPERIENCE_OTHERS; track $index) {
+              <li class="mr-1.5 mt-2">
+                <div
+                  class="flex items-center rounded-full dark:bg-d-badge-tech-background light:bg-l-badge-tech-background px-3 py-1 text-xs font-medium leading-5 dark:text-d-badge-other-text light:text-l-badge-other-text light:border light:border-solid light:border-l-badge-tech-border"
+                >
+                  {{ other }}
+                </div>
+              </li>
+            }
+          </ul>
+        </div>
       </div>
-    </div>
+    }
   </div>
 </section>

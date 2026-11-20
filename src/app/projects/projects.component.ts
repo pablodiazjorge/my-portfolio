@@ -1,5 +1,4 @@
 import { Component, OnInit, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { TooltipDirective } from '../directives/tooltip.directive';
 import { Project } from '../models/project.model';
 import { DataTranslationService } from '../services/data-translation.service';
@@ -9,7 +8,7 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule, TranslateModule, TooltipDirective],
+  imports: [TranslateModule, TooltipDirective],
   templateUrl: './projects.component.html',
   changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./projects.component.css'],
