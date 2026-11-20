@@ -43,6 +43,7 @@
             <!-- BUTTON CONTAINER -->
             <!-- Buttons floating above the overlay -->
             <div class="mt-2 flex flex-col absolute z-20 w-full sm:order-1 sm:col-span-2 sm:translate-y-1 relative overflow-hidden rounded-md proj-butt-wrapper">
+              <!-- Its tooltip opens above: when the buttons are stacked, below it would cover the Live Demo button -->
               <a
                 [href]="project.PROJECTS_LINK"
                 target="_blank"
@@ -50,6 +51,7 @@
                 class="rounded px-2 py-2 text-sm transition proj-butt text-center w-full"
                 [attr.aria-label]="'A11Y_PROJECT_REPO' | translate: { title: (project.PROJECTS_TITLE | translate) }"
                 [appTooltip]="'TIP_PROJECT_REPO' | translate: { title: (project.PROJECTS_TITLE | translate) }"
+                appTooltipPlacement="above"
               >
                <div
                   class="flex items-center w-full gap-2 font-medium dark:text-d-text-heading light:text-l-text-heading"
