@@ -317,17 +317,16 @@
                           },
                           {
                               "PROJECTS_TITLE":  "My Portfolio",
-                              "PROJECTS_DESCRIPTION":  "Personal portfolio built with Angular 22 and Tailwind CSS 4.1, featuring SSR, i18n (ES/EN), dark/light mode, and lazy-loading for a fast, accessible experience. Built with Angular Universal and Express.js for Server-Side Rendering in production.",
+                              "PROJECTS_DESCRIPTION":  "Personal portfolio built with Angular 22 and Tailwind CSS 4.1, featuring SSR, i18n (ES/EN), dark/light mode, and lazy-loading for a fast, accessible experience. Pages are prerendered to static HTML at build time with @angular/ssr. It runs zoneless, with Signals for component state and OnPush change detection in every component.",
                               "PROJECTS_IMAGE":  "/assets/images/covers/portfolio.webp",
                               "PROJECTS_LINK":  "https://github.com/pablodiazjorge/my-portfolio",
                               "PROJECTS_DEMO":  "https://www.pablodiazjorge.com/",
                               "PROJECTS_DEMO_ACTIVE":  "true",
                               "PROJECTS_TECNOLOGIES":  [
-                                                           "Angular 22",
-                                                           "Angular Universal (SSR)",
+                                                           "Angular 22 (Zoneless + Signals)",
+                                                           "@angular/ssr (prerendering)",
                                                            "Tailwind CSS 4.1",
                                                            "ngx-translate",
-                                                           "Express.js",
                                                            "PostCSS"
                                                        ]
                           },
