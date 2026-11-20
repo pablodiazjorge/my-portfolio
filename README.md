@@ -1,10 +1,10 @@
 # my-portfolio
 
-Portfolio personal. Angular 19 standalone, Tailwind CSS 4, SSR con Angular Universal, i18n ES/EN con ngx-translate.
+Portfolio personal. Angular 22 standalone, Tailwind CSS 4, SSR con Angular Universal, i18n ES/EN con ngx-translate.
 
 ## Stack
 
-Angular 19.1.7 · Angular Universal · Tailwind CSS 4.1 · ngx-translate 16 · Express.js · PostCSS
+Angular 22 · Angular Universal · Tailwind CSS 4.1 · ngx-translate 16 · Express.js · PostCSS
 
 ## Estructura
 

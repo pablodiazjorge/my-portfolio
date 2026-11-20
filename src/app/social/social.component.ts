@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TooltipDirective } from '../directives/tooltip.directive';
 import { TranslateModule } from '@ngx-translate/core';
@@ -22,6 +22,7 @@ interface SocialLink {
   standalone: true,
   imports: [CommonModule, TranslateModule, TooltipDirective],
   templateUrl: './social.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './social.component.css',
 })
 export class socialComponent {

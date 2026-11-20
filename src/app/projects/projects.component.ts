@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TooltipDirective } from '../directives/tooltip.directive';
 import { Project } from '../models/project.model';
@@ -11,6 +11,7 @@ import { Subscription } from 'rxjs';
   standalone: true,
   imports: [CommonModule, TranslateModule, TooltipDirective],
   templateUrl: './projects.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./projects.component.css'],
 })
 export class ProjectsComponent implements OnInit, OnDestroy {

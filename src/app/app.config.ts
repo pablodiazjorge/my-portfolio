@@ -1,11 +1,11 @@
-import { ApplicationConfig } from '@angular/core';
+import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
 import { ActivatedRouteSnapshot, BaseRouteReuseStrategy, provideRouter, RouteReuseStrategy } from '@angular/router';
 import { routes } from './app.routes';
 import { HttpClient, withFetch } from '@angular/common/http';
 import { provideHttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { provideClientHydration } from '@angular/platform-browser';
+import { provideClientHydration, withNoIncrementalHydration } from '@angular/platform-browser';
 import { I18N_VERSION } from './i18n/lang';
 
 /**
@@ -35,9 +35,10 @@ export class SameComponentReuseStrategy extends BaseRouteReuseStrategy {
 /** Application configuration with providers for routing, HTTP, and translation */
 export const appConfig: ApplicationConfig = {
   providers: [
+    provideZoneChangeDetection(),
     provideRouter(routes),
     { provide: RouteReuseStrategy, useClass: SameComponentReuseStrategy },
-    provideClientHydration(),
+    provideClientHydration(withNoIncrementalHydration()),
     provideHttpClient(withFetch()),
     // No defaultLanguage: the language comes from the URL and is loaded by
     // langResolver, so a second translation file is never fetched.

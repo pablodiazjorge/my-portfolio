@@ -7,8 +7,9 @@ import {
   OnDestroy,
   PLATFORM_ID,
   Renderer2,
+  DOCUMENT,
 } from '@angular/core';
-import { DOCUMENT, isPlatformBrowser } from '@angular/common';
+import { isPlatformBrowser } from '@angular/common';
 
 /** Numbers the tooltips so they can be linked through `aria-describedby`. */
 let tooltipCount = 0;

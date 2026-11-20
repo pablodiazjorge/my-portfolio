@@ -1,7 +1,0 @@
-# Targets of Angular's default query on the pre-upgrade caniuse data; keeps CSS nesting lowered for the critical-CSS inliner.
-Chrome >= 134
-Edge >= 134
-Firefox >= 128
-Safari >= 17.0
-iOS >= 17.0
-Android >= 135
