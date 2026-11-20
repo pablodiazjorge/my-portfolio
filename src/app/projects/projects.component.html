@@ -22,7 +22,7 @@
       >
         <!-- Hover background overlay -->
         <div
-          class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md light:border light:border-solid light:border-neutral-200 light:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.02)] light:drop-shadow transition motion-reduce:transition-none lg:-inset-x-6 lg:block dark:lg:group-hover:bg-d-background-card-hover light:lg:group-hover:bg-l-background-card-hover lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"
+          class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md light:border light:border-solid light:border-neutral-200 light:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.02)] light:drop-shadow transition motion-reduce:transition-none lg:-inset-x-6 lg:block dark:lg:card-hover:bg-d-background-card-hover light:lg:card-hover:bg-l-background-card-hover lg:card-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:card-hover:drop-shadow-lg"
         ></div>
         <!-- Project period and image -->
         <header
@@ -36,7 +36,7 @@
                 [alt]="'A11Y_PROJECT_IMAGE' | translate: { title: (project.PROJECTS_TITLE | translate) }"
                 width="640"
                 height="360"
-                class="z-3 w-full aspect-video object-cover rounded border-2 dark:border-d-text-heading/10 light:border-l-text-heading/10 transition dark:hover:border-d-text-heading/30 dark:group-hover:border-d-text-heading/30 light:hover:border-l-text-heading/30 light:group-hover:border-l-text-heading/30"
+                class="z-3 w-full aspect-video object-cover rounded border-2 dark:border-d-text-heading/10 light:border-l-text-heading/10 transition dark:hover:border-d-text-heading/30 dark:card-hover:border-d-text-heading/30 light:hover:border-l-text-heading/30 light:card-hover:border-l-text-heading/30"
                 loading="lazy"
               />
             </a>
@@ -111,7 +111,7 @@
               {{ project.PROJECTS_TITLE | translate }}
               <!-- Link arrow icon -->
               <svg
-                class="ml-1 inline-block h-4 w-4 shrink-0 align-middle transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 dark:text-d-text-hover-accent light:text-l-text-hover-accent"
+                class="ml-1 inline-block h-4 w-4 shrink-0 align-middle transition-transform card-hover:-translate-y-0.5 card-hover:translate-x-0.5 dark:text-d-text-hover-accent light:text-l-text-hover-accent"
                 fill="currentColor"
                 viewBox="0 0 16 16"
                 aria-hidden="true"

@@ -25,13 +25,17 @@
 }
 
 @media (min-width: 639px) {
-  /* Reduce opacity for all items on list hover */
-  .projects-list:hover .projects-item {
+  /*
+    Reduce opacity for all items on list hover. The `:has()` keeps it while
+    the pointer is on the tooltip of a button in a card: the tooltip lives in
+    body, outside the list (see the `card-hover` variant in styles.css).
+  */
+  .projects-list:is(:hover, :has([data-tooltip-hover])) .projects-item {
     opacity: 0.5;
   }
 
   /* Restore full opacity for hovered item */
-  .projects-list .projects-item:hover {
+  .projects-list .projects-item:is(:hover, :has([data-tooltip-hover])) {
     opacity: 1 !important;
   }
 }

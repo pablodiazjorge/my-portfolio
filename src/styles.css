@@ -1,6 +1,21 @@
 @import "tailwindcss";
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 @custom-variant light (&:where([data-theme=light], [data-theme=light] *));
+/*
+  Same as `group-hover`, but it also holds while the pointer is on the tooltip
+  of a control inside the group. The tooltip is attached to body (see
+  TooltipDirective), so for the card the pointer has left and `:hover` stops
+  matching; the directive marks the control with `data-tooltip-hover` while
+  its tooltip is under the pointer, and `:has()` carries that mark up to the
+  card.
+*/
+@custom-variant card-hover {
+  @media (hover: hover) {
+    &:is(:where(.group):is(:hover, :has([data-tooltip-hover])) *) {
+      @slot;
+    }
+  }
+}
 
 /*
   Self-hosted Inter (variable weight 400-700, split by unicode-range so only the

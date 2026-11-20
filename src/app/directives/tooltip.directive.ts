@@ -150,9 +150,19 @@ export class TooltipDirective implements OnDestroy {
     this.renderer.appendChild(this.document.body, tip);
 
     // The tooltip receives the pointer so it can be hovered, and it does not
-    // close while the pointer is over it.
-    this.renderer.listen(tip, 'mouseenter', () => clearTimeout(this.closeTimer));
-    this.renderer.listen(tip, 'mouseleave', () => this.scheduleClose());
+    // close while the pointer is over it. Being attached to body, for the
+    // card around the control the pointer has left and `:hover` stops
+    // matching there, so the control is marked while the pointer is on the
+    // tooltip (or on its bridge) and the card keeps its hover look through
+    // `:has()` (the `card-hover` variant in styles.css).
+    this.renderer.listen(tip, 'mouseenter', () => {
+      clearTimeout(this.closeTimer);
+      this.renderer.setAttribute(this.host.nativeElement, 'data-tooltip-hover', '');
+    });
+    this.renderer.listen(tip, 'mouseleave', () => {
+      this.renderer.removeAttribute(this.host.nativeElement, 'data-tooltip-hover');
+      this.scheduleClose();
+    });
 
     // The tooltip is fixed to the window and the control can move with the
     // page (when tabbing to one that is out of view, the browser brings it
@@ -260,5 +270,6 @@ export class TooltipDirective implements OnDestroy {
       this.tip = undefined;
     }
     this.renderer.removeAttribute(this.host.nativeElement, 'aria-describedby');
+    this.renderer.removeAttribute(this.host.nativeElement, 'data-tooltip-hover');
   }
 }
