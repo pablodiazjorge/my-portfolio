@@ -12,8 +12,8 @@
         <a
           class="group nav-link py-3 flex items-center cursor-pointer no-underline"
           href="{{ item.href }}"
-          [class.active]="item.href === activeHref"
-          [attr.aria-current]="item.href === activeHref ? 'true' : null"
+          [class.active]="item.href === activeHref()"
+          [attr.aria-current]="item.href === activeHref() ? 'true' : null"
           (click)="onClick(item, $event)"
         >
           <!-- Indicator -->

@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, input, output } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 interface NavItem {
@@ -16,10 +16,10 @@ interface NavItem {
 })
 export class SidebarComponent {
   /** URL of the currently active link */
-  @Input() activeHref!: string;
+  readonly activeHref = input.required<string>();
 
   /** Event emitter for navigation link clicks */
-  @Output() navigate = new EventEmitter<string>();
+  readonly navigate = output<string>();
 
   /** Array of navigation items */
   navItems: NavItem[] = [

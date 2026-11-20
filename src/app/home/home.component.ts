@@ -5,10 +5,10 @@ import {
   OnInit,
   OnDestroy,
   ElementRef,
-  ViewChild,
   DOCUMENT,
   ChangeDetectionStrategy,
   inject,
+  viewChild,
 } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Router } from '@angular/router';
@@ -57,8 +57,7 @@ export class HomeComponent implements OnInit, OnDestroy {
    * layer's rectangle, not the container's, which does scroll with the
    * document.
    */
-  @ViewChild('spotlight', { static: true })
-  spotlight!: ElementRef<HTMLElement>;
+  readonly spotlight = viewChild.required<ElementRef<HTMLElement>>('spotlight');
 
   /** Currently active section URL fragment */
   activeHref = '#about';
@@ -431,7 +430,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     // The rectangle is the gradient layer's own, since that layer reads both
     // variables. Being fixed to the window, the rectangle starts at its
     // corner, so the coordinates match the pointer's.
-    const el = this.spotlight.nativeElement;
+    const el = this.spotlight().nativeElement;
     const rect = el.getBoundingClientRect();
     const x = event.clientX - rect.left;
     const y = event.clientY - rect.top;

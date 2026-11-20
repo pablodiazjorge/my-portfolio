@@ -2,12 +2,14 @@ import {
   Directive,
   ElementRef,
   HostListener,
-  Input,
   OnDestroy,
   PLATFORM_ID,
   Renderer2,
   DOCUMENT,
+  effect,
   inject,
+  input,
+  untracked,
 } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
@@ -36,40 +38,39 @@ export class TooltipDirective implements OnDestroy {
   private document = inject<Document>(DOCUMENT);
   private platformId = inject<Object>(PLATFORM_ID);
 
-  /**
-   * Tooltip text. If it arrives empty, nothing is shown. If it changes while
-   * the tooltip is open, it is updated in place: the theme, language and
-   * motion buttons change their text right when pressed, with the pointer
-   * still over them.
-   */
-  @Input('appTooltip')
-  set text(value: string) {
-    this.tooltipText = value ?? '';
-    if (!this.tip) {
-      return;
-    }
-    if (!this.tooltipText) {
-      this.hide();
-      return;
-    }
-    this.renderer.setProperty(this.tip, 'textContent', this.tooltipText);
-    this.updateDescribedBy();
-    this.position();
-  }
-  get text(): string {
-    return this.tooltipText;
-  }
+  /** Tooltip text. If it arrives empty, nothing is shown. */
+  readonly text = input('', { alias: 'appTooltip' });
 
   /** The instance whose tooltip is open, if any. */
   private static openInstance?: TooltipDirective;
 
-  private tooltipText = '';
   private tip?: HTMLElement;
   /** Stops listening to window scroll and resize. */
   private unlisteners: Array<() => void> = [];
   private openTimer?: ReturnType<typeof setTimeout>;
   private closeTimer?: ReturnType<typeof setTimeout>;
   private readonly id = `tooltip-${++tooltipCount}`;
+
+  constructor() {
+    // If the text changes while the tooltip is open, it is updated in place:
+    // the theme, language and motion buttons change their text right when
+    // pressed, with the pointer still over them.
+    effect(() => {
+      const text = this.text();
+      untracked(() => {
+        if (!this.tip) {
+          return;
+        }
+        if (!text) {
+          this.hide();
+          return;
+        }
+        this.renderer.setProperty(this.tip, 'textContent', text);
+        this.updateDescribedBy();
+        this.position();
+      });
+    });
+  }
 
   ngOnDestroy(): void {
     this.hide();
@@ -110,7 +111,7 @@ export class TooltipDirective implements OnDestroy {
   }
 
   private scheduleOpen(delay: number): void {
-    if (!isPlatformBrowser(this.platformId) || !this.text) {
+    if (!isPlatformBrowser(this.platformId) || !this.text()) {
       return;
     }
     clearTimeout(this.closeTimer);
@@ -145,7 +146,7 @@ export class TooltipDirective implements OnDestroy {
     this.renderer.setAttribute(tip, 'id', this.id);
     this.renderer.setAttribute(tip, 'role', 'tooltip');
     this.renderer.addClass(tip, 'app-tooltip');
-    this.renderer.setProperty(tip, 'textContent', this.text);
+    this.renderer.setProperty(tip, 'textContent', this.text());
     this.renderer.appendChild(this.document.body, tip);
 
     // The tooltip receives the pointer so it can be hovered, and it does not
@@ -238,7 +239,7 @@ export class TooltipDirective implements OnDestroy {
     const name = control.getAttribute('aria-label') ?? control.textContent ?? '';
     const isRepeated = name
       .toLocaleLowerCase()
-      .includes(this.tooltipText.toLocaleLowerCase());
+      .includes(this.text().toLocaleLowerCase());
     if (isRepeated) {
       this.renderer.removeAttribute(control, 'aria-describedby');
     } else {
