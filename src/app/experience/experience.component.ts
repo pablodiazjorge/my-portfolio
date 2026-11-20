@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Experience } from '../models/experience.model';
 import { DataTranslationService } from '../services/data-translation.service';
@@ -10,6 +10,7 @@ import { Subscription } from 'rxjs';
   standalone: true,
   imports: [CommonModule, TranslateModule],
   templateUrl: './experience.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./experience.component.css'],
 })
 export class ExperienceComponent implements OnInit, OnDestroy {

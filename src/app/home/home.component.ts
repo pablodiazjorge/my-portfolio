@@ -7,8 +7,10 @@ import {
   OnDestroy,
   ElementRef,
   ViewChild,
+  DOCUMENT,
+  ChangeDetectionStrategy,
 } from '@angular/core';
-import { CommonModule, DOCUMENT, isPlatformBrowser } from '@angular/common';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Router } from '@angular/router';
 import { ExperienceComponent } from '../experience/experience.component';
 import { AboutComponent } from '../about/about.component';
@@ -37,6 +39,7 @@ import { AppLang, DEFAULT_LANG, pathForLang, rememberLang, urlForLang } from '..
     TooltipDirective,
   ],
   templateUrl: './home.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './home.component.css',
 })
 export class HomeComponent implements OnInit, OnDestroy {
