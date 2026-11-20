@@ -41,6 +41,15 @@ export class TooltipDirective implements OnDestroy {
   /** Tooltip text. If it arrives empty, nothing is shown. */
   readonly text = input('', { alias: 'appTooltip' });
 
+  /**
+   * Side the tooltip opens on when it fits; otherwise it opens on the other
+   * one. A control with another one right below it asks for `above`, so its
+   * tooltip does not cover that control.
+   */
+  readonly placement = input<'below' | 'above'>('below', {
+    alias: 'appTooltipPlacement',
+  });
+
   /** The instance whose tooltip is open, if any. */
   private static openInstance?: TooltipDirective;
 
@@ -188,8 +197,9 @@ export class TooltipDirective implements OnDestroy {
   }
 
   /**
-   * Below the control and centred; above it when it does not fit below. The
-   * tooltip is kept inside the window with an 8 px margin on each side.
+   * Centred on the side the control asks for (below, unless it asks for
+   * above), and on the other side when it does not fit there. The tooltip is
+   * kept inside the window with an 8 px margin on each side.
    */
   private position(): void {
     const tip = this.tip;
@@ -205,7 +215,9 @@ export class TooltipDirective implements OnDestroy {
     const viewportWidth = this.document.documentElement.clientWidth;
 
     const fitsBelow = control.bottom + gap + tipRect.height <= window.innerHeight;
-    const top = fitsBelow
+    const fitsAbove = control.top - gap - tipRect.height >= 0;
+    const below = this.placement() === 'above' ? !fitsAbove : fitsBelow;
+    const top = below
       ? control.bottom + gap
       : control.top - gap - tipRect.height;
 
@@ -247,8 +259,8 @@ export class TooltipDirective implements OnDestroy {
     const bridgeWidth = Math.max(0, overlapRight - overlapLeft);
     tip.style.setProperty('--bridge-left', `${Math.floor(bridgeLeft)}px`);
     tip.style.setProperty('--bridge-width', `${Math.ceil(bridgeWidth)}px`);
-    this.renderer.removeClass(tip, fitsBelow ? 'above' : 'below');
-    this.renderer.addClass(tip, fitsBelow ? 'below' : 'above');
+    this.renderer.removeClass(tip, below ? 'above' : 'below');
+    this.renderer.addClass(tip, below ? 'below' : 'above');
   }
 
   /**

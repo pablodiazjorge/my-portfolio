@@ -163,22 +163,24 @@
   the pointer leaves both on its way to the tooltip and closes it. It spans
   only the stretch where the control and the tooltip overlap, which the
   directive puts in --bridge-left and --bridge-width; without them it falls
-  back to the tooltip's full width.
+  back to the tooltip's full width. It is 11 px tall because it is placed
+  from inside the tooltip's 1 px border: with 10 px it left a 1 px strip
+  uncovered next to the control.
 */
 .app-tooltip::before {
   content: "";
   position: absolute;
   left: var(--bridge-left, 0);
   width: var(--bridge-width, 100%);
-  height: 10px;
+  height: 11px;
 }
 
 .app-tooltip.below::before {
-  top: -10px;
+  top: -11px;
 }
 
 .app-tooltip.above::before {
-  bottom: -10px;
+  bottom: -11px;
 }
 
 /*
