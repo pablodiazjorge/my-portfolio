@@ -1,10 +1,10 @@
 # my-portfolio
 
-Portfolio personal. Angular 22 standalone, Tailwind CSS 4, SSR con Angular Universal, i18n ES/EN con ngx-translate.
+Portfolio personal con Angular 22 (standalone y zoneless, con Signals y OnPush), Tailwind CSS 4, prerenderizado con @angular/ssr e i18n ES/EN con ngx-translate.
 
 ## Stack
 
-Angular 22 · Angular Universal · Tailwind CSS 4.1 · ngx-translate 16 · Express.js · PostCSS
+Angular 22 (zoneless + Signals), @angular/ssr, Tailwind CSS 4.1, ngx-translate 16, Express.js (solo en local), PostCSS
 
 ## Estructura
 
