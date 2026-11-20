@@ -2,12 +2,12 @@ import {
   Directive,
   ElementRef,
   HostListener,
-  Inject,
   Input,
   OnDestroy,
   PLATFORM_ID,
   Renderer2,
   DOCUMENT,
+  inject,
 } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
@@ -31,6 +31,11 @@ let tooltipCount = 0;
   standalone: true,
 })
 export class TooltipDirective implements OnDestroy {
+  private host = inject<ElementRef<HTMLElement>>(ElementRef);
+  private renderer = inject(Renderer2);
+  private document = inject<Document>(DOCUMENT);
+  private platformId = inject<Object>(PLATFORM_ID);
+
   /**
    * Tooltip text. If it arrives empty, nothing is shown. If it changes while
    * the tooltip is open, it is updated in place: the theme, language and
@@ -65,13 +70,6 @@ export class TooltipDirective implements OnDestroy {
   private openTimer?: ReturnType<typeof setTimeout>;
   private closeTimer?: ReturnType<typeof setTimeout>;
   private readonly id = `tooltip-${++tooltipCount}`;
-
-  constructor(
-    private host: ElementRef<HTMLElement>,
-    private renderer: Renderer2,
-    @Inject(DOCUMENT) private document: Document,
-    @Inject(PLATFORM_ID) private platformId: Object
-  ) {}
 
   ngOnDestroy(): void {
     this.hide();

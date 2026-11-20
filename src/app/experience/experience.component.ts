@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ChangeDetectionStrategy, inject } from '@angular/core';
 import { Experience } from '../models/experience.model';
 import { DataTranslationService } from '../services/data-translation.service';
 import { TranslateModule } from '@ngx-translate/core';
@@ -13,13 +13,13 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./experience.component.css'],
 })
 export class ExperienceComponent implements OnInit, OnDestroy {
+  private dataTranslationService = inject(DataTranslationService);
+
   /** Array of job experiences to display */
   experience: Experience[] = [];
 
   /** Subscription to the experience data Observable */
   private dataSubscription: Subscription | undefined;
-
-  constructor(private dataTranslationService: DataTranslationService) {}
 
   /** Initializes component by subscribing to experience data */
   ngOnInit(): void {

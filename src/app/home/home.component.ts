@@ -1,7 +1,6 @@
 import {
   Component,
   HostListener,
-  Inject,
   PLATFORM_ID,
   OnInit,
   OnDestroy,
@@ -9,6 +8,7 @@ import {
   ViewChild,
   DOCUMENT,
   ChangeDetectionStrategy,
+  inject,
 } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Router } from '@angular/router';
@@ -43,6 +43,13 @@ import { AppLang, DEFAULT_LANG, pathForLang, rememberLang, urlForLang } from '..
   styleUrl: './home.component.css',
 })
 export class HomeComponent implements OnInit, OnDestroy {
+  private translate = inject(TranslateService);
+  private meta = inject(Meta);
+  private titleService = inject(Title);
+  private router = inject(Router);
+  private document = inject<Document>(DOCUMENT);
+  private platformId = inject<Object>(PLATFORM_ID);
+
   /**
    * Layer that paints the gradient following the cursor. It is fixed to the
    * window, so the spotlight stays under the pointer even when the page
@@ -83,15 +90,9 @@ export class HomeComponent implements OnInit, OnDestroy {
   /** Subject to manage unsubscription from observables */
   private readonly destroy$ = new Subject<void>();
 
-  constructor(
-    private translate: TranslateService,
-    //Seo description
-    private meta: Meta,
-    private titleService: Title,
-    private router: Router,
-    @Inject(DOCUMENT) private document: Document,
-    @Inject(PLATFORM_ID) private platformId: Object
-  ) {
+  constructor() {
+    const document = this.document;
+
     // Translations for the URL's language were loaded by langResolver before
     // this component was created, on the server and in the browser alike.
     this.currentLang = (this.translate.currentLang as AppLang) || DEFAULT_LANG;

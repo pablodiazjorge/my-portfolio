@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ChangeDetectionStrategy, inject } from '@angular/core';
 import { TooltipDirective } from '../directives/tooltip.directive';
 import { Project } from '../models/project.model';
 import { DataTranslationService } from '../services/data-translation.service';
@@ -14,13 +14,13 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./projects.component.css'],
 })
 export class ProjectsComponent implements OnInit, OnDestroy {
+  private dataTranslationService = inject(DataTranslationService);
+
   /** Array of projects to display */
   projects: Project[] = [];
 
   /** Subscription to the project data Observable */
   private dataSubscription: Subscription | undefined;
-
-  constructor(private dataTranslationService: DataTranslationService) {}
 
   /** Initializes component by subscribing to project data */
   ngOnInit(): void {

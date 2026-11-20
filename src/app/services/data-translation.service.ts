@@ -1,4 +1,4 @@
-import { Injectable, OnDestroy } from '@angular/core';
+import { Injectable, OnDestroy, inject } from '@angular/core';
 import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
 import { Observable, ReplaySubject, of } from 'rxjs';
 import { switchMap, catchError, shareReplay, startWith, takeUntil } from 'rxjs/operators';
@@ -13,11 +13,13 @@ const fallbackProjectsList: Project[] = [];
   providedIn: 'root',
 })
 export class DataTranslationService implements OnDestroy {
+  private translate = inject(TranslateService);
+
   private experienceList$: Observable<Experience[]>;
   private projectsList$: Observable<Project[]>;
   private destroy$ = new ReplaySubject<void>(1);
 
-  constructor(private translate: TranslateService) {
+  constructor() {
     this.experienceList$ = this.translate.onLangChange.pipe(
       startWith({ lang: this.translate.currentLang } as LangChangeEvent),
       switchMap((event: LangChangeEvent) =>
