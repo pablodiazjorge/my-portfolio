@@ -10,7 +10,7 @@ import {
   inject,
   viewChild,
 } from '@angular/core';
-import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { isPlatformBrowser, NgClass } from '@angular/common';
 import { Router } from '@angular/router';
 import { ExperienceComponent } from '../experience/experience.component';
 import { AboutComponent } from '../about/about.component';
@@ -28,7 +28,6 @@ import { AppLang, DEFAULT_LANG, pathForLang, rememberLang, urlForLang } from '..
   selector: 'app-home',
   standalone: true,
   imports: [
-    CommonModule,
     TranslateModule,
     ExperienceComponent,
     ProjectsComponent,
@@ -37,6 +36,7 @@ import { AppLang, DEFAULT_LANG, pathForLang, rememberLang, urlForLang } from '..
     socialComponent,
     SafeHtmlPipe,
     TooltipDirective,
+    NgClass,
   ],
   templateUrl: './home.component.html',
   changeDetection: ChangeDetectionStrategy.Eager,
